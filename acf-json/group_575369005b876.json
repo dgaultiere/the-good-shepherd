@@ -1,0 +1,152 @@
+{
+    "key": "group_575369005b876",
+    "title": "Event Information",
+    "fields": [
+        {
+            "key": "field_577b0bab33b3a",
+            "label": "Date",
+            "name": "event_date",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y",
+            "return_format": "F j, Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_57536904a2520",
+            "label": "Location",
+            "name": "event_location",
+            "type": "text",
+            "instructions": "Include a location for your event",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_57536d6649929",
+            "label": "Host",
+            "name": "event_host",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Display the name of the event host",
+            "default_value": 0
+        },
+        {
+            "key": "field_57536ce91624f",
+            "label": "Host Name",
+            "name": "event_host_name",
+            "type": "text",
+            "instructions": "Name of the person or organization that is hosting the event",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_57536d6649929",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_575373f5e1835",
+            "label": "Include Register Button",
+            "name": "show_event_button",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Include a button which links to where guests can register or RSVP",
+            "default_value": 0
+        },
+        {
+            "key": "field_5753743ce1836",
+            "label": "Button URL",
+            "name": "event_register_url",
+            "type": "text",
+            "instructions": "Provide a link where guests can register or RSVP. For email use \r\nmailto:your-email@address.com",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_575373f5e1835",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "event"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1468818676
+}

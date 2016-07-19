@@ -1,0 +1,45 @@
+{
+    "key": "group_576ed056a2427",
+    "title": "Associate Information",
+    "fields": [
+        {
+            "key": "field_576ed056a7e00",
+            "label": "Location",
+            "name": "associate_location",
+            "type": "text",
+            "instructions": "City or region where this associate is based.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "associate"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1468824434
+}
