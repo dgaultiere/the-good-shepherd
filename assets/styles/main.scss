@@ -127,7 +127,7 @@ body {
 	padding-bottom: 75px;
 
 	@media (min-width: $screen-sm-min) {
-		padding-top: 112px;
+		padding-top: 100px;
 	}
 }
 
@@ -301,18 +301,79 @@ textarea {
 
 	@media (min-width: $screen-sm-min) {
 		position: fixed;
-		padding: 25px 0;
+		padding: 20px 0 30px;
+	}
+
+	.social-links-above {
+		display: none;
+		@include transition(all 0.2s);
+
+		@media (min-width: $screen-sm-min) {
+			display: block;
+		}
+	}
+
+	.social-links-below {
+		display: block;
+		@include transition(all 0.2s);
+
+		@media (min-width: $screen-sm-min) {
+			display: none;
+		}
+	}
+
+	.social-links {
+		text-align: center;
+		padding-bottom: 20px;
+		line-height: 1;
+		list-style-type: none;
+ 		-webkit-padding-start: 0px;
+		-webkit-margin-before: 0px;
+		 -webkit-margin-after: 0px;
+		 -webkit-margin-start: 0px;
+		   -webkit-margin-end: 0px;
+		@include transition(all 0.2s);
+
+		@media (min-width: $screen-sm-min) {
+			float: right;
+			padding-bottom: 10px;
+		}
+
+		.fa {
+			font-size: 15px;
+			padding: 0;
+			height: auto;
+			width: auto;
+			margin-right: 3px;
+			color: $accent-color;
+			background-color: transparent;
+
+			&:hover,
+			&:active,
+			&:focus {
+				color: darken($accent-color, 10%);
+				background-color: transparent;
+			}
+		}
+
+		li:last-child a {
+			margin-right: 15px;
+
+			@media (min-width: $screen-sm-min) {
+				margin-right: 0;
+			}
+		}
 	}
 }
 
 .navbar-brand {
 	color: $grey-medium;
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: 700;
 	letter-spacing: -0.025em;
 	height: auto;
 	line-height: 1.3333;
-	padding: 20px 15px 15px;
+	padding: 18px 15px 15px;
 	margin-left: 0px;
 	@include transition(all 0.2s);
 
@@ -336,7 +397,7 @@ textarea {
 	@media (min-width: $screen-sm-min) {
 		font-size: 24px;
 		letter-spacing: inherit;
-		padding: 15px;
+		padding: 20px 15px 0;
 		margin-left: 0px;
 
 		img {
@@ -373,12 +434,24 @@ textarea {
 		padding: 10px 15px;
 		text-align: center;
 
+		@media (min-width: $screen-sm-min) {
+			padding: 0 9px;
+			font-size: 16px;
+
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+
+		@media (min-width: $screen-md-min) {
+			font-size: 17px;
+		}
+
 		a {
-			padding: 0;
+			padding: 0 0 5px;
 			line-height: normal;
 			background: transparent;
 			color: $grey-medium;
-			padding-bottom: 5px;
 			border-bottom: 2px solid transparent;
 			max-width: 150px;
 			margin: 0 auto;
@@ -391,15 +464,6 @@ textarea {
 				color: $nav-highlight;
 				border-color: rgba(0,0,0,0.2);
 			}
-		}
-
-		@media (min-width: $screen-sm-min) {
-			padding: 24px 12px 14px;
-			font-size: 16px;
-		}
-
-		@media (min-width: $screen-md-min) {
-			font-size: 17px;
 		}
 	}
 
@@ -430,8 +494,17 @@ textarea {
 	.dropdown {
 		@include transition(all 0.2s);
 
+		.dropdown-toggle {
+			@include transition(all 0.2s);
+		}
+
+		.caret {
+			margin: 0;
+		}
+
 		.dropdown-menu {
 			right: 5px;
+			@include transition(all 0.2s);
 
 			a {
 				border-color: transparent;
@@ -440,7 +513,6 @@ textarea {
 	}
 
 	.open {
-
 		.dropdown-toggle,
 		.dropdown-toggle:hover,
 		.dropdown-toggle:focus {
@@ -459,7 +531,6 @@ textarea {
 
 			@media (min-width: $screen-sm-min) {
 				display: inline-block;
-				margin-top: -15px;
 				background-color: $white;
 				padding-top: 10px;
 				padding-bottom: 5px;
@@ -490,6 +561,11 @@ textarea {
 			}
 		}
 	}
+}
+
+.navbar-right {
+	clear: right;
+	margin-right: 0;
 }
 
 .navbar-collapse {
@@ -549,10 +625,20 @@ textarea {
 @media (min-width: $screen-sm-min) {
 	.navbar-shrink {
 		box-shadow: $box-shadow-blur-3;
-		padding: 7px 0 3px;
+		padding: 16px 0 12px;
+		@include transition(all 0.2s);
 
 		.navbar-brand {
 			font-size: 24px;
+			padding-top: 0;
+		}
+
+		.navbar-nav {
+			padding-top: 6px;
+		}
+
+		*[class^='social-links'] {
+			display: none;
 		}
 	}
 }
@@ -869,6 +955,33 @@ textarea,
 			padding: 4px 9px;
 			border-radius: 4px;
 			border: 1px solid transparent;
+		}
+	}
+}
+
+/** Social Links **/
+.social-links {
+	li {
+		display: inline;
+	}
+
+	.fa {
+		text-align: center;
+		display: inline-block;
+		border-radius: 50%;
+		font-size: 16px;
+		padding: 7px;
+		height: 31px;
+		width: 31px;
+		margin-right: 6px;
+		color: $white;
+		background-color: $grey-medium;
+
+		&:hover,
+		&:active,
+		&:focus {
+			text-decoration: none;
+			background-color: $accent-color;
 		}
 	}
 }
@@ -2212,32 +2325,14 @@ footer.content-info {
 	  }
 	}
 
-	.social-widget {
-		margin-top: -10px;
-
-		li {
-			display: inline;
-		}
-
+	.social-links {
 		.fa {
-			font-size: 16px;
-			padding: 7px;
-			text-align: center;
-			font-weight: 700;
 			color: $footer-bg-color;
-
-			display: inline-block;
-			border-radius: 50%;
-			height: 31px;
-			width: 31px;
 			background-color: $white;
-			margin-right: 6px;
 
 			&:hover,
 			&:active,
 			&:focus {
-				text-decoration: none;
-
 				background-color: $white-66;
 			}
 		}

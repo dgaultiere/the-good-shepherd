@@ -83,6 +83,18 @@
 				background-color: <?php echo $nav_highlight?>;
 			}
 
+      .navbar .social-links .fa,
+    	.navbar .social-links .fa,
+    	.navbar .social-links .fa {
+  			color: <?php echo $nav_highlight?>;
+      }
+
+      .navbar .social-links .fa:hover,
+    	.navbar .social-links .fa:active,
+    	.navbar .social-links .fa:focus {
+  			color: <?php echo Roots\Sage\Extras\color_luminance($nav_highlight,-.15); ?>;
+      }
+
 			/** Buttons **/
 			.more-button a:active,
 			.more-button a:focus,
@@ -127,7 +139,7 @@
 				background-color: <?php echo $footer_background_color?>;
 			}
 
-			footer.content-info .social-widget .fa {
+			footer.content-info .social-links .fa {
 				color: <?php echo $footer_background_color?>;
 			}
 
