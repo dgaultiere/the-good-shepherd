@@ -1050,7 +1050,7 @@ acf_add_local_field_group(array (
 						'pinterest' => 'Pinterest',
 						'tumblr' => 'Tumblr',
 						'vimeo' => 'Vimeo',
-						'youtube' => 'YouTube',
+						'youtube-play' => 'YouTube',
 						'yelp' => 'Yelp',
 					),
 					'default_value' => array (

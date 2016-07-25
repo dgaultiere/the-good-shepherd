@@ -10,7 +10,7 @@
     <!-- Web Fonts -->
     <script src="https://use.typekit.net/ifd6ekz.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
-		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 		<!-- Theme Styles -->
 		<style type="text/css">
