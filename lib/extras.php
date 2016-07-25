@@ -134,6 +134,7 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title'	=> 'Theme Settings',
 		'menu_slug' 	=> 'theme-general-settings',
 		'capability'	=> 'edit_posts',
+    'position'    => '63.3',
 		'icon_url'    => 'dashicons-welcome-widgets-menus',
 		'redirect'		=> false
 	]);
