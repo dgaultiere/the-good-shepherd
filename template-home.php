@@ -59,7 +59,7 @@
 						endwhile; // end of the loop
 						wp_reset_postdata();
 					else :
-						_e( 'Whoops, something went wrong. Please try again later.' );
+						_e( '<div class="col-xs-12">' . 'No articles were found.' . '</div>' );
 					endif;
 				?>
 			</div>
@@ -138,7 +138,7 @@
 				    endwhile; // end of the loop
 				    wp_reset_postdata();
 				  else :
-				    _e( 'Whoops, something went wrong. Please try again later.' );
+				    _e( '<div class="col-xs-12">' . 'No articles were found.' . '</div>' );
 				  endif;
 				?>
 			</div>

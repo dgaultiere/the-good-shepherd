@@ -111,7 +111,7 @@ function my_acf_settings_dir( $dir ) {
 }
 
 // 3. Hide ACF field group menu item
-// add_filter('acf/settings/show_admin', '__return_false');
+add_filter('acf/settings/show_admin', '__return_false');
 
 // 4. Include ACF
 include_once( get_stylesheet_directory() . '/plugins/acf/acf.php' );
@@ -191,7 +191,7 @@ if( function_exists('acf_add_options_page') ) {
 function google_maps_add_scripts() {
   if (is_page_template('template-contact.php')) {
     wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false', array(), '3', true );
-    wp_enqueue_script( 'google-map-init', get_template_directory_uri() . '/assets/scripts/google-maps.js', array('google-map', 'jquery'), '0.1', true );
+    wp_enqueue_script( 'google-map-init', get_template_directory_uri() . '/plugins/acf/google-maps.js', array('google-map', 'jquery'), '0.1', true );
   }
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\google_maps_add_scripts' );
