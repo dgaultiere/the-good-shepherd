@@ -12,8 +12,10 @@
 <?php endif; ?>
 
 <!-- Upcoming events -->
-<h3 id="upcoming-events-title">Upcoming Events</h3>
-<div class="upcoming-events">
+<?php if ( have_posts() ) : ?>
+  <h3 id="upcoming-events-title">Upcoming Events</h3>
+  <div class="upcoming-events">
+<?php endif; ?>
 <?php
   date_default_timezone_set('America/Los_Angeles');
   $args1 = array(
@@ -39,8 +41,10 @@
 </div>
 
 <!-- Past events -->
-<h3 id="past-events-title">Past Events</h3>
-<div class="row past-events">
+<?php if ( have_posts() ) : ?>
+  <h3 id="past-events-title">Past Events</h3>
+  <div class="row past-events">
+<?php endif; ?>
 <?php
   $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
   $args2 = array(
