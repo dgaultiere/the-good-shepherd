@@ -1912,6 +1912,8 @@ aside {
 	@media (min-width: $screen-sm-min) {
 		height: 500px;
 		padding-top: 180px;
+		padding-right: 50px;
+		padding-left: 50px;
 
 		.title {
 			font-size: 52px;
@@ -1920,6 +1922,13 @@ aside {
 		.subtitle {
 			font-size: 30px;
 		}
+	}
+
+	@media (min-width: $screen-lg-min) {
+		height: 600px;
+		padding-top: 220px;
+		padding-right: 80px;
+		padding-left: 80px;
 	}
 
 	@media (max-height: 480px) {
