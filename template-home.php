@@ -38,7 +38,7 @@
 					<h3 class="subtitle"><?php the_field('recent_articles_subtitle'); ?></h3>
 				</div>
 			</div>
-			<div clas="row">
+			<div class="row">
 				<?php
 					$args = array(
 						'posts_per_page' => '2'
