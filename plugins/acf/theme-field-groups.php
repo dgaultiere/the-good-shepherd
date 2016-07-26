@@ -667,7 +667,7 @@ acf_add_local_field_group(array (
 			'name' => 'about_title',
 			'type' => 'text',
 			'instructions' => '',
-			'required' => 0,
+			'required' => 1,
 			'conditional_logic' => 0,
 			'wrapper' => array (
 				'width' => '',
@@ -777,7 +777,7 @@ acf_add_local_field_group(array (
 			'name' => 'about_paragraph_content',
 			'type' => 'textarea',
 			'instructions' => '',
-			'required' => 0,
+			'required' => 1,
 			'conditional_logic' => 0,
 			'wrapper' => array (
 				'width' => '',
@@ -798,7 +798,7 @@ acf_add_local_field_group(array (
 			'name' => 'featured_title',
 			'type' => 'text',
 			'instructions' => '',
-			'required' => 0,
+			'required' => 1,
 			'conditional_logic' => 0,
 			'wrapper' => array (
 				'width' => '',
