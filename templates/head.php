@@ -110,12 +110,16 @@
 			.btn:hover,
 			.btn-primary:active,
 			.btn-primary:focus,
-			.btn-primary:hover {
+			.btn-primary:hover,
+			.button:active,
+			.button:focus,
+			.button:hover {
 				background-color:  <?php echo $accent_color?>;
 				border-color: <?php echo $accent_color?>;
 			}
 
-			.btn-primary {
+			.btn-primary,
+      .button {
 				color: <?php echo $accent_color?>;
 				border-color: <?php echo $accent_color?>;
 			}
