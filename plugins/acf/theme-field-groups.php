@@ -174,27 +174,27 @@ acf_add_local_field_group(array (
 					'disabled' => 0,
 				),
 			),
-			array (
-				'key' => 'field_5777faa2ed5cb',
-				'label' => 'Recent Articles Section Title',
-				'name' => 'articles_recent_title',
-				'type' => 'text',
-				'instructions' => '',
-				'required' => 1,
-				'conditional_logic' => 0,
-				'wrapper' => array (
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'default_value' => 'Or view our most recent articles:',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'maxlength' => '',
-				'readonly' => 0,
-				'disabled' => 0,
+		),
+		array (
+			'key' => 'field_5777faa2ed5cb',
+			'label' => 'Recent Articles Section Title',
+			'name' => 'articles_recent_title',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
 			),
+			'default_value' => 'Or view our most recent articles:',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+			'readonly' => 0,
+			'disabled' => 0,
 		),
 	),
 	'location' => array (
@@ -1563,51 +1563,6 @@ acf_add_local_field_group(array (
 ));
 
 // New field groups below
-
-acf_add_local_field_group(array (
-	'key' => 'group_5777fa9ba14a3',
-	'title' => 'Articles Page',
-	'fields' => array (
-		array (
-			'key' => 'field_5777faa2ed5cb',
-			'label' => 'Recent Articles Section Title',
-			'name' => 'articles_recent_title',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 1,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => 'Recent Articles',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-			'readonly' => 0,
-			'disabled' => 0,
-		),
-	),
-	'location' => array (
-		array (
-			array (
-				'param' => 'page_template',
-				'operator' => '==',
-				'value' => 'template-articles.php',
-			),
-		),
-	),
-	'menu_order' => 0,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => 1,
-	'description' => '',
-));
 
 acf_add_local_field_group(array (
 	'key' => 'group_576ed056a2427',
