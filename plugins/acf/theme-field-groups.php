@@ -707,9 +707,9 @@ acf_add_local_field_group(array (
 		),
 		array (
 			'key' => 'field_556a37ce650dd',
-			'label' => 'About Link',
+			'label' => 'About Page Link',
 			'name' => 'about_link',
-			'type' => 'page_link',
+			'type' => 'text',
 			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => 0,
