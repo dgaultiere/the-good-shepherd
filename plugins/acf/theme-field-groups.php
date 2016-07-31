@@ -836,6 +836,28 @@ acf_add_local_field_group(array (
 			'readonly' => 0,
 			'disabled' => 0,
 		),
+		array (
+			'key' => 'field_579e1694a49a8',
+			'label' => 'Featured Category',
+			'name' => 'featured_category',
+			'type' => 'taxonomy',
+			'instructions' => 'Choose a post category to display in this section. Up to 4 posts will be displayed.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'taxonomy' => 'category',
+			'field_type' => 'select',
+			'allow_null' => 0,
+			'add_term' => 1,
+			'save_terms' => 0,
+			'load_terms' => 0,
+			'return_format' => 'id',
+			'multiple' => 0,
+		),
 	),
 	'location' => array (
 		array (

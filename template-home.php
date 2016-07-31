@@ -119,7 +119,7 @@
 			<div class="row">
 				<?php
 				  $args = array(
-				    'cat' => 13,
+				    'cat' => get_field('featured_category'),
 				    'posts_per_page' => '4'
 				  );
 				  // the query
