@@ -5,6 +5,9 @@
 	<div class="meta-datapoint date">
 		<i class="fa fa-calendar"></i> <?php the_field('event_date'); ?>
 	</div>
+	<div class="meta-datapoint time">
+		<i class="fa fa-clock-o"></i> <?php the_field('event_time'); ?>
+	</div>
 	<div class="meta-datapoint location">
 		<i class="fa fa-map-marker"></i> <?php the_field('event_location'); ?>
 	</div>
