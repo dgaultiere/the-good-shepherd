@@ -2328,7 +2328,7 @@ footer.content-info {
 		  }
 	  }
 
-  .post-date {
+  	.post-date {
 			display: inline-block;
 		  font-size: 12px;
 		  font-weight: 400;
@@ -2342,8 +2342,20 @@ footer.content-info {
 		  @media (min-width: $screen-sm-min) {
 			  float: none;
 			  margin-top: 2px;
-			 }
+		  }
 	  }
+	}
+
+	.widget_text {
+		ul {
+	    list-style: inherit;
+	    padding-left: 24px;
+
+			li {
+				line-height: inherit;
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	.social-links {
