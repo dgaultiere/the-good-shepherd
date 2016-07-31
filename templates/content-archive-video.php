@@ -11,7 +11,7 @@
 	    <h3 class="entry-title">
         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
       </h3>
-	    <?php get_template_part('templates/entry-meta'); ?>
+	    <?php get_template_part('templates/entry-meta-video'); ?>
 	  </header>
     <?php if ( get_field('video_show_excerpt', 'option') ) { ?>
   	  <div class="entry-summary">

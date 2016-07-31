@@ -1,14 +1,76 @@
 {
     "key": "group_579e168d2891f",
-    "title": "Test",
+    "title": "Video Information",
     "fields": [
         {
-            "key": "field_579e282fe5a47",
-            "label": "Event Time",
-            "name": "event_time",
-            "type": "text",
+            "key": "field_579e70f13035c",
+            "label": "Video Date",
+            "name": "video_date",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y",
+            "return_format": "F j, Y",
+            "first_day": 0
+        },
+        {
+            "key": "field_579e71453035e",
+            "label": "Show Video Location",
+            "name": "show_video_location",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Display the location where the video was filmed on video pages and archives",
+            "default_value": 1
+        },
+        {
+            "key": "field_579e710c3035d",
+            "label": "Video Location",
+            "name": "video_location",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_579e71453035e",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_579e71903035f",
+            "label": "Video Speaker",
+            "name": "video_speaker",
+            "type": "text",
+            "instructions": "Name of the speaker or producer of the video",
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -29,7 +91,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "video"
             }
         ]
     ],
@@ -41,5 +103,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1469982807
+    "modified": 1470001644
 }

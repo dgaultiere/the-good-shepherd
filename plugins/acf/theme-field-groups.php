@@ -2125,6 +2125,113 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+acf_add_local_field_group(array (
+	'key' => 'group_579e168d2891f',
+	'title' => 'Video Information',
+	'fields' => array (
+		array (
+			'key' => 'field_579e70f13035c',
+			'label' => 'Video Date',
+			'name' => 'video_date',
+			'type' => 'date_picker',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'display_format' => 'F j, Y',
+			'return_format' => 'F j, Y',
+			'first_day' => 0,
+		),
+		array (
+			'key' => 'field_579e71453035e',
+			'label' => 'Show Video Location',
+			'name' => 'show_video_location',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => 'Display the location where the video was filmed on video pages and archives',
+			'default_value' => 1,
+		),
+		array (
+			'key' => 'field_579e710c3035d',
+			'label' => 'Video Location',
+			'name' => 'video_location',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_579e71453035e',
+						'operator' => '==',
+						'value' => '1',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+			'readonly' => 0,
+			'disabled' => 0,
+		),
+		array (
+			'key' => 'field_579e71903035f',
+			'label' => 'Video Speaker',
+			'name' => 'video_speaker',
+			'type' => 'text',
+			'instructions' => 'Name of the speaker or producer of the video',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+			'readonly' => 0,
+			'disabled' => 0,
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'video',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
+
 endif;
 
 ?>
