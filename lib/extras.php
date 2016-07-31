@@ -33,7 +33,8 @@ add_filter('body_class', __NAMESPACE__ . '\\body_class');
  * Limit search post types
  */
 
- function search_all($query) {
+function search_all($query) {
+  if (!is_admin()) {
    if($query->is_search) {
      $query->set('post_type', array(
      'post',
@@ -44,7 +45,8 @@ add_filter('body_class', __NAMESPACE__ . '\\body_class');
    }
    return $query;
  }
- add_filter('pre_get_posts', __NAMESPACE__ . '\\search_all');
+}
+add_filter('pre_get_posts', __NAMESPACE__ . '\\search_all');
 
 
  // function mySearchFilter($query) {
