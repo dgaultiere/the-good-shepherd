@@ -1674,6 +1674,16 @@ aside {
 			@include prose-body-sans;
 		}
 	}
+
+	.featured-image {
+		.wp-post-image {
+			max-width: 80%;
+
+			@media (min-width: $screen-sm-min) {
+				max-height: 300px;
+			}
+		}
+}
 }
 
 .post-type-archive-associate {
