@@ -692,6 +692,16 @@ textarea,
 	}
 }
 
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+  	 -moz-appearance: none;
+          appearance: none;
+}
+
 .form-control {
 	padding-left: 8px;
 	padding-right: 8px;
@@ -716,7 +726,7 @@ textarea,
 }
 
 .btn-primary,
-.button {
+.subscribe-form .button {
 	color: darken($accent-color, 10%);
 	background-color: $white;
 	border-color: $accent-color;
