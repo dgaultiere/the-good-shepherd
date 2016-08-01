@@ -15,7 +15,7 @@
           date_default_timezone_set('America/Los_Angeles');
           if ( get_field('show_event_button') && ( get_field('event_date',false,false) >= date('Ymd') ) ) {
         ?>
-          <a class="btn btn-primary btn-event" href="<?php the_field('event_register_url'); ?>">Register</a>
+          <a class="btn btn-primary btn-event" href="<?php the_field('event_register_url'); ?>" target="_blank">Register</a>
         <?php }; ?>
         <div class="clearfix"></div>
       </header>

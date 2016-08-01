@@ -11,7 +11,7 @@
       <header>
         <h3><?php the_title(); ?></h3>
         <?php get_template_part('templates/entry-meta-product'); ?>
-        <a class="btn btn-primary btn-product" href="<?php the_field('product_purchase_url'); ?>">Purchase</a>
+        <a class="btn btn-primary btn-product" href="<?php the_field('product_purchase_url'); ?>" target="_blank">Purchase</a>
     	  <div class="clearfix"></div>
       </header>
       <div class="entry-content">
