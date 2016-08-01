@@ -3,7 +3,7 @@
     <div class="col-sm-3">
       <?php if ( has_post_thumbnail() ) { ?>
   			<div class="featured-image">
-  				<?php the_post_thumbnail( 'large' ); ?>
+  				<?php the_post_thumbnail( 'thumbnail' ); ?>
   			</div>
   		<?php } ?>
     </div>
