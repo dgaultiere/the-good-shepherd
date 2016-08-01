@@ -1882,6 +1882,7 @@ iframe[src*="simplecast.com"] {
 }
 
 #cover {
+	background-color: lighten($accent-color, 10%);
 	@include background-image;
 	height: 360px;
 	padding-top: 120px;
