@@ -2,7 +2,7 @@
 /**
  * Template Name: Contact Us
  */
- 
+
  use Roots\Sage\Extras;
 
 ?>
@@ -16,10 +16,10 @@
 			</div>
 		</div>
 		<div class="col-sm-4 sidebar">
-			<div class="widget">
+			<div class="widget widget_map">
 				<h3><?php the_field('address_title'); ?></h3>
 				<?php if(get_field('show_map')) { ?>
-					<?php 
+					<?php
 					$location = get_field('address_map');
 					if( !empty($location) ) {
 					?>
@@ -29,7 +29,7 @@
 					<?php } ?>
 				<?php } ?>
 			</div>
-			<div class="widget">
+			<div class="widget widget_address">
 				<?php the_field('address_label'); ?>
 			</div>
 		</div>
