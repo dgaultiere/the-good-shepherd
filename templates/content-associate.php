@@ -1,7 +1,8 @@
 <article <?php post_class(); ?>>
   <div class="entry-content">
 	  <header>
-	    <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+      <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+      <h4 class="entry-subtitle"><?php the_field('associate_title'); ?></h4>
 	    <?php get_template_part('templates/entry-meta-associate'); ?>
 	  </header>
 	  <div class="entry-summary">

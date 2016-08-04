@@ -15,7 +15,8 @@
 /** Basic Colors **/
 $black:									#000;
 $grey-darker:						#333;
-$grey-medium:						#555;
+$grey-dark:							#555;
+$grey-medium:						#888;
 $grey: 									#9c9c9c;
 $grey-lighter: 					lighten($grey, 30%);
 $white:									rgb(255,255,255);
@@ -367,7 +368,7 @@ textarea {
 }
 
 .navbar-brand {
-	color: $grey-medium;
+	color: $grey-dark;
 	font-size: 20px;
 	font-weight: 700;
 	letter-spacing: -0.025em;
@@ -451,7 +452,7 @@ textarea {
 			padding: 0 0 5px;
 			line-height: normal;
 			background: transparent;
-			color: $grey-medium;
+			color: $grey-dark;
 			border-bottom: 2px solid transparent;
 			max-width: 150px;
 			margin: 0 auto;
@@ -474,7 +475,7 @@ textarea {
 
 		.dropdown-menu {
 			a {
-				color: $grey-medium;
+				color: $grey-dark;
 
 				&:hover,
 				&:active,
@@ -594,7 +595,7 @@ textarea {
 	}
 
 	.icon-bar {
-		background-color: $grey-medium;
+		background-color: $grey-dark;
 		width: 30px;
 		height: 3px;
 		@include transition(all 0.2s);
@@ -607,7 +608,7 @@ textarea {
 	.icon-menu {
 		display: block;
 		margin-top: 3px;
-		color: $grey-medium;
+		color: $grey-dark;
 		font-size: 10px;
 		font-weight: 700;
 		font-family: sans-serif;
@@ -684,7 +685,7 @@ input,
 textarea,
 .form-control,
 .btn {
-	color: $grey-medium;
+	color: $grey-dark;
 	border: $border-grey-2px;
 
 	&:focus {
@@ -774,10 +775,9 @@ textarea {
 	  font-size: 12px;
 	  line-height: 1.2;
 	  font-family: $font-bernino;
-	  // border: 1px solid $grey;
 	  border: $border-grey-2px;
 	  border-radius: 3px;
-	  color: $grey-medium;
+	  color: $grey-dark;
 	  @include transition(all 0.2s);
 
 		&:hover,
@@ -813,7 +813,7 @@ textarea {
 /** Links **/
 
 .heading-link {
-	color: $grey-medium;
+	color: $grey-dark;
 	text-decoration: none;
 
 	&:hover,
@@ -918,9 +918,16 @@ textarea {
 /** Entry Template **/
 
 .entry-title {
+	color: $grey-dark;
+
 	a {
 	@extend .heading-link;
 	}
+}
+
+.entry-subtitle {
+	color: $grey-medium;
+	font-style: italic;
 }
 
 
@@ -987,7 +994,7 @@ textarea {
 		width: 31px;
 		margin-right: 6px;
 		color: $white;
-		background-color: $grey-medium;
+		background-color: $grey-dark;
 
 		&:hover,
 		&:active,
@@ -1080,7 +1087,7 @@ textarea {
 
 .entry-meta-container {
 	font-size: 14px;
-	color: $grey-medium;
+	color: $grey-dark;
 	margin-bottom: 10px;
 	display: table;
 	clear: both;
@@ -1090,6 +1097,10 @@ textarea {
 		float: left;
 		padding: 2px 0;
 		display: table;
+
+		a {
+			color: $grey-dark;
+		}
 	}
 
 	i {
@@ -1103,20 +1114,6 @@ textarea {
 		padding-right: 6px;
 		border-radius: $border-radius;
 		background: #eee;
-	}
-
-	.date { }
-
-	.author {
-		a { color: $grey-medium; }
-	}
-
-	.category {
-		a { color: $grey-medium; }
-	}
-
-	.tags {
-		a { color: $grey-medium; }
 	}
 }
 
@@ -1495,7 +1492,7 @@ aside {
 
 		.comment-awaiting-moderation {
 			display: inline-block;
-			color: $grey-medium;
+			color: $grey-dark;
 			font-style: italic;
 			background-color: lighten(#ecc132, 37%);
 			border: 1px solid;
@@ -1580,18 +1577,26 @@ aside {
 		}
 	}
 
-	.entry-title {
+	.entry-title,
+	.entry-subtitle {
 		text-align: center;
-		font-size: 20px;
 		margin-top: 0;
 		margin-bottom: 5px;
+	}
+
+	.entry-title {
+		font-size: 20px;
+	}
+
+	.entry-subtitle {
+		font-size: 16px;
 	}
 
 	.entry-meta-container {
 		display: block;
 		// text-align: center;
 		font-size: 15px;
-		color: $grey-medium;
+		color: $grey-dark;
 		margin: 8px 0 12px;
 	}
 
@@ -1801,6 +1806,14 @@ aside {
 			border-radius: 50%;
 		}
 	}
+
+	.entry-title {
+		margin-bottom: 5px;
+	}
+
+	.entry-subtitle {
+		margin-top: 5px;
+	}
 }
 
 iframe[src*="simplecast.com"] {
@@ -1936,7 +1949,7 @@ iframe[src*="simplecast.com"] {
 			&:active,
 			&:hover,
 			&:focus {
-				color: $grey-medium;
+				color: $grey-dark;
 			}
 		}
 	}

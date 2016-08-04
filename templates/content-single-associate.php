@@ -9,11 +9,9 @@
     </div>
     <div class="col-sm-9">
       <header>
-        <h3><?php the_title(); ?></h3>
+        <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+        <h4 class="entry-subtitle"><?php the_field('associate_title'); ?></h4>
         <?php get_template_part('templates/entry-meta-associate'); ?>
-        <?php if ( get_field('show_event_button') ) { ?>
-          <a class="btn btn-primary btn-event" href="<?php the_field('event_register_url'); ?>">Register</a>
-        <?php }; ?>
         <div class="clearfix"></div>
       </header>
       <div class="entry-content">
@@ -21,9 +19,13 @@
       </div>
   	  <div class="clearfix"></div>
       <footer>
-        <?php get_template_part('templates/share-buttons'); ?>
+        <?php if( get_field('associate_show_sharing_buttons', 'option') ) { ?>
+          <?php get_template_part('templates/share-buttons'); ?>
+        <?php } ?>
       </footer>
-      <?php comments_template('/templates/comments.php'); ?>
+      <?php if( get_field('associate_show_comments', 'option') ) { ?>
+        <?php comments_template('/templates/comments.php'); ?>
+      <?php } ?>
     </div>
   </article>
 <?php endwhile; ?>

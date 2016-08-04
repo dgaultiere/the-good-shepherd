@@ -21,7 +21,8 @@ function title() {
   } elseif ( is_post_type_archive('event') ) {
     return __('Events', 'sage');
   } elseif ( is_post_type_archive('associate') ) {
-    return __('Associates', 'sage');
+    // return __('Associates', 'sage');
+    return get_field('associate_archive_title', 'option');
   } elseif (is_archive()) {
     return get_the_archive_title();
   } elseif (is_search()) {

@@ -8,9 +8,8 @@
 					</a>
 				</div>
 			<?php } ?>
-	    <h3 class="entry-title">
-        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-      </h3>
+      <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+      <h4 class="entry-subtitle"><?php the_field('associate_title'); ?></h4>
 	    <?php get_template_part('templates/entry-meta-associate'); ?>
 	  </header>
     <?php if ( get_field('associate_show_excerpt', 'option') ) { ?>
