@@ -1,6 +1,6 @@
 <div class="entry-meta-container entry-meta-video">
 	<span class="meta-datapoint post-type">
-		<i class="fa fa-sun-o"></i> <?php echo get_post_type(); ?>
+		<i class="fa fa-video-camera"></i> <?php echo get_post_type(); ?>
 	</span>
 	<div class="meta-datapoint date">
 		<i class="fa fa-calendar"></i> <?php the_field('video_date'); ?>
