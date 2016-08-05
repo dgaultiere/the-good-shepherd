@@ -9,7 +9,7 @@
     </div>
     <div class="col-sm-9">
       <header>
-        <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+        <h2 class="entry-title"><?php the_title(); ?></h2>
         <h4 class="entry-subtitle"><?php the_field('associate_title'); ?></h4>
         <?php get_template_part('templates/entry-meta-associate'); ?>
         <div class="clearfix"></div>

@@ -16,22 +16,22 @@
 			} elseif ( 'associate' == get_post_type() ) {
 				echo'<i class="fa fa-users"></i>';
 			}
-		?> <?php echo get_post_type(); ?>
+		?><?php echo get_post_type(); ?>
 	</span>
 	<div class="meta-datapoint date">
-		<i class="fa fa-calendar"></i> <?php the_time( get_option( 'date_format' ) ); ?>
+		<i class="fa fa-calendar"></i><?php the_time( get_option( 'date_format' ) ); ?>
 	</div>
 	<div class="meta-datapoint author">
-		<i class="fa fa-user"></i> <?php the_author_posts_link(); ?>
+		<i class="fa fa-user"></i><?php the_author_posts_link(); ?>
 	</div>
 	<?php if(get_the_category_list()) { ?>
 		<div class="meta-datapoint category">
-			<i class="fa fa-folder-o"></i> <?php the_category(', '); ?>
+			<i class="fa fa-folder-o"></i><?php the_category(', '); ?>
 		</div>
 	<?php } ?>
 	<?php if(get_the_tag_list()) { ?>
 		<div class="meta-datapoint tags">
-			<i class="fa fa-tags"></i> <?php the_tags(); ?>
+			<i class="fa fa-tags"></i><?php the_tags(); ?>
 		</div>
 	<?php } ?>
 </div>
