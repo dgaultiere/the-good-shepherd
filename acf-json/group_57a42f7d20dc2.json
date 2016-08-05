@@ -1,0 +1,45 @@
+{
+    "key": "group_57a42f7d20dc2",
+    "title": "Podcast Information",
+    "fields": [
+        {
+            "key": "field_57a42f826e1b0",
+            "label": "Podcast Author",
+            "name": "podcast_author",
+            "type": "text",
+            "instructions": "Enter an author for this podcast.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Bill & Kristi Gaultiere",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "podcast"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1470377895
+}

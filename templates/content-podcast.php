@@ -2,7 +2,7 @@
   <div class="entry-content">
 	  <header>
 	    <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-	    <?php get_template_part('templates/entry-meta'); ?>
+	    <?php get_template_part('templates/entry-meta', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
 	  </header>
 	  <div class="entry-summary">
 		  <?php if ( has_post_thumbnail() ) { ?>
