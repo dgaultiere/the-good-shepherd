@@ -877,23 +877,25 @@ textarea {
 		.post-type {
 			display: none;
 		}
+
+		.tags {
+			display: none;
+		}
 	}
 
 	.entry-summary {
-		@include prose-body;
-		@include hyphenate;
-
 		margin-top: 15px;
 		margin-bottom: 50px;
-		font-size: 17px;
-		text-align: justify;
 
 		@media (min-width: $screen-sm-min) {
 			margin-bottom: 30px;
 		}
 
 		p {
+			@include prose-body;
+			@include hyphenate;
 			font-size: 17px;
+			text-align: justify;
 		}
 	}
 

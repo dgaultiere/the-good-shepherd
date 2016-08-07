@@ -13,17 +13,6 @@
     </div>
   </a>
   <?php get_template_part('templates/entry-meta'); ?>
-  <!-- <div class="entry-meta">
-    <span class="date">
-      <i class="fa fa-calendar"></i> <?php the_time( get_option( 'date_format' ) ); ?>
-    </span>
-    <span class="author">
-      <i class="fa fa-user"></i> <?php the_author_posts_link(); ?>
-    </span>
-    <span class="categories">
-      <i class="fa fa-folder-o"></i> <?php the_category(', '); ?>
-    </span>
-  </div> -->
   <div class="entry-summary">
     <?php the_excerpt(); ?>
   </div>

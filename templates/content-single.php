@@ -5,7 +5,7 @@
     </header>
 	  <?php if ( has_post_thumbnail() ) { ?>
 			<div class="featured-image">
-				<?php the_post_thumbnail( 'large' ); ?>
+				<?php the_post_thumbnail( 'medium' ); ?>
 			</div>
 		<?php } ?>
     <div class="entry-content <?php if(the_field('text_style') !== 'sans-serif'){ ?>serif<?php }; ?>">
