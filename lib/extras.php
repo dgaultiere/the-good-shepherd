@@ -443,6 +443,41 @@ add_filter('string_limit_words', __NAMESPACE__ . '\\string_limit_words');
 
 
  /**
+  * Add custom taxonomies
+  */
+
+add_action( 'init', __NAMESPACE__ . '\\create_custom_taxonomies', 0 );
+function create_custom_taxonomies() {
+    register_taxonomy(
+        'podcast_tags',
+        'podcast',
+        array(
+            'labels' => array(
+                'name' => 'Podcast Tags',
+                'singular_name' => 'Podcast Tag'
+            ),
+            'show_ui' => true,
+            'show_tagcloud' => true,
+            'hierarchical' => false
+        )
+    );
+    register_taxonomy(
+        'video_tags',
+        'video',
+        array(
+            'labels' => array(
+                'name' => 'Video Tags',
+                'singular_name' => 'Video Tag'
+            ),
+            'show_ui' => true,
+            'show_tagcloud' => true,
+            'hierarchical' => false
+        )
+    );
+}
+
+
+ /**
  * Lightens/darkens a given colour (hex format), returning the altered colour in hex format.
  *
  * @param str $hex Colour as hexadecimal (with or without hash);
