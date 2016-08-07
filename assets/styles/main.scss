@@ -13,15 +13,15 @@
    ========================================================================== */
 
 /** Basic Colors **/
-$black:								#000;
-$grey-darker:					#333;
-$grey-dark:						#555;
-$grey-medium:					#888;
-$grey: 								#9c9c9c;
-$grey-lighter: 				lighten($grey, 30%);
-$white:								rgb(255,255,255);
-$white-66:						rgba(255,255,255,0.66);
-$white-33:						rgba(255,255,255,0.33);
+$black:							#000;
+$grey-darker:				#333;
+$grey-dark:					#555;
+$grey-medium:				#888;
+$grey: 							#9c9c9c;
+$grey-lighter: 			lighten($grey, 30%);
+$white:							rgb(255,255,255);
+$white-66:					rgba(255,255,255,0.66);
+$white-33:					rgba(255,255,255,0.33);
 
 /** Specific-Use Colors **/
 $nav-highlight:					#3498db;
@@ -44,9 +44,9 @@ $box-shadow-3:							0 3px 0 rgba(0,0,0,0.2);
 $box-shadow-blur-3:					0 1px 3px rgba(0,0,0,0.5);
 
 /** Text Variables **/
-$font-bernino:				'jaf-bernino-sans', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'Geneva', 'Verdana', sans-serif;
-$font-freight:				'freight-text-pro', 'Georgia', 'Cambria', 'Times New Roman', 'Times', serif;
-$text-shadow-1:				0 0 3px rgba(0,0,0,.5);
+$font-bernino:			'jaf-bernino-sans', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'Geneva', 'Verdana', sans-serif;
+$font-freight:			'freight-text-pro', 'Georgia', 'Cambria', 'Times New Roman', 'Times', serif;
+$text-shadow-1:			0 0 3px rgba(0,0,0,.5);
 
 
 /** Mixins **/
@@ -99,7 +99,24 @@ $text-shadow-1:				0 0 3px rgba(0,0,0,.5);
 
 /* Flatten das boostrap */
 
-.well, .navbar-inner, .popover, .btn, .tooltip, input, select, textarea, pre, .progress, .modal, .add-on, .alert, .table-bordered, .tooltip-inner, .badge, .label, .img-polaroid {
+.well,
+.navbar-inner,
+.popover,
+.btn,
+.tooltip,
+input,
+select,
+textarea,
+pre,
+.progress,
+.modal,
+.add-on,
+.alert,
+.table-bordered,
+.tooltip-inner,
+.badge,
+.label,
+.img-polaroid {
 	-webkit-box-shadow: none !important;
  		 -moz-box-shadow: none !important;
  		 			box-shadow: none !important;
@@ -134,7 +151,12 @@ body {
 	}
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
 	font-weight: 600;
 	margin-top: 20px;
 }
@@ -464,7 +486,6 @@ textarea {
 			background: transparent;
 			color: $grey-dark;
 			border-bottom: 2px solid transparent;
-			max-width: 150px;
 			margin: 0 auto;
 			@include transition(all 0.2s);
 
@@ -563,7 +584,7 @@ textarea {
 				}
 
 				a {
-					max-width: 160px;
+					// max-width: 160px;
 					padding: 0 0 5px;
 					background-color: transparent;
 					border-color: transparent;
@@ -2005,7 +2026,7 @@ iframe[src*="simplecast.com"] {
 		padding-left: 80px;
 	}
 
-	@media (max-height: 480px) {
+	@media (max-height: 479px) and (max-width: $screen-sm-min) {
 		height: 50%;
 		padding-top: 60px;
 	}
