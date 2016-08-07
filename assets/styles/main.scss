@@ -481,6 +481,7 @@ textarea {
 		}
 
 		a {
+			display: inline-block;
 			padding: 0 0 5px;
 			line-height: normal;
 			background: transparent;
@@ -584,7 +585,6 @@ textarea {
 				}
 
 				a {
-					// max-width: 160px;
 					padding: 0 0 5px;
 					background-color: transparent;
 					border-color: transparent;
