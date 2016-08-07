@@ -448,33 +448,48 @@ add_filter('string_limit_words', __NAMESPACE__ . '\\string_limit_words');
 
 add_action( 'init', __NAMESPACE__ . '\\create_custom_taxonomies', 0 );
 function create_custom_taxonomies() {
-    register_taxonomy(
-        'podcast_tags',
-        'podcast',
-        array(
-            'labels' => array(
-                'name' => 'Podcast Tags',
-                'singular_name' => 'Podcast Tag'
-            ),
-            'show_ui' => true,
-            'show_tagcloud' => true,
-            'hierarchical' => false
-        )
-    );
-    register_taxonomy(
-        'video_tags',
-        'video',
-        array(
-            'labels' => array(
-                'name' => 'Video Tags',
-                'singular_name' => 'Video Tag'
-            ),
-            'show_ui' => true,
-            'show_tagcloud' => true,
-            'hierarchical' => false
-        )
-    );
+  register_taxonomy(
+    'podcast_tags',
+    'podcast',
+    array(
+      'labels' => array(
+        'name' => 'Podcast Tags',
+        'singular_name' => 'Podcast Tag'
+      ),
+      'show_ui' => true,
+      'show_tagcloud' => true,
+      'hierarchical' => false
+    )
+  );
+  register_taxonomy(
+    'video_tags',
+    'video',
+    array(
+      'labels' => array(
+        'name' => 'Video Tags',
+        'singular_name' => 'Video Tag'
+      ),
+      'show_ui' => true,
+      'show_tagcloud' => true,
+      'hierarchical' => false
+    )
+  );
 }
+
+
+
+
+/**
+ * Add custom image sizes
+ */
+
+add_action( 'after_setup_theme', __NAMESPACE__ . '\\create_custom_image_sizes' );
+function create_custom_image_sizes() {
+	add_image_size( 'extra-large', 1920, 1080, false );
+	add_image_size( 'page-header', 1920, 280, true );
+}
+
+
 
 
  /**

@@ -5,7 +5,7 @@
 ?>
 
 <!-- Cover Section -->
-<div class="container-fluid section text-<?php the_field('cover_text_color'); ?>" id="cover" style="background-image:url('<?php the_field('cover_photo'); ?>');">
+<div class="container-fluid section text-<?php the_field('cover_text_color'); ?>" id="cover" style="background-image:url('<?php $cover_image = get_field('cover_photo'); echo $cover_image['sizes']['extra-large']; ?>');">
 	<div class="row">
 		<div class="col-xs-12">
 			<h1 class="title"><?php the_field('cover_title'); ?></h1>
@@ -68,7 +68,7 @@
 </div>
 
 <!-- About Section -->
-<div class="container-fluid section" id="about">
+<div class="container-fluid section grey-bg" id="about">
 	<div class="row">
 		<div class="container">
 			<div class="row">
@@ -79,7 +79,7 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-12">
-					<img src="<?php the_field('about_image'); ?>">
+					<?php echo wp_get_attachment_image( get_field('about_image'), 'medium' ); ?>
 					<a href="<?php the_field('about_link'); ?>" class="heading-link">
 						<h4><?php the_field('about_paragraph_heading'); ?></h4>
 					</a>
