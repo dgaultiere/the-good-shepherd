@@ -34,7 +34,6 @@ $page-header-color:			#555;
 /** Border/Box Variables **/
 $border-radius:  						3px;
 $border-grey-1px:						1px solid #c9c9c9;
-$border-grey-1px-dot:				1px dotted #c9c9c9;
 $border-grey-2px:						2px solid #c9c9c9;
 $border-grey-light-2px:			2px solid #d7d7d7;
 $border-grey-lighter-2px:		2px solid #e9e9e9;
@@ -1463,7 +1462,7 @@ aside {
 
 .comments {
 	margin-top: 50px;
-	border-top: $border-grey-1px;
+	border-top: $border-grey-2px;
 	padding-top: 25px;
 	font-size: 14px;
 	font-family: $font-bernino;
@@ -2196,7 +2195,7 @@ iframe[src*="simplecast.com"] {
 .page-template-template-subscribe {
 	.col-subscribe-form {
 		&.right {
-			border-top: $border-grey-1px;
+			border-top: $border-grey-lighter-2px;
 
 			@media (min-width: $screen-sm-min) {
 				padding-left: 20px;
@@ -2212,13 +2211,13 @@ iframe[src*="simplecast.com"] {
 
 	.subscribe-form {
 		&.top {
-			border-bottom: $border-grey-1px;
+			border-bottom: $border-grey-lighter-2px;
 			padding-bottom: 25px;
 			margin-bottom: 40px;
 		}
 
 		&.bottom {
-			border-top: $border-grey-1px;
+			border-top: $border-grey-lighter-2px;
 			padding-top: 25px;
 			margin-top: 40px;
 		}
