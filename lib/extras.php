@@ -154,6 +154,12 @@ if( function_exists('acf_add_options_page') ) {
 	]);
 
 	acf_add_options_sub_page([
+		'page_title' 	=> 'Blog & Posts Settings',
+		'menu_title'	=> 'Blog & Posts',
+		'parent_slug'	=> 'theme-general-settings',
+	]);
+
+	acf_add_options_sub_page([
 		'page_title' 	=> 'Podcast Settings',
 		'menu_title'	=> 'Podcast',
 		'parent_slug'	=> 'theme-general-settings',

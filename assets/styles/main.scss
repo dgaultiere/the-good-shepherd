@@ -1551,6 +1551,19 @@ aside {
 		font-style: italic;
 	}
 
+	.edit-link {
+		color: $grey-dark;
+		font-style: normal;
+
+		&:before {
+			content: '(';
+		}
+
+		&:after {
+			content: ')';
+		}
+	}
+
 	.comment-form {
 		.comment-notes,
 		.logged-in-as {

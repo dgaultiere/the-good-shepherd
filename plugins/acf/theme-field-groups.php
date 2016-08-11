@@ -2116,6 +2116,46 @@ mailto:your-email@address.com',
 ));
 
 acf_add_local_field_group(array (
+	'key' => 'group_57ac1503553bf',
+	'title' => 'Posts',
+	'fields' => array (
+		array (
+			'key' => 'field_57ac15095e897',
+			'label' => 'Hide Post Sidebar',
+			'name' => 'hide_post_sidebar',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => 'Hide the sidebar on individual posts',
+			'default_value' => 0,
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'acf-options-blog-posts',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
+
+acf_add_local_field_group(array (
 	'key' => 'group_576ed9eeb1a99',
 	'title' => 'Podcast Page',
 	'fields' => array (

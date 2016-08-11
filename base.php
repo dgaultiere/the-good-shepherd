@@ -34,7 +34,11 @@ use Roots\Sage\Wrapper;
                 ?>
               </div>
             <?php endif; ?>
-		        <?php if (Config\display_sidebar()) : ?>
+		        <?php if (get_field('hide_post_sidebar','option')) : ?>
+			        <main class="main col-sm-10 col-sm-offset-1" role="main">
+			          <?php include Wrapper\template_path(); ?>
+			        </main><!-- /.main -->
+		        <?php elseif (Config\display_sidebar()) : ?>
 			        <main class="main col-sm-9" role="main">
 			          <?php include Wrapper\template_path(); ?>
 			        </main><!-- /.main -->
