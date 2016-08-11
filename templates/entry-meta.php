@@ -18,11 +18,11 @@
 			}
 		?><?php echo get_post_type(); ?>
 	</span>
-	<div class="meta-datapoint date">
-		<i class="fa fa-calendar"></i><?php the_time( get_option( 'date_format' ) ); ?>
-	</div>
 	<div class="meta-datapoint author">
 		<i class="fa fa-user"></i><?php the_author_posts_link(); ?>
+	</div>
+	<div class="meta-datapoint date">
+		<i class="fa fa-calendar"></i><?php the_time( get_option( 'date_format' ) ); ?>
 	</div>
 	<?php if(get_the_category_list()) { ?>
 		<div class="meta-datapoint category">

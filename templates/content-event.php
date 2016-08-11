@@ -2,6 +2,9 @@
   <div class="entry-content">
 	  <header>
 	    <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+    	<?php if ( get_field('event_host') ) { ?>
+    		<h4 class="entry-subtitle"><?php the_field('event_host_name'); ?></h4>
+    	<?php }; ?>
 	    <?php get_template_part('templates/entry-meta-event'); ?>
 	  </header>
 	  <div class="entry-summary">

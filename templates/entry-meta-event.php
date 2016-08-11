@@ -11,9 +11,4 @@
 	<div class="meta-datapoint location">
 		<i class="fa fa-map-marker"></i><?php the_field('event_location'); ?>
 	</div>
-	<?php if ( get_field('event_host') ) { ?>
-		<div class="meta-datapoint host">
-			<i class="fa fa-user"></i><?php the_field('event_host_name'); ?>
-		</div>
-	<?php }; ?>
 </div>

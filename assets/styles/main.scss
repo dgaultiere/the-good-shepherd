@@ -1715,6 +1715,15 @@ aside {
 		padding: 10px 0;
 		margin: 80px 0;
 	}
+
+	.entry-title {
+		margin-bottom: 5px;
+	}
+
+	.entry-subtitle {
+		margin-top: 0;
+		font-size: 16px;
+	}
 }
 
 .post-type-archive-product {
@@ -1861,6 +1870,16 @@ aside {
 		}
 	}
 
+	.entry-title {
+		margin-bottom: 5px;
+	}
+
+	.entry-subtitle {
+		margin-top: 5px;
+	}
+}
+
+.single-event {
 	.entry-title {
 		margin-bottom: 5px;
 	}
