@@ -1087,6 +1087,17 @@ textarea {
 	    letter-spacing: -0.025em;
 	  }
 
+		a {
+			color: $white;
+
+			&:hover,
+			&:active,
+			&:focus {
+				text-decoration: none;
+				box-shadow: 0 4px 0 rgba(255,255,255,0.66);
+			}
+		}
+
 	  @media (min-width: $screen-sm-min) {
 		  h1 {
 			  font-size: 36px;

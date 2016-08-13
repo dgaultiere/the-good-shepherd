@@ -30,13 +30,13 @@ function title() {
   } elseif (is_404()) {
     return __('Page Not Found', 'sage');
   } elseif ( is_singular('podcast') ) {
-    return sprintf(__('Podcast: %s', 'sage'), get_the_title());
+    return sprintf(__('<a href="/podcast">Podcast</a>: %s', 'sage'), get_the_title());
   } elseif ( is_singular('product') ) {
-    return sprintf(__('Store: %s', 'sage'), get_the_title());
+    return sprintf(__('<a href="/store">Store</a>: %s', 'sage'), get_the_title());
   } elseif ( is_singular('event') ) {
-    return sprintf(__('Event: %s', 'sage'), get_the_title());
+    return sprintf(__('<a href="/events">Events</a>: %s', 'sage'), get_the_title());
   } elseif ( is_singular('associate') ) {
-    return sprintf(__('Associate: %s', 'sage'), get_the_title());
+    return sprintf(__('<a href="/associates">Soul Shepherds</a>: %s', 'sage'), get_the_title());
   // } elseif ( is_singular(array('podcast','video','product','event','associate')) ) {
   //   return get_post_type_object(get_post_type())->labels->singular_name . ': ' . get_the_title() ;
   } else {
