@@ -1,3 +1,4 @@
+<!-- Exactly like content-single.php but without a featured image -->
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
     <header>
