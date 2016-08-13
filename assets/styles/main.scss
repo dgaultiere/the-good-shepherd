@@ -254,6 +254,12 @@ p {
 /* Ensure blog posts use serif font unless otherwise indicated */
 .entry-content.serif {
 	@include prose-body;
+
+	p,
+	ul,
+	ol {
+		@include prose-body;
+	}
 }
 
 /* Handy little class to make a quote or line of text stand out */

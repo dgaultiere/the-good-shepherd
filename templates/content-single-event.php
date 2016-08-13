@@ -22,7 +22,7 @@
         <?php }; ?>
         <div class="clearfix"></div>
       </header>
-      <div class="entry-content">
+      <div class="entry-content <?php if(the_field('text_style') !== 'sans-serif'){ ?>serif<?php }; ?>">
         <?php the_content(); ?>
       </div>
   	  <div class="clearfix"></div>
