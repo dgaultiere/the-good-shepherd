@@ -1286,10 +1286,10 @@ textarea {
 		width: auto;
 		max-width: 100%;
 		height: auto;
-		max-height: 300px;
+		max-height: 100%;
 
 		@media (min-width: $screen-sm-min) {
-			max-height: 150px;
+			max-height: 50%;
 		}
 	}
 }
@@ -1310,8 +1310,16 @@ textarea {
 			width: 30%;
 		}
 
-		@media (min-width: $screen-md-min) {
-			width: 20%;
+		@media (min-width: $screen-lg-min) {
+			width: 25%;
+		}
+
+		.wp-post-image {
+			max-height: 300px;
+
+			@media (min-width: $screen-sm-min) {
+				max-height: 175px;
+			}
 		}
 
 		a {
