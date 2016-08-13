@@ -337,6 +337,32 @@ add_filter('string_limit_words', __NAMESPACE__ . '\\string_limit_words');
  * Add custom post types
  */
 
+function change_post_object() {
+    global $wp_post_types;
+    $labels = &$wp_post_types['post']->labels;
+    $labels->name = 'Articles';
+    $labels->singular_name = 'Article';
+    $labels->add_new = 'Add Article';
+    $labels->add_new_item = 'Add New Article';
+    $labels->edit_item = 'Edit Article';
+    $labels->new_item = 'Article';
+    $labels->view_item = 'View Article';
+    $labels->search_items = 'Search Articles';
+    $labels->not_found = 'No Articles found';
+    $labels->not_found_in_trash = 'No Articles found in Trash';
+    $labels->all_items = 'All Articles';
+    $labels->menu_name = 'Articles';
+    $labels->name_admin_bar = 'Articles';
+}
+add_action( 'init', __NAMESPACE__ . '\\change_post_object' );
+
+
+
+
+/**
+ * Add custom post types
+ */
+
  add_action( 'init', __NAMESPACE__ . '\\create_post_type' );
  function create_post_type() {
    register_post_type( 'podcast',
@@ -401,6 +427,7 @@ add_filter('string_limit_words', __NAMESPACE__ . '\\string_limit_words');
        'labels' => array(
          'name' => __( 'Events' ),
          'singular_name' => __( 'Event' ),
+         'add_new' => __( 'Add Event' ),
          'add_new_item' => __( 'Add New Event' ),
          'edit_item' => __( 'Edit Event' ),
          'new_item' => __( 'New Event' ),
@@ -419,6 +446,7 @@ add_filter('string_limit_words', __NAMESPACE__ . '\\string_limit_words');
        'labels' => array(
          'name' => __( 'Associates' ),
          'singular_name' => __( 'Associate' ),
+         'add_new' => __( 'Add Associate' ),
          'add_new_item' => __( 'Add New Associate' ),
          'edit_item' => __( 'Edit Associate' ),
          'new_item' => __( 'New Associate' ),
