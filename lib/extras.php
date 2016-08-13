@@ -352,7 +352,7 @@ function change_post_object() {
     $labels->not_found_in_trash = 'No Articles found in Trash';
     $labels->all_items = 'All Articles';
     $labels->menu_name = 'Articles';
-    $labels->name_admin_bar = 'Articles';
+    $labels->name_admin_bar = 'Article';
 }
 add_action( 'init', __NAMESPACE__ . '\\change_post_object' );
 
@@ -368,14 +368,15 @@ add_action( 'init', __NAMESPACE__ . '\\change_post_object' );
    register_post_type( 'podcast',
      array(
        'labels' => array(
-         'name' => __( 'Podcasts' ),
+         'name' => __( 'Podcast' ),
          'singular_name' => __( 'Podcast' ),
-         'add_new' => __( 'Add Podcast' ),
-         'add_new_item' => __( 'Add New Podcast' ),
-         'edit_item' => __( 'Edit Podcast' ),
-         'new_item' => __( 'New Podcast' ),
-         'view_item' => __( 'View Podcast' ),
-         'search_items' => __( 'Search Podcasts' )
+         'add_new' => __( 'Add Episode' ),
+         'add_new_item' => __( 'Add New Episode' ),
+         'edit_item' => __( 'Edit Episode' ),
+         'new_item' => __( 'New Episode' ),
+         'view_item' => __( 'View Episode' ),
+         'search_items' => __( 'Search Episodes' ),
+         'all_items' => __( 'All Episodes' )
       ),
        'public' => true,
        'has_archive' => true,
@@ -394,7 +395,8 @@ add_action( 'init', __NAMESPACE__ . '\\change_post_object' );
          'edit_item' => __( 'Edit Video' ),
          'new_item' => __( 'New Video' ),
          'view_item' => __( 'View Video' ),
-         'search_items' => __( 'Search Videos' )
+         'search_items' => __( 'Search Videos' ),
+         'all_items' => __( 'All Videos' )
       ),
        'public' => true,
        'has_archive' => true,
@@ -413,7 +415,8 @@ add_action( 'init', __NAMESPACE__ . '\\change_post_object' );
          'edit_item' => __( 'Edit Product' ),
          'new_item' => __( 'New Product' ),
          'view_item' => __( 'View Product' ),
-         'search_items' => __( 'Search Products' )
+         'search_items' => __( 'Search Products' ),
+         'all_items' => __( 'All Products' )
       ),
        'public' => true,
        'has_archive' => true,
@@ -432,7 +435,8 @@ add_action( 'init', __NAMESPACE__ . '\\change_post_object' );
          'edit_item' => __( 'Edit Event' ),
          'new_item' => __( 'New Event' ),
          'view_item' => __( 'View Event' ),
-         'search_items' => __( 'Search Events' )
+         'search_items' => __( 'Search Events' ),
+         'all_items' => __( 'All Events' )
        ),
        'public' => true,
        'has_archive' => true,
@@ -451,7 +455,8 @@ add_action( 'init', __NAMESPACE__ . '\\change_post_object' );
          'edit_item' => __( 'Edit Associate' ),
          'new_item' => __( 'New Associate' ),
          'view_item' => __( 'View Associate' ),
-         'search_items' => __( 'Search Associates' )
+         'search_items' => __( 'Search Associates' ),
+         'all_items' => __( 'All Associates' )
        ),
        'public' => true,
        'has_archive' => true,
@@ -469,6 +474,7 @@ add_action( 'init', __NAMESPACE__ . '\\change_post_object' );
        'public' => true,
        'has_archive' => false,
        'menu_icon' => 'dashicons-welcome-learn-more',
+       'show_in_admin_bar' => false,
        'supports' => array('title','editor','thumbnail','excerpt','revisions','page-attributes', 'comments'),
      )
    );
