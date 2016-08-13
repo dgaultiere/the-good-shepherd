@@ -7,7 +7,7 @@ namespace Roots\Sage\Titles;
  */
 function title() {
   $post_type = get_post_type();
-  $post_type_name = get_post_type_object($post_type)->labels->singular_name;
+  $post_type_name = get_post_type_object($post_type)->labels->name;
 
   if (is_home()) {
     if (get_option('page_for_posts', true)) {
@@ -31,16 +31,7 @@ function title() {
     return sprintf(__('Search results for &ldquo;%s&rdquo;', 'sage'), get_search_query());
   } elseif (is_404()) {
     return __('Page Not Found', 'sage');
-  // } elseif ( is_singular('podcast') ) {
-  //   return sprintf(__('<a href="/podcast">Podcast</a>: %s', 'sage'), get_the_title());
-  // } elseif ( is_singular('product') ) {
-  //   return sprintf(__('<a href="/store">Store</a>: %s', 'sage'), get_the_title());
-  // } elseif ( is_singular('event') ) {
-  //   return sprintf(__('<a href="/events">Events</a>: %s', 'sage'), get_the_title());
-  // } elseif ( is_singular('associate') ) {
-  //   return sprintf(__('<a href="/associates">Soul Shepherds</a>: %s', 'sage'), get_the_title());
-  // } elseif ( is_singular(array('podcast','video','product','event','associate')) ) {
-} elseif ( is_singular() ) {
+  } elseif ( is_singular() ) {
     return '<a href="' . get_post_type_archive_link($post_type) . '">' . $post_type_name . '</a>: ' . get_the_title();
   } else {
     return get_the_title();
