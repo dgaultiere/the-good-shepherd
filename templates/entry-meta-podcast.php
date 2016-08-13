@@ -1,6 +1,6 @@
 <div class="entry-meta-container entry-meta-podcast">
 	<span class="meta-datapoint post-type">
-		<i class="fa fa-users"></i><?php echo get_post_type(); ?>
+		<i class="fa fa-microphone"></i><?php echo get_post_type(); ?>
 	</span>
 	<?php if( get_field('podcast_author') ) { ?>
 		<div class="meta-datapoint author">

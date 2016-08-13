@@ -1121,6 +1121,13 @@ textarea {
 
 		.entry-summary {
 			margin-bottom: 0;
+			@include prose-body;
+
+			p,
+			ul,
+			ol {
+				@include prose-body;
+			}
 		}
 	}
 }
@@ -1701,16 +1708,6 @@ aside {
 .blog {
 	.post-type {
 		display: none;
-	}
-
-	.entry-summary {
-		@include prose-body;
-
-		p,
-		ul,
-		ol {
-			@include prose-body;
-		}
 	}
 }
 

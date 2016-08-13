@@ -4,17 +4,17 @@
 			if ( 'post' == get_post_type() ) {
 				echo '<i class="fa fa-file-text"></i>';
 			} elseif ( 'page' == get_post_type() ) {
-				echo'<i class="fa fa-file"></i>';
+				echo '<i class="fa fa-file"></i>';
 			} elseif ( 'podcast' == get_post_type() ) {
-				echo'<i class="fa fa-microphone"></i>';
+				echo '<i class="fa fa-microphone"></i>';
 			} elseif ( 'video' == get_post_type() ) {
-				echo'<i class="fa fa-video-camera"></i>';
+				echo '<i class="fa fa-video-camera"></i>';
 			} elseif ( 'product' == get_post_type() ) {
-				echo'<i class="fa fa-shopping-cart"></i>';
+				echo '<i class="fa fa-shopping-cart"></i>';
 			} elseif ( 'event' == get_post_type() ) {
-				echo'<i class="fa fa-sun-o"></i>';
+				echo '<i class="fa fa-sun-o"></i>';
 			} elseif ( 'associate' == get_post_type() ) {
-				echo'<i class="fa fa-users"></i>';
+				echo '<i class="fa fa-users"></i>';
 			}
 		?><?php echo get_post_type(); ?>
 	</span>
