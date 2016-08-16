@@ -2,34 +2,53 @@
 
 <?php
 	$default_header_image = get_field('default_header_image','option');
-	$header_image = get_field('header_background_image');
+	$page_header_image = get_field('page_header_image');
+	$post_header_image = get_field('post_header_image');
 	$post_type = get_post_type();
 	$post_type_all_items = get_post_type_object($post_type)->labels->all_items;
 ?>
 
 <?php if ( is_home() || is_archive() ) { ?>
-	<div class="header-background"
+	<div
 		<?php if (get_field('default_header_background', 'option') == 'color') { ?>
-			style="background-color: <?php the_field('default_header_color', 'option'); ?>"
+			class="header-background" style="background-color: <?php the_field('default_header_color', 'option'); ?>"
 		<?php } elseif (get_field('default_header_background', 'option') == 'image') { ?>
-			style="background-image: url('<?php echo $default_header_image['sizes']['page-header'] ?>');"
+			class="header-background bg-image" style="background-image: url('<?php echo $default_header_image['sizes']['page-header'] ?>');"
 		<?php } else { ?>
-			style="background-color: grey;"
+			class="header-background" style="background-color: grey;"
+		<?php }; ?>
+	>
+<?php } elseif ( is_singular(array('post','event','podcast')) && !is_page() ) { ?>
+	<div
+		<?php if (get_field('post_header_background') == 'featured-image' && has_post_thumbnail()) { ?>
+			class="header-background bg-image" style="background-image: url('<?php the_post_thumbnail_url('page-header') ?>');"
+		<?php } elseif (get_field('post_header_background') == 'color') { ?>
+			class="header-background" style="background-color: <?php the_field('post_header_color'); ?>"
+		<?php } elseif (get_field('post_header_background') == 'image') { ?>
+			class="header-background bg-image" style="background-image: url('<?php echo $post_header_image['sizes']['page-header'] ?>');"
+		<?php } else { ?>
+			<?php if (get_field('default_header_background', 'option') == 'color') { ?>
+				class="header-background" style="background-color: <?php the_field('default_header_color', 'option'); ?>"
+			<?php } elseif (get_field('default_header_background', 'option') == 'image') { ?>
+				class="header-background bg-image" style="background-image: url('<?php echo $default_header_image['sizes']['page-header'] ?>');"
+			<?php } else { ?>
+				class="header-background" style="background-color: grey;"
+			<?php }; ?>
 		<?php }; ?>
 	>
 <?php } else { ?>
-	<div class="header-background"
-		<?php if (get_field('header_background_type') == 'color') { ?>
-			style="background-color: <?php the_field('header_background_color'); ?>"
-		<?php } elseif (get_field('header_background_type') == 'image') { ?>
-			style="background-image: url('<?php echo $header_image['sizes']['page-header'] ?>');"
+	<div 
+		<?php if (get_field('page_header_background') == 'color') { ?>
+			class="header-background" style="background-color: <?php the_field('page_header_color'); ?>"
+		<?php } elseif (get_field('page_header_background') == 'image') { ?>
+			class="header-background bg-image" style="background-image: url('<?php echo $page_header_image['sizes']['page-header'] ?>');"
 		<?php } else { ?>
 			<?php if (get_field('default_header_background', 'option') == 'color') { ?>
-				style="background-color: <?php the_field('default_header_color', 'option'); ?>"
+				class="header-background" style="background-color: <?php the_field('default_header_color', 'option'); ?>"
 			<?php } elseif (get_field('default_header_background', 'option') == 'image') { ?>
-				style="background-image: url('<?php echo $default_header_image['sizes']['page-header'] ?>');"
+				class="header-background bg-image" style="background-image: url('<?php echo $default_header_image['sizes']['page-header'] ?>');"
 			<?php } else { ?>
-				style="background-color: grey;"
+				class="header-background" style="background-color: grey;"
 			<?php }; ?>
 		<?php }; ?>
 	>
@@ -37,7 +56,30 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-				<div class="page-header">
+				<div class="page-header
+				<?php if(
+					// Posts and custom post types with image headers
+					(
+						is_singular(array('post','event','podcast')) && !is_page() && (
+							( get_field('post_header_background') == 'featured-image' && has_post_thumbnail() )
+							|| ( get_field('page_header_background') == 'default' && get_field('default_header_background', 'option') == 'image' )
+						)
+					)
+					// Home or archive pages using theme default image header
+					|| (
+						( is_home() || is_archive() ) && get_field('default_header_background', 'option') == 'image'
+					)
+					// Pages using custom image headers or theme default image header
+					|| (
+						is_page() && (
+							get_field('page_header_background') == 'image'
+							|| ( get_field('page_header_background') == 'default' && get_field('default_header_background', 'option') == 'image' )
+						)
+					)
+				) { ?>
+					bg-image
+				<?php } ?>
+				">
 					<?php	if(is_singular() && !is_page()) { ?>
 						<div class="post-view-all">
 							<span>&lsaquo;</span><a href="<?php echo get_post_type_archive_link($post_type) ?>"><?php echo $post_type_all_items ?></a>

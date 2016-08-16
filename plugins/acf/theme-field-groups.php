@@ -480,8 +480,8 @@ acf_add_local_field_group(array (
 	'fields' => array (
 		array (
 			'key' => 'field_556b8a22eca9b',
-			'label' => 'Header Background Type',
-			'name' => 'header_background_type',
+			'label' => 'Page Header Background',
+			'name' => 'page_header_background',
 			'type' => 'radio',
 			'instructions' => 'Use a custom background image or color on the header of this page.',
 			'required' => 1,
@@ -492,9 +492,9 @@ acf_add_local_field_group(array (
 				'id' => '',
 			),
 			'choices' => array (
-				'default' => 'Default',
-				'image' => 'Image',
-				'color' => 'Color',
+				'default' => 'Theme Default',
+				'image' => 'Custom Image',
+				'color' => 'Custom Color',
 			),
 			'other_choice' => 0,
 			'save_other_choice' => 0,
@@ -503,8 +503,8 @@ acf_add_local_field_group(array (
 		),
 		array (
 			'key' => 'field_556bc0e81ab9b',
-			'label' => 'Header Background Color',
-			'name' => 'header_background_color',
+			'label' => 'Page Header Color',
+			'name' => 'page_header_color',
 			'type' => 'color_picker',
 			'instructions' => 'Choose a color for the header background. If you\'re not sure, try one of these: <a href="https://flatuicolors.com/" target="_blank">www.flatuicolors.com</a>',
 			'required' => 1,
@@ -526,10 +526,10 @@ acf_add_local_field_group(array (
 		),
 		array (
 			'key' => 'field_55f63ea1608e8',
-			'label' => 'Header Background Image',
-			'name' => 'header_background_image',
+			'label' => 'Page Header Image',
+			'name' => 'page_header_image',
 			'type' => 'image',
-			'instructions' => 'Choose an image for the header background. Recommended 1000x300 pixels minimum.',
+			'instructions' => 'Choose an image for the header background. Wide images are recommended. Images will be cropped to 1920x280 for display.',
 			'required' => 1,
 			'conditional_logic' => array (
 				array (
@@ -548,8 +548,8 @@ acf_add_local_field_group(array (
 			'return_format' => 'object',
 			'preview_size' => 'medium',
 			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
+			'min_width' => '1920',
+			'min_height' => '280',
 			'min_size' => '',
 			'max_width' => '',
 			'max_height' => '',
@@ -584,13 +584,6 @@ acf_add_local_field_group(array (
 			array (
 				'param' => 'post_type',
 				'operator' => '==',
-				'value' => 'post',
-			),
-		),
-		array (
-			array (
-				'param' => 'post_type',
-				'operator' => '==',
 				'value' => 'page',
 			),
 			array (
@@ -602,6 +595,119 @@ acf_add_local_field_group(array (
 				'param' => 'page_type',
 				'operator' => '!=',
 				'value' => 'posts_page',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
+
+acf_add_local_field_group(array (
+	'key' => 'group_57b28f5b9fcff',
+	'title' => 'Default Post Options',
+	'fields' => array (
+		array (
+			'key' => 'field_57b28f6f708db',
+			'label' => 'Post Header Background',
+			'name' => 'post_header_background',
+			'type' => 'radio',
+			'instructions' => 'Use a custom background image or color on the header of this post.',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array (
+				'default' => 'Theme Default',
+				'featured-image' => 'Featured Image',
+				'image' => 'Custom Image',
+				'color' => 'Custom Color',
+			),
+			'other_choice' => 0,
+			'save_other_choice' => 0,
+			'default_value' => 'featured-image',
+			'layout' => 'vertical',
+		),
+		array (
+			'key' => 'field_57b29044708dc',
+			'label' => 'Post Header Color',
+			'name' => 'post_header_color',
+			'type' => 'color_picker',
+			'instructions' => 'Choose a color for the header background. If you\'re not sure, try one of these: <a href="https://flatuicolors.com/" target="_blank">www.flatuicolors.com</a>',
+			'required' => 1,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_57b28f6f708db',
+						'operator' => '==',
+						'value' => 'color',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '#9c9c9c',
+		),
+		array (
+			'key' => 'field_57b2935691524',
+			'label' => 'Post Header Image',
+			'name' => 'post_header_image',
+			'type' => 'image',
+			'instructions' => 'Choose an image for the header background. Wide images are recommended. Images will be cropped to 1920x280 for display.',
+			'required' => 1,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_57b28f6f708db',
+						'operator' => '==',
+						'value' => 'image',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'array',
+			'preview_size' => 'medium',
+			'library' => 'all',
+			'min_width' => 1920,
+			'min_height' => 280,
+			'min_size' => '',
+			'max_width' => '',
+			'max_height' => '',
+			'max_size' => '',
+			'mime_types' => '',
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'post_type',
+				'operator' => '!=',
+				'value' => 'page',
+			),
+			array (
+				'param' => 'post_type',
+				'operator' => '!=',
+				'value' => 'salt',
+			),
+			array (
+				'param' => 'post_type',
+				'operator' => '!=',
+				'value' => 'wpcf7_contact_form',
 			),
 		),
 	),
