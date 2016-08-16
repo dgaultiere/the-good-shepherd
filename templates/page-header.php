@@ -39,7 +39,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="page-header">
-					<?php	if(is_singular()) { ?>
+					<?php	if(is_singular() && !is_page()) { ?>
 						<div class="post-view-all">
 							<span>&lsaquo;</span><a href="<?php echo get_post_type_archive_link($post_type) ?>"><?php echo $post_type_all_items ?></a>
 						</div>
