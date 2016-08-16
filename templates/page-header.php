@@ -1,8 +1,11 @@
 <?php use Roots\Sage\Titles; ?>
 
 <?php
-$default_header_image = get_field('default_header_image','option');
-$header_image = get_field('header_background_image');
+	$default_header_image = get_field('default_header_image','option');
+	$header_image = get_field('header_background_image');
+	$post_type = get_post_type();
+	$post_type_name = get_post_type_object($post_type)->labels->name;
+	$post_type_all_items = get_post_type_object($post_type)->labels->all_items;
 ?>
 
 <?php if ( is_home() || is_archive() ) { ?>
@@ -36,6 +39,11 @@ $header_image = get_field('header_background_image');
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="page-header">
+					<?php	if(is_singular()) { ?>
+						<div class="post-view-all">
+							<span>&lsaquo;</span><a href="<?php echo get_post_type_archive_link($post_type) ?>"><?php echo $post_type_all_items ?></a>
+						</div>
+					<?php }; ?>
 					<h1>
 						<?= Titles\title(); ?>
 					</h1>

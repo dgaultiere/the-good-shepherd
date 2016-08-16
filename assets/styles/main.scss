@@ -1069,41 +1069,88 @@ textarea {
 
 .header-background {
 	@include background-image;
-	height: 175px;
   margin: 0 -15px 40px;
-  padding: 40px 0 25px;
+  padding: 15px 0;
 
   .page-header {
+		position: relative;
+		height: 150px;
   	color: $white;
 		text-shadow: $text-shadow-1;
 	  border-bottom: 0;
+		margin: 0;
+		padding: 0;
 
 	  h1 {
+			display: block;
+			clear: both;
 		  font-size: 24px;
-		  width: 100%;
-		  height: 80px;
-	    overflow: hidden;
-	    text-overflow: ellipsis;
+			margin: 0;
+			position: absolute;
+			bottom: 5px;
 	    letter-spacing: -0.025em;
+
+		  @media (min-width: $screen-sm-min) {
+				display: inline-block;
+				font-size: 36px;
+				letter-spacing: inherit;
+				width: calc(100% - 125px);
+			}
 	  }
 
-		a {
-			color: $white;
+		.post-view-all {
+			float: left;
+			margin-top: 0;
 
-			&:hover,
-			&:active,
-			&:focus {
-				text-decoration: none;
-				box-shadow: 0 4px 0 rgba(255,255,255,0.66);
+			@media (min-width: $screen-sm-min) {
+				float: none;
+				position: absolute;
+				bottom: 8px;
+				right: 0;
+			}
+
+			a {
+				display: inline-block;
+				width: auto;
+				color: $white;
+				border-bottom: 1px solid $white;
+				border-radius: 0;
+				box-shadow: $box-shadow-1;
+				font-size: 14px;
+				padding: 0;
+
+				&:hover,
+				&:active,
+				&:focus {
+					text-decoration: none;
+					color: $white;
+					border-bottom: 2px solid $white;
+				}
+
+				@media (min-width: $screen-sm-min) {
+					font-size: 16px;
+					border: 2px solid $white;
+					border-radius: $border-radius;
+					padding: 3px 9px 2px;
+
+					&:hover,
+					&:active,
+					&:focus {
+						text-shadow: none;
+						color: $grey-dark;
+						background-color: $white;
+					}
+				}
+			}
+
+			span {
+				margin-right: 3px;
+
+			  @media (min-width: $screen-sm-min) {
+					display: none;
+				}
 			}
 		}
-
-	  @media (min-width: $screen-sm-min) {
-		  h1 {
-			  font-size: 36px;
-				letter-spacing: inherit;
-		  }
-	  }
   }
 }
 
