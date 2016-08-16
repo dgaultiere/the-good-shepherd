@@ -6,14 +6,13 @@
   				<?php the_post_thumbnail( 'medium' ); ?>
   			</div>
   		<?php } ?>
-    </div>
-    <div class="col-sm-9">
       <header>
-        <h3><?php the_title(); ?></h3>
         <?php get_template_part('templates/entry-meta-product'); ?>
         <a class="btn btn-primary btn-product" href="<?php the_field('product_purchase_url'); ?>" target="_blank">Purchase</a>
     	  <div class="clearfix"></div>
       </header>
+    </div>
+    <div class="col-sm-9">
       <div class="entry-content <?php if(the_field('text_style') !== 'sans-serif'){ ?>serif<?php }; ?>">
         <?php the_content(); ?>
       </div>

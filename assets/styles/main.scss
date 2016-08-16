@@ -259,6 +259,7 @@ p {
 	ul,
 	ol {
 		@include prose-body;
+		text-align: justify;
 	}
 }
 
@@ -1065,6 +1066,10 @@ textarea {
 	.navbar-fixed-top {
 		border-bottom: none;
 	}
+}
+
+.entry-content :first-child {
+	margin-top: 0;
 }
 
 .header-background {
@@ -1885,11 +1890,15 @@ aside {
 	.post-type {
 		display: none;
 	}
+
+	.main {
+		header {
+			margin-bottom: 40px;
+		}
+	}
 }
 
-.single-product,
-.single-event,
-.single-associate {
+.single-product {
 	.featured-image {
 		width: 100%;
 		margin-bottom: 15px;
@@ -1920,7 +1929,6 @@ aside {
 
 	.main {
 		header {
-			margin-bottom: 40px;
 			text-align: center;
 
 			@media (min-width: $screen-sm-min) {
@@ -1937,6 +1945,7 @@ aside {
 		}
 
 		.meta-datapoint {
+			display: block;
 			font-size: 16px;
 		}
 
@@ -1945,10 +1954,15 @@ aside {
 		}
 
 		.price {
-			margin-top: -10px;
 			font-size: 24px;
+			margin-top: -8px;
 			float: right;
 			margin-right: 0;
+
+			@media (min-width: $screen-sm-min) {
+				margin-top: 0;
+				float: none;
+			}
 
 			i {
 				font-size: 16px;
@@ -1957,8 +1971,7 @@ aside {
 		}
 	}
 
-	.btn-product,
-	.btn-event {
+	.btn-product {
 		display: block;
 		margin-top: 15px;
 
@@ -1971,8 +1984,35 @@ aside {
 
 .single-associate {
 	.featured-image {
+		width: 100%;
+		margin-bottom: 15px;
+		border-radius: $border-radius;
+
+		@media (min-width: $screen-sm-min) {
+			float: right;
+			width: 240px;
+			max-width: 100%;
+			margin-left: 25px;
+			margin-right: 0;
+		}
+
 		.wp-post-image {
 			border-radius: 50%;
+			width: auto;
+			min-width: 250px;
+			max-width: 100%;
+			height: auto;
+			max-height: 400px;
+			display: block;
+			margin: 0 auto;
+
+			@media (min-width: $screen-sm-min) {
+				margin: 0;
+			}
+
+			@media (min-width: $screen-sm-min) {
+				min-width: 150px;
+			}
 		}
 	}
 

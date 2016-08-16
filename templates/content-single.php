@@ -1,9 +1,11 @@
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
     <header>
-      <?php if ( is_singular('event') && get_field('event_host') ) { ?>
-        <h4 class="entry-subtitle"><?php the_field('event_host_name'); ?></h4>
-      <?php }; ?>
+        <?php if ( is_singular('event') && get_field('event_host') ) { ?>
+          <h4 class="entry-subtitle"><?php the_field('event_host_name'); ?></h4>
+        <?php } elseif ( is_singular('associate') ) { ?>
+          <h4 class="entry-subtitle"><?php the_field('associate_title'); ?></h4>
+        <?php }; ?>
       <?php get_template_part('templates/entry-meta', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
       <?php
         date_default_timezone_set('America/Los_Angeles');
@@ -24,6 +26,8 @@
     <footer>
       <?php get_template_part('templates/share-buttons'); ?>
     </footer>
-    <?php comments_template('/templates/comments.php'); ?>
+    <?php if ( !is_singular('associate') ) { ?>
+      <?php comments_template('/templates/comments.php'); ?>
+    <?php } ?>
   </article>
 <?php endwhile; ?>
