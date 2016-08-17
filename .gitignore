@@ -18,3 +18,7 @@ ehthumbs.db
 node_modules
 npm-debug.log
 vendor
+
+# ACF JSON #
+############
+acf-json
