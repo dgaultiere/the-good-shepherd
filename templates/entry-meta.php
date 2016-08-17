@@ -1,6 +1,9 @@
 <div class="entry-meta-container">
 	<span class="meta-datapoint post-type">
 		<?php
+			$post_type = get_post_type();
+			$post_type_name = get_post_type_object($post_type)->labels->singular_name;
+
 			if ( 'post' == get_post_type() ) {
 				echo '<i class="fa fa-file-text"></i>';
 			} elseif ( 'page' == get_post_type() ) {
@@ -16,7 +19,7 @@
 			} elseif ( 'associate' == get_post_type() ) {
 				echo '<i class="fa fa-users"></i>';
 			}
-		?><?php echo get_post_type(); ?>
+		?><?php echo $post_type_name; ?>
 	</span>
 	<div class="meta-datapoint author">
 		<i class="fa fa-user"></i><?php the_author_posts_link(); ?>
