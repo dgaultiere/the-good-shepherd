@@ -15,6 +15,8 @@
 	    <?php the_excerpt(); ?>
 	    <?php if(get_field('site_language', 'option') == "es-mx") { ?>
 			  	<div class="read-more-link"><a href="<?php the_permalink(); ?>">Lee Mas</a></div>
+			<?php } elseif(in_category('audio')) { ?>
+			  	<div class="read-more-link"><a href="<?php the_permalink(); ?>">Listen Now</a></div>
 			<?php } else { ?>
 			  	<div class="read-more-link"><a href="<?php the_permalink(); ?>">Read More</a></div>
 			<?php } ?>
