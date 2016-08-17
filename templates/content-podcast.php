@@ -14,9 +14,9 @@
 			<?php } ?>
 	    <?php the_excerpt(); ?>
 	    <?php if(get_field('site_language', 'option') == "es-mx") { ?>
-			  	<div class="read-more-link"><a href="<?php the_permalink(); ?>">Ver Episodio</a></div>
+			  	<div class="read-more-link"><a href="<?php the_permalink(); ?>">Escucha ahora</a></div>
 			<?php } else { ?>
-			  	<div class="read-more-link"><a href="<?php the_permalink(); ?>">View Episode</a></div>
+			  	<div class="read-more-link"><a href="<?php the_permalink(); ?>">Listen Now</a></div>
 			<?php } ?>
 	  </div>
 	  <div class="clearfix"></div>

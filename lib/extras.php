@@ -370,13 +370,13 @@ add_action( 'init', __NAMESPACE__ . '\\change_post_object' );
        'labels' => array(
          'name' => __( 'Podcast' ),
          'singular_name' => __( 'Podcast' ),
-         'add_new' => __( 'Add Episode' ),
-         'add_new_item' => __( 'Add New Episode' ),
-         'edit_item' => __( 'Edit Episode' ),
-         'new_item' => __( 'New Episode' ),
-         'view_item' => __( 'View Episode' ),
-         'search_items' => __( 'Search Episodes' ),
-         'all_items' => __( 'All Episodes' )
+         'add_new' => __( 'Add Podcast' ),
+         'add_new_item' => __( 'Add New Podcast' ),
+         'edit_item' => __( 'Edit Podcast' ),
+         'new_item' => __( 'New Podcast' ),
+         'view_item' => __( 'View Podcast' ),
+         'search_items' => __( 'Search Podcasts' ),
+         'all_items' => __( 'All Podcasts' )
       ),
        'public' => true,
        'has_archive' => true,
