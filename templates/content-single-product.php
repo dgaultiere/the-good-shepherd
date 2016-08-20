@@ -7,9 +7,10 @@
   			</div>
   		<?php } ?>
       <header>
+        <h4 class="entry-subtitle"><?php the_field('product_author'); ?></h4>
         <?php get_template_part('templates/entry-meta-product'); ?>
+        <div class="clearfix"></div>
         <a class="btn btn-primary btn-product" href="<?php the_field('product_purchase_url'); ?>" target="_blank">Purchase</a>
-    	  <div class="clearfix"></div>
       </header>
     </div>
     <div class="col-sm-9">
