@@ -2085,14 +2085,18 @@ aside {
 		margin-top: 5px;
 	}
 
-	.btn {
-		display: block;
-		margin: 8px 0;
-		padding: 6px 16px;
+	.main {
+		header {
+			.btn {
+				display: block;
+				margin: 8px 0;
+				padding: 6px 16px;
 
-		@media (min-width: 440px) {
-			display: inline-block;
-			float: right;
+				@media (min-width: 440px) {
+					display: inline-block;
+					float: right;
+				}
+			}
 		}
 	}
 }

@@ -17,6 +17,7 @@
 	  <div class="clearfix"></div>
     <footer>
       <?php get_template_part('templates/share-buttons'); ?>
+      <?php get_template_part('templates/subscribe-form'); ?>
     </footer>
     <?php if ( !is_singular('associate') ) { ?>
       <?php comments_template('/templates/comments.php'); ?>

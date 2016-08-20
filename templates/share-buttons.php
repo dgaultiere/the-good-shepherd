@@ -1,4 +1,4 @@
-<?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
+<!-- <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?> -->
 <?php if(get_field('enable_post_share', 'option')) { ?>
   <div class="social-share-container">
     <h3><?php the_field('post_share_title', 'option'); ?></h3>
