@@ -1481,15 +1481,6 @@ aside {
 	display: none;
 
 	@media (min-width: $screen-sm-min) {
-		// opacity: 0;
-		// position: fixed;
-		// top: 100px;
-		// left: 0;
-		// right: 0;
-		// margin: 0 auto;
-		// width: 100%;
-		// max-width: 730px;
-		// @include transition(all 0.2s);
 		display: block;
 		position: absolute;
 		top: 430px;
@@ -1500,7 +1491,6 @@ aside {
 		max-width: 730px;
 
 		&.share-float {
-			// opacity: 1;
 			position: fixed;
 			top: 100px;
 		}
@@ -1547,15 +1537,23 @@ aside {
 
 @media (min-width: $screen-sm-min) {
 	body.admin-bar {
-		.floating-share-buttons {
-			top: calc(140px + 32px) !important;
+		.bg-image {
+			.floating-share-buttons {
+				&.share-float {
+					top: calc(200px + 32px) !important;
+				}
+			}
 		}
 	}
 
 	@media (max-width: 782px) {
 		body.admin-bar {
-			.floating-share-buttons {
-				top: calc(140px + 46px) !important;
+			.bg-image {
+				.floating-share-buttons {
+					&.share-float {
+						top: calc(200px + 46px) !important;
+					}
+				}
 			}
 		}
 	}
