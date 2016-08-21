@@ -28,7 +28,9 @@
     </div>
 	  <div class="clearfix"></div>
     <footer>
-      <?php get_template_part('templates/share-buttons'); ?>
+      <div class="bottom-share-buttons">
+        <?php get_template_part('templates/share-buttons'); ?>
+      </div>
     </footer>
     <?php comments_template('/templates/comments.php'); ?>
   </article>

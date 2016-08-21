@@ -37,7 +37,7 @@
 		<?php }; ?>
 	>
 <?php } else { ?>
-	<div 
+	<div
 		<?php if (get_field('page_header_background') == 'color') { ?>
 			class="header-background" style="background-color: <?php the_field('page_header_color'); ?>"
 		<?php } elseif (get_field('page_header_background') == 'image') { ?>
@@ -92,4 +92,9 @@
 			</div>
 		</div>
 	</div>
+	<?php if ( is_singular(array('post','podcast','video','event','associate')) ) { ?>
+		<div class="floating-share-buttons">
+			<?php get_template_part('templates/share-buttons'); ?>
+		</div>
+	<?php }; ?>
 </div>

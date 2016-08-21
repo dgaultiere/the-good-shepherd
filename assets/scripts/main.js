@@ -35,7 +35,7 @@
 
         // Floating share buttons
 				$(window).scroll(function() {
-					if ( ($(document).scrollTop() > 500) && ($(document).scrollTop() < ($(document).height() - 1000)) ) {
+					if ( ($(document).scrollTop() > 330) && ($(document).scrollTop() < $(document).height() - 1000 ) ) {
 						$('.floating-share-buttons').addClass('share-float');
 					} else {
 						$('.floating-share-buttons').removeClass('share-float');

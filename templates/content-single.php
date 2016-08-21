@@ -6,9 +6,6 @@
       <?php }; ?>
       <?php get_template_part('templates/entry-meta', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
     </header>
-    <div class="floating-share-buttons">
-      <?php get_template_part('templates/share-buttons'); ?>
-    </div>
 	  <?php if ( has_post_thumbnail() && get_field('post_header_background') != 'featured-image' && !is_singular('video') ) { ?>
 			<div class="featured-image">
 				<?php the_post_thumbnail( 'medium' ); ?>
@@ -19,10 +16,11 @@
     </div>
 	  <div class="clearfix"></div>
     <footer>
+      <div class="bottom-share-buttons">
+        <?php get_template_part('templates/share-buttons'); ?>
+      </div>
       <?php if ( is_singular(array('post','podcast')) ) { ?>
         <?php get_template_part('templates/subscribe-form'); ?>
-      <?php } else { ?>
-        <?php get_template_part('templates/share-buttons'); ?>
       <?php }; ?>
     </footer>
     <?php if ( !is_singular('associate') ) { ?>
