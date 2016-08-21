@@ -1,4 +1,3 @@
-<!-- <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?> -->
 <?php if(get_field('enable_post_share', 'option')) { ?>
   <div class="social-share-container">
     <h3><?php the_field('post_share_title', 'option'); ?></h3>
@@ -14,6 +13,13 @@
         <li>
           <a href="https://twitter.com/intent/tweet?text=<?php echo get_permalink($post->ID); ?>" target="_blank" class="twitter-icon">
             <i class="fa fa-twitter"></i>
+          </a>
+        </li>
+      <?php }; ?>
+      <?php if ( in_array( 'pinterest', get_field('post_share_buttons', 'option') ) ) { ?>
+        <li>
+          <a href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID); ?>" target="_blank" class="pinterest-icon">
+            <i class="fa fa-pinterest"></i>
           </a>
         </li>
       <?php }; ?>

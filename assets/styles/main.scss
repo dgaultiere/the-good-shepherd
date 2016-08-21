@@ -1550,6 +1550,22 @@ aside {
 			}
 		}
 
+		.pinterest-icon {
+			.fa {
+				color: #cb2027;
+			}
+
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: #cb2027;
+
+				.fa {
+					color: $white;
+				}
+			}
+		}
+
 		.email-icon {
 			.fa {
 				color: #1abc9c;
@@ -1575,8 +1591,6 @@ aside {
 
 .comments {
 	margin-top: 50px;
-	border-top: $border-grey-2px;
-	padding-top: 25px;
 	font-size: 14px;
 	font-family: $font-bernino;
 
@@ -1912,6 +1926,17 @@ aside {
 				margin: 4px 0 0;
 				clear: none;
 			}
+		}
+	}
+
+	.subscribe-form {
+		background: $grey-lighter;
+		padding: 14px 22px;
+		margin-top: 15px;
+		border-radius: $border-radius;
+
+		.button {
+			background: $white;
 		}
 	}
 }
@@ -2458,72 +2483,99 @@ iframe[src*="simplecast.com"] {
 			text-align: center;
 		}
 
-		.mc-field-group {
-			margin-bottom: 15px;
-		}
-
-		input {
-			float: left;
-			outline: none;
-			height: 36px;
-			padding: 6px 12px;
-			font-size: 16px;
-			margin-right: 10px;
-			@include transition(color 0.2s, background 0.2s, background-color 0.2s, border-color 0.2s);
-		}
-
 		.email {
-			width: 100%;
-			margin-bottom: 10px;
-
 			@media (min-width: $screen-sm-min) {
 				max-width: 520px;
 			}
 		}
 
-		.button {
-			// @extend .btn;
-			// @extend .btn-primary;
-			width: 100%;
-			margin-right: 0;
-
-			@media (min-width: $screen-sm-min) {
-				width: auto;
-			}
-		}
-
 		.alert {
-			padding: 10px;
-			font-size: 14px;
-			max-width: 720px;
-		}
-
-		.clear {
-			clear: both;
+			max-width: 630px;
 		}
 
 		#mc_embed_signup {
-			display: block;
-			width: 640px;
-			max-width: 100%;
-			margin: 0 auto;
+			width: 630px;
+		}
+	}
+}
 
-			div.mce_inline_error {
-				padding: 10px;
-				font-size: 14px;
-				max-width: 720px;
-				border-radius: $border-radius;
-				border: 1px solid #ebccd1;
-				background-color: #f2dede;
-				color: #a94442;
-				margin-top: 15px;
-				margin-bottom: 20px;
-				font-weight: 400;
-			}
+.subscribe-form {
+	h5 {
+		margin: 10px 0 15px;
+		text-align: center;
+	}
 
-			input.mce_inline_error {
-				border-color: #ebccd1;
-			}
+	.mc-field-group {
+		margin-bottom: 15px;
+	}
+
+	input {
+		float: left;
+		outline: none;
+		height: 36px;
+		padding: 6px 12px;
+		font-size: 16px;
+		margin-right: 10px;
+		@include transition(color 0.2s, background 0.2s, background-color 0.2s, border-color 0.2s);
+	}
+
+	.email {
+		width: 100%;
+		margin-bottom: 10px;
+
+		@media (min-width: $screen-sm-min) {
+			max-width: 280px;
+		}
+	}
+
+	.button {
+		// @extend .btn;
+		// @extend .btn-primary;
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 10px;
+
+		@media (min-width: $screen-sm-min) {
+			width: auto;
+		}
+	}
+
+	.clear {
+		clear: both;
+	}
+
+	#mc_embed_signup {
+		display: block;
+		width: 390px;
+		max-width: 100%;
+		margin: 0 auto;
+
+		.alert,
+		div.mce_inline_error,
+		div#mce-success-response,
+		div#mce-error-response {
+			padding: 10px;
+			font-size: 14px;
+			max-width: 630px;
+			border-radius: $border-radius;
+			border-width: 1px;
+			border-style: solid;
+			margin-top: 5px;
+			font-weight: 400;
+			clear: both;
+		}
+
+		div.mce_inline_error,
+		div#mce-error-response {
+			@extend .alert-danger;
+		}
+
+		div#mce-success-response {
+			@extend .alert-success;
+		}
+
+		input.mce_inline_error {
+			border-color: #ebccd1;
 		}
 	}
 }

@@ -16,8 +16,11 @@
     </div>
 	  <div class="clearfix"></div>
     <footer>
-      <?php get_template_part('templates/share-buttons'); ?>
-      <?php get_template_part('templates/subscribe-form'); ?>
+      <?php if ( is_singular(array('post','podcast')) ) { ?>
+        <?php get_template_part('templates/subscribe-form'); ?>
+      <?php } else { ?>
+        <?php get_template_part('templates/share-buttons'); ?>
+      <?php }; ?>
     </footer>
     <?php if ( !is_singular('associate') ) { ?>
       <?php comments_template('/templates/comments.php'); ?>

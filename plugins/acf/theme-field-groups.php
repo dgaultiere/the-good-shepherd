@@ -1820,6 +1820,46 @@ acf_add_local_field_group(array (
 ));
 
 acf_add_local_field_group(array (
+	'key' => 'group_57b9350176ee7',
+	'title' => 'Post Layout',
+	'fields' => array (
+		array (
+			'key' => 'field_57b93505cb1a3',
+			'label' => 'Hide Post Sidebar',
+			'name' => 'hide_post_sidebar',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => 'Hide the sidebar on individual posts',
+			'default_value' => 1,
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'acf-options-blog-posts',
+			),
+		),
+	),
+	'menu_order' => 1,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
+
+acf_add_local_field_group(array (
 	'key' => 'group_560e09fb0bdc7',
 	'title' => 'Post Share Buttons',
 	'fields' => array (
@@ -1892,6 +1932,7 @@ acf_add_local_field_group(array (
 			'choices' => array (
 				'facebook' => 'Facebook',
 				'twitter' => 'Twitter',
+				'pinterest' => 'Pinterest',
 				'email' => 'Email',
 			),
 			'default_value' => array (
@@ -1905,7 +1946,134 @@ acf_add_local_field_group(array (
 			array (
 				'param' => 'options_page',
 				'operator' => '==',
-				'value' => 'theme-general-settings',
+				'value' => 'acf-options-blog-posts',
+			),
+		),
+	),
+	'menu_order' => 2,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
+
+acf_add_local_field_group(array (
+	'key' => 'group_57ac1503553bf',
+	'title' => 'Subscribe Form',
+	'fields' => array (
+		array (
+			'key' => 'field_57b8d0ac84a78',
+			'label' => 'Show Subscribe Form',
+			'name' => 'show_subscribe_form',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => 'Show an email subscription form at the bottom of posts',
+			'default_value' => 1,
+		),
+		array (
+			'key' => 'field_57b8d0ff84a79',
+			'label' => 'Subscribe Form Title',
+			'name' => 'subscribe_form_title',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_57b8d0ac84a78',
+						'operator' => '==',
+						'value' => '1',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => 'Subscribe',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+			'readonly' => 0,
+			'disabled' => 0,
+		),
+		array (
+			'key' => 'field_57b8d13a84a7a',
+			'label' => 'Subscribe Form Description',
+			'name' => 'subscribe_form_description',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_57b8d0ac84a78',
+						'operator' => '==',
+						'value' => '1',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+			'readonly' => 0,
+			'disabled' => 0,
+		),
+		array (
+			'key' => 'field_57b8d15984a7b',
+			'label' => 'Subscribe Form Code',
+			'name' => 'subscribe_form_code',
+			'type' => 'textarea',
+			'instructions' => 'Paste the code for your mailing list signup form. This should be available from your provider (e.g. MailChimp).',
+			'required' => 1,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_57b8d0ac84a78',
+						'operator' => '==',
+						'value' => '1',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'maxlength' => '',
+			'rows' => '',
+			'new_lines' => '',
+			'readonly' => 0,
+			'disabled' => 0,
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'acf-options-blog-posts',
 			),
 		),
 	),
@@ -1918,8 +2086,6 @@ acf_add_local_field_group(array (
 	'active' => 1,
 	'description' => '',
 ));
-
-// New field groups below
 
 acf_add_local_field_group(array (
 	'key' => 'group_576ed056a2427',
@@ -2328,46 +2494,6 @@ mailto:your-email@address.com',
 				'param' => 'post_type',
 				'operator' => '==',
 				'value' => 'event',
-			),
-		),
-	),
-	'menu_order' => 0,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => 1,
-	'description' => '',
-));
-
-acf_add_local_field_group(array (
-	'key' => 'group_57ac1503553bf',
-	'title' => 'Posts',
-	'fields' => array (
-		array (
-			'key' => 'field_57ac15095e897',
-			'label' => 'Hide Post Sidebar',
-			'name' => 'hide_post_sidebar',
-			'type' => 'true_false',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => 'Hide the sidebar on individual posts',
-			'default_value' => 0,
-		),
-	),
-	'location' => array (
-		array (
-			array (
-				'param' => 'options_page',
-				'operator' => '==',
-				'value' => 'acf-options-blog-posts',
 			),
 		),
 	),
