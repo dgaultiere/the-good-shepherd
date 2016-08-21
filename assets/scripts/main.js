@@ -23,7 +23,7 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
-      
+
 	      // Navbar shrink
 				$(window).scroll(function() {
 					if ($(document).scrollTop() > 38) {
@@ -32,7 +32,16 @@
 						$('.navbar').removeClass('navbar-shrink');
 					}
 				});
-				
+
+        // Floating share buttons
+				$(window).scroll(function() {
+					if ( ($(document).scrollTop() > 500) && ($(document).scrollTop() < ($(document).height() - 1000)) ) {
+						$('.floating-share-buttons').addClass('share-float');
+					} else {
+						$('.floating-share-buttons').removeClass('share-float');
+					}
+				});
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -42,7 +51,7 @@
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
-			
+
 				// Smooth scroll to div
 				$(function() {
 					$('a[href*=#]:not([href=#])').click(function() {
@@ -65,7 +74,7 @@
 						}
 					});
 				});
-				
+
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS

@@ -1,6 +1,6 @@
 <?php if(get_field('enable_post_share', 'option')) { ?>
   <div class="social-share-container">
-    <h3><?php the_field('post_share_title', 'option'); ?></h3>
+    <h4><?php the_field('post_share_title', 'option'); ?></h4>
     <ul>
       <?php if ( in_array( 'facebook', get_field('post_share_buttons', 'option') ) ) { ?>
         <li>

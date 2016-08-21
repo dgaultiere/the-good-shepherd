@@ -6,6 +6,9 @@
       <?php }; ?>
       <?php get_template_part('templates/entry-meta', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
     </header>
+    <div class="floating-share-buttons">
+      <?php get_template_part('templates/share-buttons'); ?>
+    </div>
 	  <?php if ( has_post_thumbnail() && get_field('post_header_background') != 'featured-image' && !is_singular('video') ) { ?>
 			<div class="featured-image">
 				<?php the_post_thumbnail( 'medium' ); ?>
