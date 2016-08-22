@@ -882,7 +882,7 @@ acf_add_local_field_group(array (
 
 acf_add_local_field_group(array (
 	'key' => 'group_55c6c12d0d232',
-	'title' => 'Homepage',
+	'title' => 'Homepage 2',
 	'fields' => array (
 		array (
 			'key' => 'field_553f0c213cc48',
@@ -1221,7 +1221,7 @@ acf_add_local_field_group(array (
 			array (
 				'param' => 'page_template',
 				'operator' => '==',
-				'value' => 'template-home.php',
+				'value' => 'template-home-2.php',
 			),
 		),
 	),

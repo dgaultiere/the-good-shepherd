@@ -10,12 +10,14 @@
       <span>&nbsp;</span>
     </div>
   </a>
-  <h3 class="entry-title below">
+  <h4 class="entry-title below">
     <a href="<?php the_permalink(); ?>">
       <?php the_title(); ?>
     </a>
-  </h3>
+  </h4>
   <div class="entry-summary">
-    <?php echo Roots\Sage\Extras\string_limit_words($excerpt,25); ?>
+    <p>
+      <?php echo Roots\Sage\Extras\string_limit_words($excerpt,25); ?>
+    </p>
   </div>
 </article>

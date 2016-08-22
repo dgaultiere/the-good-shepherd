@@ -891,33 +891,20 @@ textarea {
 /** Post Snippets **/
 
 .snippet {
+	margin-bottom: 50px;
+
 	.entry-title {
 		text-align: center;
 		margin: 0 auto;
-	}
-
-	.entry-title.over {
-		color: $white;
-		max-height: 50px;
-		text-shadow: $text-shadow-1;
-		text-overflow: ellipsis;
-		-webkit-font-smoothing: subpixel-antialiased
-	}
-
-	.entry-title.below {
 		font-size: 16px;
 		margin-bottom: 15px;
 		color: $grey-darker;
 		text-decoration: none;
-
-		&:hover,
-		&:active,
-		&:focus {
-			text-decoration: none;
-		}
 	}
 
 	.entry-meta-container {
+		clear: none;
+
 		.post-type {
 			display: none;
 		}
@@ -929,11 +916,6 @@ textarea {
 
 	.entry-summary {
 		margin-top: 15px;
-		margin-bottom: 50px;
-
-		@media (min-width: $screen-sm-min) {
-			margin-bottom: 30px;
-		}
 
 		p {
 			@include prose-body;
@@ -968,6 +950,37 @@ textarea {
 	}
 }
 
+.snippet-full {
+	.entry-title {
+		text-align: left;
+		font-size: 20px;
+		margin-bottom: 5px;
+	}
+
+	.snippet-thumbnail {
+		padding: 25%;
+	}
+}
+
+.snippet-side {
+	.entry-title {
+		text-align: left;
+		font-size: 20px;
+		margin-bottom: 5px;
+	}
+
+	.snippet-thumbnail {
+		margin-bottom: 10px;
+		padding: 25%;
+
+		@media (min-width: $screen-sm-min) {
+			float: left;
+			width: 38%;
+			margin-right: 15px;
+			padding: 11% 15%;
+		}
+	}
+}
 
 
 /** Entry Template **/
@@ -2245,11 +2258,11 @@ iframe[src*="simplecast.com"] {
 
 
 /* ==========================================================================
-   Homepage Template
+   Homepage Templates
    ========================================================================== */
 
-.home,
-.page-template-template-home {
+.page-template-template-home,
+.page-template-template-home-2 {
 	.navbar-fixed-top {
 		border-bottom: none;
 	}
@@ -2306,11 +2319,79 @@ iframe[src*="simplecast.com"] {
 		}
 	}
 
+	.entry-summary {
+		p {
+			font-size: 17px;
+		}
+	}
+
 	img {
 		display: block;
 		width: 100%;
 		height: auto;
 		padding: 0;
+	}
+
+	&.text-white {
+		.title,
+		.subtitle,
+		.down-arrow,
+		h1,h2,h3,h4,h5,h6,
+		a {
+			color: $white;
+		}
+
+		.btn {
+			border-color: $white;
+
+			&:active,
+			&:hover,
+			&:focus {
+				color: initial !important;
+				background: $white;
+			}
+		}
+
+		.down-arrow {
+			text-shadow: $text-shadow-1;
+
+			&:active,
+			&:hover,
+			&:focus {
+				color: $grey-light;
+			}
+		}
+	}
+
+	&.text-black {
+		.title,
+		.subtitle,
+		.down-arrow,
+		h1,h2,h3,h4,h5,h6,
+		a {
+			color: $grey-darker;
+		}
+
+		.btn {
+			color: $grey-darker;
+			border-color: $grey-darker;
+
+			&:active,
+			&:hover,
+			&:focus {
+				color: initial !important;
+			}
+		}
+
+		.down-arrow {
+			text-shadow: $text-shadow-1;
+
+			&:active,
+			&:hover,
+			&:focus {
+				color: $grey-dark;
+			}
+		}
 	}
 }
 
@@ -2346,42 +2427,6 @@ iframe[src*="simplecast.com"] {
 		border-bottom: none;
 	}
 
-	&.text-white {
-		.title,
-		.subtitle,
-		.down-arrow {
-			color: $white;
-		}
-
-		.down-arrow {
-			text-shadow: $text-shadow-1;
-
-			&:active,
-			&:hover,
-			&:focus {
-				color: $grey-light;
-			}
-		}
-	}
-
-	&.text-black {
-		.title,
-		.subtitle,
-		.down-arrow {
-			color: $grey-darker;
-		}
-
-		.down-arrow {
-			text-shadow: $text-shadow-1;
-
-			&:active,
-			&:hover,
-			&:focus {
-				color: $grey-dark;
-			}
-		}
-	}
-
 	@media (min-width: $screen-sm-min) {
 		height: 500px;
 		padding-top: 180px;
@@ -2409,6 +2454,81 @@ iframe[src*="simplecast.com"] {
 		padding-top: 60px;
 	}
 }
+
+/* Homepage 1 */
+
+.page-template-template-home {
+	.section {
+		.title {
+			font-size: 28px;
+			padding-bottom: 10px;
+		}
+	}
+}
+
+#quote {
+	text-align: center;
+
+	.quote-credit {
+		opacity: .75;
+	}
+}
+
+#our-ministry {
+	#about-us,
+	#tlc {
+		margin-bottom: 50px;
+
+		img {
+			max-height: 250px;
+			margin-bottom: 10px;
+
+			@media (min-width: $screen-sm-min) {
+				float: left;
+				width: 38%;
+				margin-right: 15px;
+			}
+		}
+	}
+}
+
+#featured-link {
+	text-align: center;
+
+	h2 {
+		line-height: 1.45;
+	}
+
+	.btn {
+		margin-top: 30px;
+
+		.fa {
+			margin-left: 5px;
+		}
+	}
+}
+
+#featured-product {
+	img {
+		float: left;
+		width: auto;
+		height: 250px;
+		margin-right: 25px;
+	}
+
+	.entry-summary {
+		p {
+			font-size: 19px;
+		}
+	}
+
+	.btn {
+		float: right;
+	}
+}
+
+
+/* Homepage 2 */
 
 #about {
 	img {
