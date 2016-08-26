@@ -216,7 +216,7 @@
 						<?php
 							$featured_link_image = get_field('featured_link_image');
 							if( $featured_link_image ) {
-								echo wp_get_attachment_image( $featured_link_image, 'full-size');
+								echo wp_get_attachment_image( $featured_link_image, 'large');
 							}
 						?>
 					</a>
