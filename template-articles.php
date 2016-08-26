@@ -40,27 +40,7 @@
 	</div>
 </div>
 <div class="article-recent">
-	<!-- <h3><?php the_field('articles_recent_title'); ?></h3>
-	<div class="row grid">
-	  <?php
-			$args = array(
-				'posts_per_page' => '4'
-			);
-			// the query
-			$the_query = new WP_Query( $args );
-			if ( $the_query->have_posts() ) :
-				// the loop
-				while ( $the_query->have_posts() ) : $the_query->the_post();
-		?>
-	    <div class="col-sm-3 grid-item">
-	      <?php get_template_part('templates/content-snippet-post'); ?>
-	    </div>
-		<?php
-			endwhile;// end of the loop
-				wp_reset_postdata();
-			else :
-				_e( 'Whoops, something went wrong. Please try again later.' );
-			endif;
-		?> -->
-	</div>
+	<a href="<?php echo get_permalink( get_option('page_for_posts' ) ); ?>" class="btn btn-primary">
+		<?php the_field('articles_recent_title'); ?> <i class="fa fa-angle-right"></i>
+	</a>
 </div>

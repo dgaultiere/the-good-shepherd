@@ -2594,7 +2594,7 @@ iframe[src*="simplecast.com"] {
 
 
 /* ==========================================================================
-   Articles Page Template
+   Search Articles Page Template
    ========================================================================== */
 
 .page-template-template-articles {
@@ -2604,6 +2604,10 @@ iframe[src*="simplecast.com"] {
 
 	.grid {
 		margin-top: 25px;
+	}
+
+	.snippet {
+		margin-bottom: 25px;
 	}
 }
 
@@ -2628,10 +2632,15 @@ iframe[src*="simplecast.com"] {
 	}
 }
 
-.article-recent {
+.article-categories {
 	h3 {
-		margin-top: 0;
+		margin-top: 10px;
 	}
+}
+
+.article-recent {
+	margin-top: 80px;
+	text-align: center;
 }
 
 

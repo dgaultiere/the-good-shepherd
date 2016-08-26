@@ -10,6 +10,6 @@
     </a>
   </h3>
   <div class="entry-summary">
-  <?php the_sub_field('articles_index_desc'); ?>
+    <p><?php the_sub_field('articles_index_desc'); ?></p>
   </div>
 </article>

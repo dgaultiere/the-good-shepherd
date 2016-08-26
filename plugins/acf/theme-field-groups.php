@@ -298,6 +298,27 @@ acf_add_local_field_group(array (
 				),
 			),
 		),
+		array (
+			'key' => 'field_561ab0093385b123',
+			'label' => 'Recent Articles Link Title',
+			'name' => 'articles_recent_title',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => 'Browse Recent Articles',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+			'readonly' => 0,
+			'disabled' => 0,
+		),
 	),
 	'location' => array (
 		array (
