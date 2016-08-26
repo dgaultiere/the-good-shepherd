@@ -13,11 +13,14 @@
 
 <div class="row">
   <?php
+    $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
     $args = array(
       'post_type' => 'video',
       'meta_key' => 'video_date',
       'orderby' => 'meta_value_num',
-      'order' => 'DESC'
+      'order' => 'DESC',
+      'posts_per_page' => 10,
+      'paged' => $paged
     );
     // the query
     $the_query = new WP_Query( $args );
