@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Find An Article
+ * Template Name: Search Articles
  */
 ?>
 
@@ -19,6 +19,16 @@
 		<?php wp_tag_cloud( 'number=80' ); ?>
 	</div>
 </div>
+<div class="article-indexes">
+	<h3><?php the_field('articles_indexes_title'); ?></h3>
+	<div class="row grid">
+		<?php while( have_rows('articles_indexes') ): the_row(); ?>
+			<div class="col-sm-3 grid-item">
+	      <?php get_template_part('templates/content-snippet-index'); ?>
+			</div>
+			<?php endwhile; ?>
+	</div>
+</div>
 <div class="article-categories">
 	<h3><?php the_field('articles_categories_title'); ?></h3>
 	<div class="row grid">
@@ -30,7 +40,7 @@
 	</div>
 </div>
 <div class="article-recent">
-	<h3><?php the_field('articles_recent_title'); ?></h3>
+	<!-- <h3><?php the_field('articles_recent_title'); ?></h3>
 	<div class="row grid">
 	  <?php
 			$args = array(
@@ -51,6 +61,6 @@
 			else :
 				_e( 'Whoops, something went wrong. Please try again later.' );
 			endif;
-		?>
+		?> -->
 	</div>
 </div>
