@@ -2464,6 +2464,29 @@ iframe[src*="simplecast.com"] {
 			padding-bottom: 10px;
 		}
 	}
+
+	#about-us,
+	#tlc {
+		margin-bottom: 50px;
+
+		img {
+			width: 100%;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+#content-section-1,
+#content-section-2 {
+	@media (min-width: $screen-md-min) {
+		.col-sm-6:first-child {
+			padding-right: 30px;
+		}
+
+		.col-sm-6:last-child {
+			padding-left: 30px;
+		}
+	}
 }
 
 #quote {
@@ -2478,29 +2501,18 @@ iframe[src*="simplecast.com"] {
 	}
 }
 
-#our-ministry {
-	#about-us,
-	#tlc {
-		margin-bottom: 50px;
-
-		img {
-			max-height: 250px;
-			margin-bottom: 10px;
-
-			@media (min-width: $screen-sm-min) {
-				float: left;
-				width: 38%;
-				margin-right: 15px;
-			}
-		}
-	}
-}
-
 #featured-link {
 	text-align: center;
+	overflow: hidden;
 
 	h2 {
 		line-height: 1.45;
+	}
+
+	img {
+		margin: 15px auto 0;
+		width: 100%;
+		max-width: 800px;
 	}
 
 	.btn {

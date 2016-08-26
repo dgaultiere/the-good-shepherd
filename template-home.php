@@ -13,15 +13,36 @@
 		</div>
 	</div>
 	<div class="row">
-		<a href="#recent-articles" class="down-arrow"><i class="fa fa-angle-down"></i></a>
+		<a href="#content-section-1" class="down-arrow"><i class="fa fa-angle-down"></i></a>
 	</div>
 </div>
 
-<!-- Recent Articles Section -->
-<div class="container-fluid section" id="recent-articles">
+<!-- Content Section 1 -->
+<div class="container-fluid section" id="content-section-1">
 	<div class="row">
 		<div class="container">
 			<div class="row">
+				<div class="col-sm-6">
+					<div id="about-us">
+						<h3 class="title">
+							<?php the_field('about_us_title'); ?>
+							<div class="view-all">
+								<a href="<?php the_field('about_us_link') ?>">Learn More</a>
+							</div>
+						</h3>
+						<a href="<?php the_field('about_us_link') ?>">
+							<?php
+								$about_image = get_field('about_us_image');
+								if( $about_image ) {
+									echo wp_get_attachment_image( $about_image, 'large');
+								}
+							?>
+						</a>
+						<div class="entry-summary">
+							<?php the_field('about_us_summary'); ?>
+						</div>
+					</div>
+				</div>
 				<div class="col-sm-6">
 					<div id="recent-article">
 						<h3 class="title">
@@ -39,7 +60,7 @@
 							if ( $the_query->have_posts() ) :
 								// the loop
 								while ( $the_query->have_posts() ) : $the_query->the_post();
-									get_template_part('templates/content-snippet-post-full');
+									get_template_part('templates/content-snippet-post-side');
 								endwhile; // end of the loop
 								wp_reset_postdata();
 							else :
@@ -47,8 +68,6 @@
 							endif;
 						?>
 					</div>
-				</div>
-				<div class="col-sm-6">
 					<div id="recent-podcast">
 						<h3 class="title">
 							<?php the_field('recent_podcast_title'); ?>
@@ -59,6 +78,84 @@
 						<?php
 							$args = array(
 								'post_type' => 'podcast',
+								'posts_per_page' => '1'
+							);
+							// the query
+							$the_query = new WP_Query( $args );
+							if ( $the_query->have_posts() ) :
+								// the loop
+								while ( $the_query->have_posts() ) : $the_query->the_post();
+									get_template_part('templates/content-snippet-post-side');
+								endwhile; // end of the loop
+								wp_reset_postdata();
+							else :
+								_e( '<div class="alert alert-warning">' . 'Sorry, no results were found.' . '</div>' );
+							endif;
+						?>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<a href="#quote" class="down-arrow"><i class="fa fa-angle-down"></i></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Quote Section -->
+<div class="container-fluid section text-<?php the_field('quote_text_color'); ?>" id="quote" style="background-color:<?php the_field('quote_background_color'); ?>">
+	<div class="row">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<h2 class="callout"><?php the_field('quote_title'); ?></h2>
+					<h5 class="quote-credit"><?php the_field('quote_subtitle'); ?></h5>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<a href="#content-section-2" class="down-arrow"><i class="fa fa-angle-down"></i></a>
+	</div>
+</div>
+
+<!-- Content Section 2 -->
+<div class="container-fluid section" id="content-section-2">
+	<div class="row">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<div id="tlc">
+						<h3 class="title">
+							<?php the_field('tlc_title'); ?>
+							<div class="view-all">
+								<a href="<?php the_field('tlc_link') ?>">Learn More</a>
+							</div>
+						</h3>
+						<a href="<?php the_field('tlc_link') ?>">
+							<?php
+								$tlc_image = get_field('tlc_image');
+								if( $tlc_image ) {
+									echo wp_get_attachment_image( $tlc_image, 'medium');
+								}
+							?>
+						</a>
+						<div class="entry-summary">
+							<?php the_field('tlc_summary'); ?>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div id="recent-event">
+						<h3 class="title">
+							<?php the_field('recent_event_title'); ?>
+							<div class="view-all">
+								<a href="<?php echo get_post_type_archive_link('event') ?>">All Events</a>
+							</div>
+						</h3>
+						<?php
+							$args = array(
+								'post_type' => 'event',
 								'posts_per_page' => '1'
 							);
 							// the query
@@ -102,103 +199,6 @@
 				</div>
 			</div>
 			<div class="row">
-				<a href="#quote" class="down-arrow"><i class="fa fa-angle-down"></i></a>
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- Quote Section -->
-<div class="container-fluid section text-<?php the_field('quote_text_color'); ?>" id="quote" style="background-color:<?php the_field('quote_background_color'); ?>">
-	<div class="row">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<h2 class="callout"><?php the_field('quote_title'); ?></h2>
-					<h5 class="quote-credit"><?php the_field('quote_subtitle'); ?></h5>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<a href="#our-ministry" class="down-arrow"><i class="fa fa-angle-down"></i></a>
-	</div>
-</div>
-
-<!-- Our Ministry Section -->
-<div class="container-fluid section" id="our-ministry">
-	<div class="row">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-6">
-					<div id="about-us">
-						<h3 class="title">
-							<?php the_field('about_us_title'); ?>
-							<div class="view-all">
-								<a href="<?php the_field('about_us_link') ?>">Learn More</a>
-							</div>
-						</h3>
-						<a href="<?php the_field('about_us_link') ?>">
-							<?php
-								$about_image = get_field('about_us_image');
-								if( $about_image ) {
-									echo wp_get_attachment_image( $about_image, 'medium');
-								}
-							?>
-						</a>
-						<div class="entry-summary">
-							<?php the_field('about_us_summary'); ?>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6">
-					<div id="recent-event">
-						<h3 class="title">
-							<?php the_field('recent_event_title'); ?>
-							<div class="view-all">
-								<a href="<?php echo get_post_type_archive_link('event') ?>">All Events</a>
-							</div>
-						</h3>
-						<?php
-							$args = array(
-								'post_type' => 'event',
-								'posts_per_page' => '1'
-							);
-							// the query
-							$the_query = new WP_Query( $args );
-							if ( $the_query->have_posts() ) :
-								// the loop
-								while ( $the_query->have_posts() ) : $the_query->the_post();
-									get_template_part('templates/content-snippet-post-side');
-								endwhile; // end of the loop
-								wp_reset_postdata();
-							else :
-								_e( '<div class="alert alert-warning">' . 'Sorry, no results were found.' . '</div>' );
-							endif;
-						?>
-					</div>
-					<div id="tlc">
-						<h3 class="title">
-							<?php the_field('tlc_title'); ?>
-							<div class="view-all">
-								<a href="<?php the_field('tlc_link') ?>">Learn More</a>
-							</div>
-						</h3>
-						<a href="<?php the_field('tlc_link') ?>">
-							<?php
-								$tlc_image = get_field('tlc_image');
-								if( $tlc_image ) {
-									echo wp_get_attachment_image( $tlc_image, 'medium');
-								}
-							?>
-						</a>
-						<div class="entry-summary">
-							<?php the_field('tlc_summary'); ?>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
 				<a href="#featured-link" class="down-arrow"><i class="fa fa-angle-down"></i></a>
 			</div>
 		</div>
@@ -212,6 +212,14 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<h2><?php the_field('featured_link_title'); ?></h2>
+					<a href="<?php the_field('featured_link_url') ?>">
+						<?php
+							$featured_link_image = get_field('featured_link_image');
+							if( $featured_link_image ) {
+								echo wp_get_attachment_image( $featured_link_image, 'full-size');
+							}
+						?>
+					</a>
 					<a href="<?php the_field('featured_link_url'); ?>" class="btn">
 						<?php the_field('featured_link_subtitle'); ?><i class="fa fa-angle-right"></i>
 					</a>
