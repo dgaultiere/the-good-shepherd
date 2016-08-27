@@ -2738,30 +2738,31 @@ iframe[src*="simplecast.com"] {
 .page-template-template-subscribe {
 	.col-subscribe-form {
 		&.right {
-			border-top: $border-grey-lighter-2px;
+			margin-top: 40px;
 
 			@media (min-width: $screen-sm-min) {
 				padding-left: 20px;
-				border-top: none;
+				margin-top: 0;
 
 				h3 {
+					font-size: 24px;
 					text-align: left;
 					margin-top: 0;
 				}
+			}
+
+			.subscribe-form {
+				padding-bottom: 15px;
 			}
 		}
 	}
 
 	.subscribe-form {
 		&.top {
-			border-bottom: $border-grey-lighter-2px;
-			padding-bottom: 25px;
 			margin-bottom: 40px;
 		}
 
 		&.bottom {
-			border-top: $border-grey-lighter-2px;
-			padding-top: 25px;
 			margin-top: 40px;
 		}
 
@@ -2787,6 +2788,10 @@ iframe[src*="simplecast.com"] {
 }
 
 .subscribe-form {
+	background: $grey-lighter;
+	border-radius: $border-radius;
+	padding: 15px 15px 25px;
+
 	h5 {
 		margin: 10px 0 15px;
 		text-align: center;
@@ -2821,6 +2826,7 @@ iframe[src*="simplecast.com"] {
 		width: 100%;
 		margin-right: 0;
 		margin-bottom: 10px;
+		background: $white;
 
 		@media (min-width: $screen-sm-min) {
 			width: auto;
