@@ -1878,8 +1878,8 @@ aside {
 
 .archive-top-content {
 	border-bottom: $border-grey-lighter-2px;
-	padding-bottom: 50px;
-	margin: 0 15px 50px;
+	padding-bottom: 30px;
+	margin: 0 0 60px;
 }
 
 .grid-item {
@@ -1935,6 +1935,10 @@ aside {
 }
 
 .post-type-archive-event {
+	.archive-top-content {
+		border: none;
+	}
+
 	#upcoming-events-title {
 		text-align: center;
 		background: $grey-light;
