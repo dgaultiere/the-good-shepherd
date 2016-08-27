@@ -88,7 +88,7 @@ require_once( get_stylesheet_directory() . '/plugins/tgmpa/tgmpa-config.php' );
  * Add ACF plugin to theme
  */
 
-// 1. customize ACF path
+// 1. Customize ACF path
 add_filter('acf/settings/path', __NAMESPACE__ . '\\my_acf_settings_path');
 function my_acf_settings_path( $path ) {
 
@@ -100,7 +100,7 @@ function my_acf_settings_path( $path ) {
 
 }
 
-// 2. customize ACF dir
+// 2. Customize ACF dir
 add_filter('acf/settings/dir', __NAMESPACE__ . '\\my_acf_settings_dir');
 function my_acf_settings_dir( $dir ) {
 
@@ -330,6 +330,18 @@ function string_limit_words($string, $word_limit) {
   return implode(' ', $words);
 }
 add_filter('string_limit_words', __NAMESPACE__ . '\\string_limit_words');
+
+
+
+/**
+ * Ensure TinyMCE uses TypeKit fonts
+ */
+
+add_filter('mce_external_plugins', __NAMESPACE__ . '\\tomjn_mce_external_plugins');
+function tomjn_mce_external_plugins($plugin_array){
+  $plugin_array['typekit']  =  get_template_directory_uri() . '/plugins/typekit-tinymce/typekit.tinymce.js';
+    return $plugin_array;
+}
 
 
 
