@@ -1211,6 +1211,7 @@ textarea {
 /* Page Headers with Background Image */
 .header-background.bg-image {
 	@include background-image;
+	background-color: $grey;
 	position: relative;
 	z-index: 1;
 
