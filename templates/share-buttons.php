@@ -1,31 +1,39 @@
-<?php if(get_field('enable_post_share', 'option')) { ?>
+<?php
+  if(get_field('enable_post_share', 'option')) {
+
+    // Post info for sharing
+    $share_title = utf8_uri_encode( get_the_title(), 99 );
+    $share_url = urlencode( get_permalink($post->ID) );
+    $share_image = urlencode( get_site_url() . wp_get_attachment_url( get_post_thumbnail_id($post->ID) ) );
+    $share_description = utf8_uri_encode('I just found this ' . get_post_type($post->ID) . ' on ' . get_bloginfo('name') . ' and thought you would enjoy it.', 999) . '%0A%0A';
+?>
   <div class="social-share-container">
     <h4><?php the_field('post_share_title', 'option'); ?></h4>
     <ul>
       <?php if ( in_array( 'facebook', get_field('post_share_buttons', 'option') ) ) { ?>
         <li>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink($post->ID); ?>" target="_blank" class="facebook-icon">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $share_url ?>" target="_blank" class="facebook-icon">
             <i class="fa fa-facebook"></i>
           </a>
         </li>
       <?php }; ?>
       <?php if ( in_array( 'twitter', get_field('post_share_buttons', 'option') ) ) { ?>
         <li>
-          <a href="https://twitter.com/intent/tweet?text=<?php echo get_permalink($post->ID); ?>" target="_blank" class="twitter-icon">
+          <a href="https://twitter.com/intent/tweet?text=<?php echo $share_title . $share_url ?>" target="_blank" class="twitter-icon">
             <i class="fa fa-twitter"></i>
           </a>
         </li>
       <?php }; ?>
       <?php if ( in_array( 'pinterest', get_field('post_share_buttons', 'option') ) ) { ?>
         <li>
-          <a href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID); ?>" target="_blank" class="pinterest-icon">
+          <a href="http://pinterest.com/pin/create/button/?url=<?php echo $share_url ?>&media=<?php echo $share_image ?>&description=<?php echo $share_title ?>" target="_blank" class="pinterest-icon">
             <i class="fa fa-pinterest"></i>
           </a>
         </li>
       <?php }; ?>
       <?php if ( in_array( 'email', get_field('post_share_buttons', 'option') ) ) { ?>
         <li>
-          <a href="mailto:?subject=<?php echo get_the_title(); ?>&body=<?php if(get_field('site_language', 'option') == "es-mx") { ?>Acabo%20de%20leer%20este%20gran%20artículo%20sobre%20<?php echo get_bloginfo('name'); ?>%20y%20pensé%20que%20podría%20disfrutar%20de%20ella.<?php } else { ?>I%20just%20read%20this%20great%20article%20on%20<?php echo get_bloginfo('name'); ?>%20and%20thought%20you%20would%20enjoy%20it.<?php } ?>%0A%0A<?php echo get_permalink($post->ID); ?>" target="_blank" class="email-icon">
+          <a href="mailto:?subject=<?php echo $share_title ?>&body=<?php echo $share_description . $share_url ?>" target="_blank" class="email-icon">
             <i class="fa fa-envelope"></i>
           </a>
         </li>
