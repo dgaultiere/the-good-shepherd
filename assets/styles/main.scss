@@ -218,6 +218,8 @@ p {
 
 .main,
 .archive-top-content {
+	z-index: 1;
+
 	h1, h2, h3, h4, h5, h6 {
 		@include prose-heading;
 	}
@@ -1521,6 +1523,7 @@ aside {
 
 .floating-share-buttons {
 	display: none;
+	z-index: -1;
 
 	@media (min-width: $screen-sm-min) {
 		display: block;
