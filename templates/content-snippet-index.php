@@ -1,6 +1,9 @@
+<?php
+  $index_image = get_sub_field('articles_index_image');
+?>
 <article class="snippet">
   <a href="<?php the_sub_field('articles_index_link'); ?>" class="plain-link">
-    <div class="snippet-thumbnail" style="background-image: url('<?php the_sub_field('articles_index_image'); ?>');">
+    <div class="snippet-thumbnail" style="background-image: url('<?php echo $index_image['sizes']['medium']; ?>');">
       <span>&nbsp;</span>
     </div>
   </a>
