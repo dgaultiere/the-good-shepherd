@@ -774,6 +774,11 @@ textarea,
 	&:focus {
 		border-color: $accent-color;
 	}
+
+	a {
+		color: $grey-dark;
+		text-decoration: none;
+	}
 }
 
 input[type="text"],
@@ -807,6 +812,10 @@ textarea {
 		color: $white;
 		border-color: $accent-color;
 		background-color: $accent-color;
+
+		a {
+			color: $white;
+		}
 	}
 }
 
@@ -822,6 +831,10 @@ textarea {
 		color: $white;
 		background-color: $accent-color;
 		border-color: $accent-color;
+	}
+
+	a {
+		color: darken($accent-color, 10%);
 	}
 }
 

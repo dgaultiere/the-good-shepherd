@@ -119,6 +119,7 @@
 			}
 
 			.btn-primary,
+      .btn-primary a,
       .subscribe-form .button {
 				color: <?php echo $accent_color?>;
 				border-color: <?php echo $accent_color?>;

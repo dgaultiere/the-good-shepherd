@@ -320,6 +320,39 @@ function page_navi( $before = '', $after = '' ) {
 
 
 /**
+ * Custom shortcodes
+ */
+
+// Callout
+function callout_text_shortcode( $atts , $content = null ) {
+	return '<div class="callout">' . $content . '</div>';
+}
+add_shortcode( 'callout', __NAMESPACE__ . '\\callout_text_shortcode' );
+
+// Callout
+function button_shortcode( $atts , $content = null ) {
+  // Attributes
+	$atts = shortcode_atts(
+		array(
+			'primary' => '0',
+		),
+		$atts,
+		'button'
+	);
+	// Return image HTML code
+  if ($atts['primary'] == '1') {
+    return '<div class="btn btn-primary">' . $content . '</div>';
+  } else {
+    return '<div class="btn">' . $content . '</div>';
+  }
+}
+add_shortcode( 'button', __NAMESPACE__ . '\\button_shortcode' );
+
+
+
+
+
+/**
  * Function to limit string word length
  */
 
