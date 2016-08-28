@@ -1,16 +1,3 @@
-<?php if (!have_posts()) : ?>
-  <div class="alert alert-warning">
-    <?php if(get_field('site_language', 'option') == "es-mx") {
-			_e('Lo sentimos, no se encontraron resultados.', 'sage');
-		} else {
-			_e('Sorry, no results were found.', 'sage');
-		} ?>
-  </div>
-	<div class="big-search">
-		<?php get_search_form(); ?>
-	</div>
-<?php endif; ?>
-
 <div class="row">
   <?php
     $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
@@ -36,6 +23,15 @@
         if ( $count % 3 == 0 ) echo '</div><div class="row">';
       endwhile; // end of the loop
       wp_reset_postdata();
+    else :
+  ?>
+    <div class="alert alert-warning">
+      Sorry, no videos were found.
+    </div>
+  	<div class="big-search">
+  		<?php get_search_form(); ?>
+  	</div>
+  <?php
     endif;
   ?>
 </div>
