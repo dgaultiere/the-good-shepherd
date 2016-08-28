@@ -154,8 +154,14 @@
 							</div>
 						</h3>
 						<?php
-							$args = array(
-								'post_type' => 'event',
+						  date_default_timezone_set('America/Los_Angeles');
+						  $args = array(
+						    'post_type' => 'event',
+						    'meta_key' => 'event_date',
+						    'meta_value' => date('Ymd'),
+						    'meta_compare' => '>=',
+						    'orderby' => 'event_date',
+						    'order' => 'ASC',
 								'posts_per_page' => '1'
 							);
 							// the query
