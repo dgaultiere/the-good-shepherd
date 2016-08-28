@@ -2649,10 +2649,6 @@ iframe[src*="simplecast.com"] {
 		margin-top: 40px;
 	}
 
-	.grid {
-		margin-top: 25px;
-	}
-
 	.snippet {
 		margin-bottom: 25px;
 	}
@@ -2679,9 +2675,16 @@ iframe[src*="simplecast.com"] {
 	}
 }
 
+.article-indexes {
+	h3 {
+		margin-bottom: 25px;
+	}
+}
+
 .article-categories {
 	h3 {
 		margin-top: 10px;
+		margin-bottom: 25px;
 	}
 }
 

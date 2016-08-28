@@ -26,7 +26,11 @@
 			<div class="col-sm-3 grid-item">
 	      <?php get_template_part('templates/content-snippet-index'); ?>
 			</div>
-			<?php endwhile; ?>
+	  <?php
+	    $count++;
+	    if ( $count % 4 == 0 ) echo '</div><div class="row grid">';
+	    endwhile;
+	  ?>
 	</div>
 </div>
 <div class="article-categories">
@@ -36,7 +40,11 @@
 			<div class="col-sm-3 grid-item">
 	      <?php get_template_part('templates/content-snippet-category'); ?>
 			</div>
-			<?php endwhile; ?>
+	  <?php
+	    $count++;
+	    if ( $count % 4 == 0 ) echo '</div><div class="row grid">';
+	    endwhile;
+	  ?>
 	</div>
 </div>
 <div class="article-recent">
