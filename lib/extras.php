@@ -598,3 +598,21 @@ function color_luminance( $hex, $percent ) {
 	return $new_hex;
 }
 add_filter('color_luminance', __NAMESPACE__ . '\\color_luminance');
+
+
+
+
+/**
+ * Google Analytics tracking code
+ */
+
+function include_GA() {
+$analytics_id = get_field('google_analytics_id','option');
+?>
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create', <?php echo $analytics_id ?> ,'auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+<?php }
+add_action('wp_footer', __NAMESPACE__ . '\\include_GA', 10);

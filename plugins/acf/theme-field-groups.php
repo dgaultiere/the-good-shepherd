@@ -2039,6 +2039,28 @@ acf_add_local_field_group(array (
 			'disabled' => 0,
 			'readonly' => 0,
 		),
+		array (
+			'key' => 'field_553f17b9964b8239',
+			'label' => 'Google Analytics ID',
+			'name' => 'google_analytics_id',
+			'type' => 'text',
+			'instructions' => 'To enable Google Analytics tracking, paste your tracking ID (e.g. UA-XXXXX-X) here.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'formatting' => 'none',
+			'maxlength' => '',
+			'readonly' => 0,
+			'disabled' => 0,
+		),
 	),
 	'location' => array (
 		array (
