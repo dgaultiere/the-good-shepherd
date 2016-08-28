@@ -2210,6 +2210,84 @@ acf_add_local_field_group(array (
 ));
 
 acf_add_local_field_group(array (
+	'key' => 'group_57bfc2cbec8ff',
+	'title' => 'Shortcodes For Posts & Pages',
+	'fields' => array (
+		array (
+			'key' => 'field_57c235c979351',
+			'label' => 'Callout Text: [callout]',
+			'name' => 'callout_text:_callout',
+			'type' => 'message',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '<p>Draw attention to a line of text. Best used in addition to a heading tag (e.g. H3). The result will be bold, italicized, serif text that is centered on the page.</p>
+<p><b>Example:</b> [callout]This is a great inspiring line of text[/callout]</p>',
+			'new_lines' => '',
+			'esc_html' => 0,
+		),
+		array (
+			'key' => 'field_57c242ac47103',
+			'label' => 'Regular Button: [button]',
+			'name' => 'regular_button:_button',
+			'type' => 'message',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '<p>Turn a link into a regular button. Regular buttons have a grey border and turn colored when the user hovers or clicks.</p>
+<p><b>Example:</b> [button]Regular Button[/button]</p>',
+			'new_lines' => '',
+			'esc_html' => 0,
+		),
+		array (
+			'key' => 'field_57c26b43f90f8',
+			'label' => 'Primary Button: [button-primary]',
+			'name' => '_copy',
+			'type' => 'message',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '<p>Turn a link into a primary button. Primary buttons use your theme link color defined in Theme Styling above.</p>
+<p><b>Example:</b> [button-primary]Primary Button[/button-primary]</p>',
+			'new_lines' => '',
+			'esc_html' => 0,
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'theme-general-settings',
+			),
+		),
+	),
+	'menu_order' => 99,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
+
+acf_add_local_field_group(array (
 	'key' => 'group_5608a1fd42047',
 	'title' => 'Subscription Page Options',
 	'fields' => array (
