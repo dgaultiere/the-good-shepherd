@@ -1324,16 +1324,6 @@ textarea {
 	}
 }
 
-.single-post {
-	.entry-meta-container {
-		margin-bottom: 30px;
-	}
-
-	.featured-image {
-		margin-bottom: 25px;
-	}
-}
-
 
 /** Featured Image **/
 
@@ -2106,6 +2096,14 @@ aside {
 		.button {
 			background: $white;
 		}
+	}
+}
+
+.single-post,
+.single-event,
+.single-podcast {
+	.featured-image {
+		width: 30%;
 	}
 }
 
