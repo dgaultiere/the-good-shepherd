@@ -1,10 +1,6 @@
 <?php if (!have_posts()) : ?>
   <div class="alert alert-warning">
-    <?php if(get_field('site_language', 'option') == "es-mx") {
-			_e('Lo sentimos, no se encontraron resultados.', 'sage');
-		} else {
-			_e('Sorry, no results were found.', 'sage');
-		} ?>
+    Sorry, no results were found.
   </div>
 	<div class="big-search">
 		<?php get_search_form(); ?>
