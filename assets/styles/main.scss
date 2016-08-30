@@ -1527,6 +1527,7 @@ aside {
 .floating-share-buttons {
 	display: none;
 	z-index: 1;
+	transform: translate3d(0px,0px,0px);
 
 	@media (min-width: $screen-sm-min) {
 		display: block;

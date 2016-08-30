@@ -34,13 +34,51 @@
 				});
 
         // Floating share buttons
+
 				$(window).scroll(function() {
-					if ( ($(document).scrollTop() > 330) && ($(document).scrollTop() < $(document).height() - 1000 ) ) {
+					if ( ( $(document).scrollTop() > 330 ) && ( $(document).scrollTop() < $(document).height() - 1000 ) ) {
 						$('.floating-share-buttons').addClass('share-float');
 					} else {
 						$('.floating-share-buttons').removeClass('share-float');
 					}
 				});
+
+        // $(window).bind('touchmove', function(e) {
+        //   console.log($(this).scrollTop());
+        //   if ( ( $(document).scrollTop() > 330 ) && ( $(document).scrollTop() < $(document).height() - 1000 ) ) {
+				// 		$('.floating-share-buttons').addClass('share-float');
+				// 	} else {
+				// 		$('.floating-share-buttons').removeClass('share-float');
+				// 	}
+        // });
+
+        // document.addEventListener("touchmove", ScrollStart, false);
+        // document.addEventListener("scroll", Scroll, false);
+        // function ScrollStart() {
+        //   // start of scroll event for iOS
+        // }
+        // function Scroll() {
+        //   // end of scroll event for iOS and start/end of scroll event for other browsers
+        // }
+
+        // function some_scroll_function() {
+        //   // Do stuff on scroll
+				// 	if ( ( $(document).scrollTop() > 330 ) && ( $(document).scrollTop() < $(document).height() - 1000 ) ) {
+				// 		$('.floating-share-buttons').addClass('share-float');
+				// 	} else {
+				// 		$('.floating-share-buttons').removeClass('share-float');
+				// 	}
+        // }
+        // var scrollInterval = null;
+        // $(window).scroll(function () {
+        //   some_scroll_function();
+        // });
+        // $(window).bind('touchmove', function() {
+        //   scrollInterval = window.setInterval(some_scroll_function(), 100);
+        // });
+        // $(window).bind('touchend', function() {
+        //   clearInterval(scrollInterval);
+        // });
 
       },
       finalize: function() {
@@ -54,7 +92,7 @@
 
 				// Smooth scroll to div
 				$(function() {
-					$('a[href*=#]:not([href=#])').click(function() {
+					$('a[href*=\\#]:not([href=\\#])').click(function() {
 						if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
 							var target = $(this.hash);
 							target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
