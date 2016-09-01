@@ -380,7 +380,7 @@ function change_post_object() {
     $labels = &$wp_post_types['post']->labels;
     $labels->name = 'Articles';
     $labels->singular_name = 'Article';
-    $labels->add_new = 'Add Article';
+    $labels->add_new = 'New Article';
     $labels->add_new_item = 'Add New Article';
     $labels->edit_item = 'Edit Article';
     $labels->new_item = 'Article';
@@ -408,7 +408,7 @@ add_action( 'init', __NAMESPACE__ . '\\change_post_object' );
        'labels' => array(
          'name' => __( 'Podcast' ),
          'singular_name' => __( 'Podcast' ),
-         'add_new' => __( 'Add Podcast' ),
+         'add_new' => __( 'New Podcast' ),
          'add_new_item' => __( 'Add New Podcast' ),
          'edit_item' => __( 'Edit Podcast' ),
          'new_item' => __( 'New Podcast' ),
@@ -428,7 +428,7 @@ add_action( 'init', __NAMESPACE__ . '\\change_post_object' );
        'labels' => array(
          'name' => __( 'Videos' ),
          'singular_name' => __( 'Video' ),
-         'add_new' => __( 'Add Video' ),
+         'add_new' => __( 'New Video' ),
          'add_new_item' => __( 'Add New Video' ),
          'edit_item' => __( 'Edit Video' ),
          'new_item' => __( 'New Video' ),
@@ -448,7 +448,7 @@ add_action( 'init', __NAMESPACE__ . '\\change_post_object' );
        'labels' => array(
          'name' => __( 'Store' ),
          'singular_name' => __( 'Product' ),
-         'add_new' => __( 'Add Product' ),
+         'add_new' => __( 'New Product' ),
          'add_new_item' => __( 'Add New Product' ),
          'edit_item' => __( 'Edit Product' ),
          'new_item' => __( 'New Product' ),
@@ -468,7 +468,7 @@ add_action( 'init', __NAMESPACE__ . '\\change_post_object' );
        'labels' => array(
          'name' => __( 'Events' ),
          'singular_name' => __( 'Event' ),
-         'add_new' => __( 'Add Event' ),
+         'add_new' => __( 'New Event' ),
          'add_new_item' => __( 'Add New Event' ),
          'edit_item' => __( 'Edit Event' ),
          'new_item' => __( 'New Event' ),
@@ -488,7 +488,7 @@ add_action( 'init', __NAMESPACE__ . '\\change_post_object' );
        'labels' => array(
          'name' => __( 'Associates' ),
          'singular_name' => __( 'Associate' ),
-         'add_new' => __( 'Add Associate' ),
+         'add_new' => __( 'New Associate' ),
          'add_new_item' => __( 'Add New Associate' ),
          'edit_item' => __( 'Edit Associate' ),
          'new_item' => __( 'New Associate' ),
