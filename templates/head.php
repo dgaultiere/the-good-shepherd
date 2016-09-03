@@ -4,7 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- Icons -->
     <link rel="icon" href="<?php the_field('favicon','option'); ?>">
+    <link rel="apple-touch-icon" href="<?php the_field('favicon','option'); ?>">
+    <meta name="msapplication-TileColor" content="<?php the_field('accent_color','option'); ?>">
+    <meta name="msapplication-TileImage" content="<?php the_field('favicon','option'); ?>">
 
     <?php wp_head(); ?>
 
