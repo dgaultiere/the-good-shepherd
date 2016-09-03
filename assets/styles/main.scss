@@ -2103,7 +2103,16 @@ aside {
 .single-event,
 .single-podcast {
 	.featured-image {
-		width: 30%;
+		width: 100%;
+
+		@media (min-width: $screen-sm-min) {
+			width: 30%;
+		}
+
+		.wp-post-image {
+			display: block;
+			margin: 0 auto;
+		}
 	}
 }
 
