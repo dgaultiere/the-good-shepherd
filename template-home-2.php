@@ -7,7 +7,7 @@
 <!-- Cover Section -->
 <div class="container-fluid section text-<?php the_field('cover_text_color'); ?>" id="cover" style="background-image:url('<?php $cover_image = get_field('cover_photo'); echo $cover_image['sizes']['extra-large']; ?>');">
 	<div class="row">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-xs-12">
 					<h1 class="title"><?php the_field('cover_title'); ?></h1>
