@@ -33,16 +33,6 @@
 					}
 				});
 
-        // Floating share buttons
-
-				$(window).scroll(function() {
-					if ( ( $(document).scrollTop() > 330 ) && ( $(document).scrollTop() < $(document).height() - 1000 ) ) {
-						$('.floating-share-buttons').addClass('share-float');
-					} else {
-						$('.floating-share-buttons').removeClass('share-float');
-					}
-				});
-
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -79,6 +69,26 @@
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
+      }
+    },
+    // Post type singles
+    'single': {
+      init: function() {
+        // JavaScript to be fired on post type singles
+
+        // Floating share buttons
+				$(window).scroll(function() {
+					if ( ( $(document).scrollTop() > 330 ) && ( $(document).scrollTop() < $(document).height() - 1000 ) ) {
+						$('.no-bg-image .floating-share-buttons').addClass('share-float');
+					} else {
+						$('.no-bg-image .floating-share-buttons').removeClass('share-float');
+					}
+					if ( ( $(document).scrollTop() > 430 ) && ( $(document).scrollTop() < $(document).height() - 1000 ) ) {
+						$('.bg-image .floating-share-buttons').addClass('share-float');
+					} else {
+						$('.bg-image .floating-share-buttons').removeClass('share-float');
+					}
+				});
       }
     },
     // About us page, note the change from about-us to about_us.

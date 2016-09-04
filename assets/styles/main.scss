@@ -1138,6 +1138,7 @@ textarea {
 .header-background {
   margin: 0 -15px 40px;
   padding: 15px 0;
+	position: relative;
 
   .page-header {
 		position: relative;
@@ -1226,7 +1227,6 @@ textarea {
 .header-background.bg-image {
 	@include background-image;
 	background-color: $grey;
-	position: relative;
 	z-index: 1;
 
 	&:before {
@@ -1531,7 +1531,7 @@ aside {
 	@media (min-width: $screen-sm-min) {
 		display: block;
 		position: absolute;
-		top: 430px;
+		top: 330px;
 		left: 0;
 		right: 0;
 		margin: 0 auto;
@@ -1577,30 +1577,31 @@ aside {
 
 .bg-image {
 	.floating-share-buttons {
-		&.share-float {
-			top: 200px;
+
+		@media (min-width: $screen-sm-min) {
+			top: 430px;
+
+			&.share-float {
+				top: 100px;
+			}
 		}
 	}
 }
 
 @media (min-width: $screen-sm-min) {
 	body.admin-bar {
-		.bg-image {
-			.floating-share-buttons {
-				&.share-float {
-					top: calc(200px + 32px) !important;
-				}
+		.floating-share-buttons {
+			&.share-float {
+				top: calc(100px + 32px) !important;
 			}
 		}
 	}
 
 	@media (max-width: 782px) {
 		body.admin-bar {
-			.bg-image {
-				.floating-share-buttons {
-					&.share-float {
-						top: calc(200px + 46px) !important;
-					}
+			.floating-share-buttons {
+				&.share-float {
+					top: calc(100px + 46px) !important;
 				}
 			}
 		}
