@@ -8,7 +8,7 @@
     <!-- Icons -->
     <link rel="icon" href="<?php the_field('favicon','option'); ?>">
     <link rel="apple-touch-icon" href="<?php the_field('favicon','option'); ?>">
-    <meta name="msapplication-TileColor" content="<?php the_field('accent_color','option'); ?>">
+    <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="<?php the_field('favicon','option'); ?>">
 
     <?php wp_head(); ?>
