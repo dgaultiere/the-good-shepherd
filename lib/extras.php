@@ -372,7 +372,7 @@ function tomjn_mce_external_plugins($plugin_array){
 
 
 /**
- * Add custom post types
+ * Rename post to articles
  */
 
 function change_post_object() {
