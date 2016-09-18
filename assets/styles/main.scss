@@ -206,6 +206,40 @@ a {
 	}
 }
 
+/* BEGIN code to prevent FOUC on page load */
+.navbar-brand,
+.navbar-nav,
+*[class^='social-links'],
+.page-header,
+.archive-top-content,
+.sidebar,
+.main,
+.floating-share-buttons {
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transition: transform .4s ease-in-out, opacity .4s ease-in-out;
+  -webkit-transition: -webkit-transform .4s ease-in-out, opacity .4s ease-in-out;
+}
+
+.wf-loading {
+	.navbar-brand,
+	.navbar-nav,
+	*[class^='social-links'],
+	.page-header,
+	.archive-top-content,
+	.sidebar,
+	.main,
+	.floating-share-buttons {
+	  opacity: 0;
+	  transform: translateY(-20px);
+	  -webkit-transform: translateY(-20px);
+	  -ms-transform: translateY(-20px);
+	}
+}
+/* END code to prevent FOUC on page load */
+
 p {
 	text-rendering: optimizeLegibility;
 	-webkit-font-feature-settings: "kern";
