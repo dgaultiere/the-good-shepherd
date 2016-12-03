@@ -753,7 +753,7 @@ acf_add_local_field_group(array (
 			),
 			'other_choice' => 0,
 			'save_other_choice' => 0,
-			'default_value' => 'featured-image',
+			'default_value' => 'default',
 			'layout' => 'vertical',
 		),
 		array (
