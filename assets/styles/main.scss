@@ -1,4 +1,4 @@
-/* ==========================================================================
+ /* ==========================================================================
    Custom Stylesheet for SoulShepherding.org
    by David Gaultiere (http://www.davidgaultiere.com)
    ========================================================================== */
@@ -808,6 +808,8 @@ textarea,
 
 	&:focus {
 		border-color: $accent-color;
+		outline: none;
+		-webkit-appearance: none;
 	}
 
 	a {
@@ -877,6 +879,10 @@ textarea {
 	display: inline-block;
 	padding: 3px 4px 2px;
 	line-height: 1;
+}
+
+input[type=submit] {
+	@extend .btn-primary;
 }
 
 .input-group-btn:last-child>.btn,
@@ -2744,6 +2750,32 @@ iframe[src*="simplecast.com"] {
 /* ==========================================================================
    Contact Page Template
    ========================================================================== */
+
+form.wpcf7-form {
+	p {
+		margin-bottom: 0;
+	}
+
+	label {
+		margin-bottom: 2px;
+	}
+
+	input,
+	input[type=text],
+	input[type=email],
+	input[type=url],
+	textarea {
+		margin-bottom: 15px !important;
+		width: auto;
+		max-width: 100%;
+		padding: 2px 6px;
+	}
+
+	textarea {
+		width: 500px;
+		height: 180px;
+	}
+}
 
 .contact-form {
 	margin-top: 30px;

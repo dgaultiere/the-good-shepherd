@@ -129,14 +129,18 @@
 			.btn-primary:hover,
 			.subscribe-form .button:active,
 			.subscribe-form .button:focus,
-			.subscribe-form .button:hover {
+			.subscribe-form .button:hover,
+      input[type=submit]:active,
+      input[type=submit]:focus,
+      input[type=submit]:hover {
 				background-color:  <?php echo $accent_color?>;
 				border-color: <?php echo $accent_color?>;
 			}
 
 			.btn-primary,
       .btn-primary a,
-      .subscribe-form .button {
+      .subscribe-form .button,
+      input[type=submit] {
 				color: <?php echo $accent_color?>;
 				border-color: <?php echo $accent_color?>;
 			}
