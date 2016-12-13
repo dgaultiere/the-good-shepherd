@@ -43,13 +43,6 @@ function my_theme_register_required_plugins() {
 			'required'  => true,
 		),
 
-		// Bootstrap for Contact Form 7
-		array(
-			'name'      => 'Bootstrap for Contact Form 7',
-			'slug'      => 'bootstrap-for-contact-form-7',
-			'required'  => true,
-		),
-
 		// ACF support for Contact Form 7
 		array(
 			'name'      => 'Advanced Custom Fields - Contact Form 7',
