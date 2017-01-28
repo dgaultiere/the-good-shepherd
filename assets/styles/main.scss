@@ -97,7 +97,7 @@ $text-shadow-1:			0 0 3px rgba(0,0,0,.5);
 }
 
 
-/* Flatten das boostrap */
+/** Flatten das boostrap **/
 
 .well,
 .navbar-inner,
@@ -126,6 +126,33 @@ pre,
 }
 
 
+/** Basic Print Styles (element-specific styles inline) **/
+
+@media print {
+	body {
+		color: #000;
+		background: #fff;
+		margin: .5cm;
+	}
+
+	.container,
+	.container-fluid,
+	.row,
+	[class*="col-"] {
+			margin: auto;
+			width: 100%;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		page-break-after: avoid;
+	}
+
+	iframe {
+		display: none;
+	}
+}
+
+
 /** Basic Elements **/
 
 html {
@@ -149,6 +176,10 @@ body {
 
 	@media (min-width: $screen-sm-min) {
 		padding-top: 100px;
+
+		@media print {
+			padding-top: 0;
+		}
 	}
 }
 
@@ -680,6 +711,10 @@ textarea {
 			}
 		}
 	}
+
+	@media print {
+		display: none;
+	}
 }
 
 .navbar-right {
@@ -854,6 +889,11 @@ textarea {
 			color: $white;
 		}
 	}
+
+	@media print {
+		a:after { content:''; }
+		a[href]:after { content: none !important; }
+	}
 }
 
 .btn-primary,
@@ -937,6 +977,11 @@ input[type=submit] {
 	@extend .more-button;
 
 	margin-top: 7px;
+
+	@media print {
+		a:after { content:''; }
+		a[href]:after { content: none !important; }
+	}
 }
 
 .view-all {
@@ -945,6 +990,11 @@ input[type=submit] {
 	position: absolute;
   right: 0;
   bottom: 15px;
+
+	@media print {
+		a:after { content:''; }
+		a[href]:after { content: none !important; }
+	}
 }
 
 /** Links **/
@@ -1072,6 +1122,11 @@ input[type=submit] {
 .entry-title {
 	color: $grey-dark;
 
+	@media print {
+		a:after { content:''; }
+		a[href]:after { content: none !important; }
+	}
+
 	a {
 	@extend .heading-link;
 	}
@@ -1103,6 +1158,10 @@ input[type=submit] {
 		color: $grey;
 		text-decoration: none;
 	}
+
+	@media print {
+		display: none;
+	}
 }
 
 
@@ -1120,6 +1179,10 @@ input[type=submit] {
 .pagination {
 	display: table;
 	margin: 10px auto;
+
+	@media print {
+		display: none;
+	}
 
 	li {
 		a {
@@ -1182,6 +1245,10 @@ input[type=submit] {
   padding: 15px 0;
 	position: relative;
 
+	@media print {
+		margin: 40px auto 10px;
+	}
+
   .page-header {
 		position: relative;
 		height: 150px;
@@ -1190,6 +1257,11 @@ input[type=submit] {
 	  border-bottom: 0;
 		margin: 0;
 		padding: 0;
+
+		@media print {
+			height: 50px !important;
+			margin: 0 -15px;
+		}
 
 	  h1 {
 			display: block;
@@ -1217,6 +1289,10 @@ input[type=submit] {
 				position: absolute;
 				bottom: 8px;
 				right: 0;
+			}
+
+			@media print {
+				display: none;
 			}
 
 			a {
@@ -1340,6 +1416,11 @@ input[type=submit] {
 	display: table;
 	clear: both;
 
+	@media print {
+		a:after { content:''; }
+		a[href]:after { content: none !important; }
+	}
+
 	.meta-datapoint {
 		margin-right: 12px;
 		float: left;
@@ -1364,92 +1445,6 @@ input[type=submit] {
 		background: #eee;
 	}
 }
-
-
-/** Featured Image **/
-
-/*
-.featured-image {
-	width: 100%;
-	max-width: 480px;
-	max-height: 320px;
-	overflow: hidden;
-	margin-bottom: 15px;
-	border-radius: $border-radius;
-
-	@media (min-width: $screen-sm-min) {
-		max-width: 320px;
-		max-height: 100%;
-		float: left;
-		margin-right: 20px;
-		margin-bottom: 0;
-	}
-
-	.wp-post-image {
-		width: 100%;
-		max-width: 100%;
-		height: auto;
-	}
-}
-
-.entry-summary {
-	.featured-image {
-	  position: relative;
-	  overflow: hidden;
-	  padding-bottom: 180px;
-		background-color: #c9c9c9;
-		@include transition(all 0.2s);
-
-		&:hover,
-		&:active,
-		&:focus {
-			opacity: 0.8;
-			filter: alpha(opacity=80);
-			color: rgba(0,0,0,1);
-			text-decoration: underline;
-		}
-
-		.wp-post-image {
-			display: block;
-	    position: absolute;
-	    top: -9999px;
-	    bottom: -9999px;
-	    left: -9999px;
-	    right: -9999px;
-	    margin: auto;
-	    min-width: 100%;
-		}
-	}
-}
-
-.product-thumbnail {
-	@include background-image;
-	background-size: contain;
-	width: 100%;
-	margin-bottom: 15px;
-	padding: 30%;
-	border-radius: 2px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	text-align: center;
-	font-weight: 600;
-	color: rgba(0,0,0,0);
-	@include transition(all 0.2s);
-
-	&:hover,
-	&:active,
-	&:focus {
-		opacity: 0.8;
-		filter: alpha(opacity=80);
-		color: rgba(0,0,0,1);
-		text-decoration: underline;
-	}
-
-	@media (min-width: $screen-sm-min) {
-		padding: 30%;
-	}
-}
-*/
 
 .featured-image {
 	width: 100%;
@@ -1483,17 +1478,17 @@ input[type=submit] {
 		text-align: center;
 		@include transition(all 0.2s);
 
-		&:hover,
-		&:active,
-		&:focus {
-		}
-
 		@media (min-width: $screen-sm-min) {
 			width: 30%;
 		}
 
 		@media (min-width: $screen-lg-min) {
 			width: 25%;
+		}
+
+		@media print {
+			a:after { content:''; }
+    	a[href]:after { content: none !important; }
 		}
 
 		.wp-post-image {
@@ -1560,6 +1555,10 @@ aside {
 	.widget_search h3 {
 		display: none;
 	}
+
+	@media print {
+		display: none;
+	}
 }
 
 
@@ -1614,6 +1613,10 @@ aside {
 			height: 14px;
 			overflow: hidden;
 		}
+	}
+
+	@media print {
+		display: none;
 	}
 }
 
@@ -1782,6 +1785,10 @@ aside {
 			}
 		}
 	}
+
+	@media print {
+		display: none;
+	}
 }
 
 
@@ -1901,6 +1908,10 @@ aside {
 			font-size: 14px;
 		}
 	}
+
+	@media print {
+		display: none;
+	}
 }
 
 .comment-form-author,
@@ -1969,6 +1980,12 @@ aside {
 		text-align: center;
 		margin-right: 0;
 
+		@media print {
+			text-align: left;
+	    a:after { content:''; }
+	    a[href]:after { content: none !important; }
+		}
+
 		a {
 			display: inline-block;
 			margin: 0 auto;
@@ -1980,6 +1997,12 @@ aside {
 		text-align: center;
 		margin-top: 0;
 		margin-bottom: 5px;
+
+		@media print {
+			text-align: left;
+	    a:after { content:''; }
+	    a[href]:after { content: none !important; }
+		}
 	}
 
 	.entry-title {
@@ -2002,6 +2025,10 @@ aside {
 
 	.entry-meta-video {
 		text-align: center;
+
+		@media print {
+			text-align: left;
+		}
 	}
 
 	.entry-summary {
@@ -2090,6 +2117,10 @@ aside {
 	.entry-meta-container {
 		text-align: center;
 
+		@media print {
+			text-align: left;
+		}
+
 		.website {
 			display: none;
 		}
@@ -2097,6 +2128,10 @@ aside {
 
 	.entry-summary {
 		text-align: center;
+
+		@media print {
+			text-align: left;
+		}
 	}
 }
 
@@ -2119,6 +2154,10 @@ aside {
 			border-radius: $border-radius;
 			margin-bottom: 40px;
 
+			@media print {
+				padding: 0;
+			}
+
 			.entry-subtitle {
 				display: inline-block;
 				margin: 4px 0 0;
@@ -2139,6 +2178,10 @@ aside {
 
 		.button {
 			background: $white;
+		}
+
+		@media print {
+			display: none;
 		}
 	}
 }
@@ -2924,6 +2967,10 @@ form.wpcf7-form {
 	border-radius: $border-radius;
 	padding: 15px 15px 25px;
 
+	@media print {
+		display: none;
+	}
+
 	h5 {
 		margin: 10px 0 15px;
 		text-align: center;
@@ -3229,5 +3276,9 @@ footer.content-info {
 		letter-spacing: 0.025em;
 		font-size: 13px;
 		margin-top: 40px;
+	}
+
+	@media print {
+		display: none;
 	}
 }
