@@ -38,6 +38,13 @@
           </a>
         </li>
       <?php }; ?>
+      <?php if ( in_array( 'print', get_field('post_share_buttons', 'option') ) ) { ?>
+        <li>
+          <a href="javascript:window.print()" target="_blank" class="print-icon" onclick="ga('send', 'event', 'Share Buttons', 'print');">
+            <i class="fa fa-print"></i>
+          </a>
+        </li>
+      <?php }; ?>
     </ul>
   </div>
 <?php } ?>

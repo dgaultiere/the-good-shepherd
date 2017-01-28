@@ -1768,6 +1768,7 @@ aside {
 		}
 
 		.email-icon {
+			// #1abc9c
 			.fa {
 				color: #1abc9c;
 				font-size: 20px;
@@ -1778,6 +1779,24 @@ aside {
 			&:active,
 			&:focus {
 				background-color: #1abc9c;
+
+				.fa {
+					color: $white;
+				}
+			}
+		}
+
+		.print-icon {
+			.fa {
+				color: #34495e;
+				font-size: 20px;
+				margin-bottom: 11px;
+			}
+
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: #34495e;
 
 				.fa {
 					color: $white;
