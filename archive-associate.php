@@ -6,7 +6,7 @@
       'meta_key' => 'associate_last_name',
       'orderby' => 'meta_value',
       'order' => 'ASC',
-      'posts_per_page' => 10,
+      'posts_per_page' => 18,
       'paged' => $paged
     );
     // the query

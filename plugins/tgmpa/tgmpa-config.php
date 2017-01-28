@@ -104,10 +104,10 @@ function my_theme_register_required_plugins() {
 		'parent_slug'  => 'themes.php',            // Parent menu slug.
 		'capability'   => 'edit_theme_options',    // Capability needed to view plugin install page, should be a capability associated with the parent menu used.
 		'has_notices'  => true,                    // Show admin notices or not.
-		'dismissable'  => false,                   // If false, a user cannot dismiss the nag message.
-		'dismiss_msg'  => 'You must install the required plugins before you can use this theme. Please click the link below to install the required plugins.', // If 'dismissable' is false, this message will be output at top of nag.
+		'dismissable'  => true,                   // If false, a user cannot dismiss the nag message.
+		'dismiss_msg'  => 'You must install the required plugins before you can use this theme.', // If 'dismissable' is false, this message will be output at top of nag.
 		'is_automatic' => true,                    // Automatically activate plugins after installation or not.
-		'message'      => '<div class="notice notice-warning"><p>Please click the <b>"install"</b> link on each of the required plugins below. You can also check the boxes and select "install" from the bulk actions.</p></div>', // Message to output right before the plugins table.
+		'message'      => '<div class="notice notice-warning"><p>Please click the <b>"install"</b> or <b>"update"</b> link on each of the required plugins below. You can also check the boxes and select "install" or "update" from the bulk actions.</p></div>', // Message to output right before the plugins table.
 
 		/*
 		'strings'      => array(

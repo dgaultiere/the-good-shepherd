@@ -6,7 +6,7 @@
       'meta_key' => 'video_date',
       'orderby' => 'meta_value_num',
       'order' => 'DESC',
-      'posts_per_page' => 10,
+      'posts_per_page' => 12,
       'paged' => $paged
     );
     // the query
