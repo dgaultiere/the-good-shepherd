@@ -19,8 +19,10 @@
       <div class="bottom-share-buttons">
         <?php get_template_part('templates/share-buttons'); ?>
       </div>
-      <?php if ( is_singular(array('post','podcast')) ) { ?>
+      <?php if ( is_singular(array('post','podcast')) && get_field('show_subscribe_form','option') ) { ?>
         <?php get_template_part('templates/subscribe-form'); ?>
+      <?php } else { ?>
+        <hr>
       <?php }; ?>
     </footer>
     <?php if ( !is_singular('associate') ) { ?>

@@ -6,9 +6,11 @@
 
 <?php if(get_field('signup_form_placement') == "top") { ?>
 	<!-- Form (Top) -->
-	<div class="subscribe-form top">
+	<div class="subscribe-form-container top">
 		<h3><?php the_field('signup_form_title'); ?></h3>
-		<?php the_field('signup_form_code'); ?>
+		<div class="subscribe-form">
+			<?php the_field('subscribe_form_code','option'); ?>
+		</div>
 	</div>
 <?php } ?>
 
@@ -23,7 +25,7 @@
 	<?php get_template_part('templates/content', 'page-custom'); ?>
 <?php endwhile; ?>
 
-<?php if(get_field('signup_form_placement') == "right") { ?>			
+<?php if(get_field('signup_form_placement') == "right") { ?>
 		</div>
 		<div class="col-sm-4 col-subscribe-form right">
 			<div class="subscribe-form">

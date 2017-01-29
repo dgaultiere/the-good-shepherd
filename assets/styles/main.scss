@@ -871,7 +871,6 @@ textarea {
 
 /** Links & Buttons **/
 
-
 .btn {
 	font-family: $font-bernino;
 	font-weight: 400;
@@ -1196,6 +1195,7 @@ input[type=submit] {
 	}
 }
 
+
 /** Social Links **/
 .social-links {
 	li {
@@ -1219,6 +1219,101 @@ input[type=submit] {
 		&:focus {
 			text-decoration: none;
 			background-color: $accent-color;
+		}
+	}
+}
+
+
+/** Subscribe Form **/
+
+.subscribe-form-container {
+	background: $grey-lighter;
+	border-radius: $border-radius;
+	padding: 15px 15px 25px;
+
+	@media print {
+		display: none;
+	}
+
+	h5 {
+		margin: 10px 0 15px;
+		text-align: center;
+	}
+}
+
+.subscribe-form {
+	.mc-field-group {
+		margin-bottom: 15px;
+	}
+
+	input {
+		float: left;
+		outline: none;
+		height: 36px;
+		padding: 6px 12px;
+		font-size: 16px;
+		margin-right: 10px;
+		@include transition(color 0.2s, background 0.2s, background-color 0.2s, border-color 0.2s);
+	}
+
+	.email {
+		width: 100%;
+		margin-bottom: 10px;
+
+		@media (min-width: $screen-sm-min) {
+			max-width: 276px;
+		}
+	}
+
+	.button {
+		// @extend .btn;
+		// @extend .btn-primary;
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 10px;
+		background: $white;
+
+		@media (min-width: $screen-sm-min) {
+			width: auto;
+		}
+	}
+
+	.clear {
+		clear: both;
+	}
+
+	#mc_embed_signup {
+		display: block;
+		width: 390px;
+		max-width: 100%;
+		margin: 0 auto;
+
+		.alert,
+		div.mce_inline_error,
+		div#mce-success-response,
+		div#mce-error-response {
+			padding: 6px 10px;
+			font-size: 15px;
+			max-width: 516px;
+			border-radius: $border-radius;
+			border-width: 2px;
+			border-style: solid;
+			margin-top: 5px;
+			font-weight: 400;
+			clear: both;
+		}
+
+		div.mce_inline_error,
+		div#mce-error-response {
+			@extend .alert-danger;
+		}
+
+		div#mce-success-response {
+			@extend .alert-success;
+		}
+
+		input.mce_inline_error {
+			border-color: #ebccd1;
 		}
 	}
 }
@@ -2189,7 +2284,7 @@ aside {
 		}
 	}
 
-	.subscribe-form {
+	.subscribe-form-container {
 		background: $grey-lighter;
 		padding: 14px 22px;
 		margin-top: 15px;
@@ -2638,6 +2733,20 @@ iframe[src*="simplecast.com"] {
 	}
 }
 
+#subscribe {
+	padding-top: 35px;
+	padding-bottom: 35px;
+
+	.title {
+		font-weight: 600;
+		font-size: 24px;
+		text-align: center;
+		border-bottom: none;
+		margin-bottom: 15px;
+		padding-bottom: 0;
+	}
+}
+
 #content-section-1,
 #content-section-2 {
 	@media (min-width: $screen-md-min) {
@@ -2656,10 +2765,6 @@ iframe[src*="simplecast.com"] {
 
 	.quote-credit {
 		opacity: .75;
-	}
-
-	.down-arrow {
-		text-shadow: none;
 	}
 }
 
@@ -2945,13 +3050,13 @@ form.wpcf7-form {
 				}
 			}
 
-			.subscribe-form {
+			.subscribe-form-container {
 				padding-bottom: 15px;
 			}
 		}
 	}
 
-	.subscribe-form {
+	.subscribe-form-container {
 		&.top {
 			margin-bottom: 40px;
 		}
@@ -2981,95 +3086,6 @@ form.wpcf7-form {
 	}
 }
 
-.subscribe-form {
-	background: $grey-lighter;
-	border-radius: $border-radius;
-	padding: 15px 15px 25px;
-
-	@media print {
-		display: none;
-	}
-
-	h5 {
-		margin: 10px 0 15px;
-		text-align: center;
-	}
-
-	.mc-field-group {
-		margin-bottom: 15px;
-	}
-
-	input {
-		float: left;
-		outline: none;
-		height: 36px;
-		padding: 6px 12px;
-		font-size: 16px;
-		margin-right: 10px;
-		@include transition(color 0.2s, background 0.2s, background-color 0.2s, border-color 0.2s);
-	}
-
-	.email {
-		width: 100%;
-		margin-bottom: 10px;
-
-		@media (min-width: $screen-sm-min) {
-			max-width: 276px;
-		}
-	}
-
-	.button {
-		// @extend .btn;
-		// @extend .btn-primary;
-		width: 100%;
-		margin-right: 0;
-		margin-bottom: 10px;
-		background: $white;
-
-		@media (min-width: $screen-sm-min) {
-			width: auto;
-		}
-	}
-
-	.clear {
-		clear: both;
-	}
-
-	#mc_embed_signup {
-		display: block;
-		width: 390px;
-		max-width: 100%;
-		margin: 0 auto;
-
-		.alert,
-		div.mce_inline_error,
-		div#mce-success-response,
-		div#mce-error-response {
-			padding: 6px 10px;
-			font-size: 15px;
-			max-width: 516px;
-			border-radius: $border-radius;
-			border-width: 2px;
-			border-style: solid;
-			margin-top: 5px;
-			font-weight: 400;
-			clear: both;
-		}
-
-		div.mce_inline_error,
-		div#mce-error-response {
-			@extend .alert-danger;
-		}
-
-		div#mce-success-response {
-			@extend .alert-success;
-		}
-
-		input.mce_inline_error {
-			border-color: #ebccd1;
-		}
-	}
-}
 
 
 
