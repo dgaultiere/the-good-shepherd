@@ -17,7 +17,7 @@ use Roots\Sage\Wrapper;
       get_template_part('templates/header');
     ?>
     <div class="wrap <?php the_field('text_style'); ?>" role="document">
-	    <?php if ( is_page_template(array('template-home.php','template-home-2.php')) ) : ?>
+	    <?php if ( is_page_template(array('template-home.php','template-home-2.php','template-home-3.php')) ) : ?>
 	    	<div class="container-fluid">
 	    <?php else : ?>
 		    <div class="container-fluid">
