@@ -52,7 +52,7 @@
 </div>
 
 <!-- Podcast -->
-<div class="container-fluid section grey-bg" id="podcast">
+<div class="container-fluid section text-<?php the_field('podcast_text_color'); ?>" id="podcast" style="background-image:url('<?php $cover_image = get_field('podcast_photo'); echo $cover_image['sizes']['extra-large']; ?>');">
 	<div class="row">
 		<div class="container">
 			<div class="row">
