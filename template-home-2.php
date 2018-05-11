@@ -15,6 +15,9 @@
 				</div>
 			</div>
 			<div class="row">
+				<?php if ( get_field('show_cover_button') ) { ?>
+					<a href="<?php the_field('cover_button_link') ?>" class="btn btn-primary"><?php the_field('cover_button_text') ?></a>
+				<?php }; ?>
 				<a href="#recent-articles" class="down-arrow"><i class="fa fa-angle-down"></i></a>
 			</div>
 		</div>
