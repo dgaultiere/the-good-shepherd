@@ -1850,8 +1850,6 @@ acf_add_local_field_group(array (
 			'default_value' => 'white',
 			'layout' => 'horizontal',
 		),
-
-		// Cover button
 		array (
 			'key' => 'field_57ba721aa4b86f91',
 			'label' => 'Include Cover Button',

@@ -231,7 +231,9 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-12">
-					<!-- stuff here -->
+					<div class="big-search">
+						<?php get_search_form(); ?>
+					</div>
 				</div>
 			</div>
 		</div>
