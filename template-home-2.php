@@ -14,10 +14,11 @@
 					<h2 class="subtitle"><?php the_field('cover_subtitle'); ?></h2>
 				</div>
 			</div>
-			<div class="row">
 				<?php if ( get_field('show_cover_button') ) { ?>
 					<a href="<?php the_field('cover_button_link') ?>" class="btn btn-primary"><?php the_field('cover_button_text') ?></a>
 				<?php }; ?>
+			</div>
+			<div class="row">
 				<a href="#featured-link" class="down-arrow"><i class="fa fa-angle-down"></i></a>
 			</div>
 		</div>
@@ -62,9 +63,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-xs-12">
-					<!-- stuff here -->
-				</div>
+				<a href="<?php the_field('podcast_button_link') ?>" class="btn btn-primary"><?php the_field('podcast_button_text') ?></a>
 			</div>
 			<div class="row">
 				<a href="#product" class="down-arrow"><i class="fa fa-angle-down"></i></a>
