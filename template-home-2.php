@@ -124,21 +124,19 @@
 <!-- Description #2 -->
 
 <!-- Subscribe -->
-<?php if ( get_field('show_subscribe_form_homepage') ) { ?>
-	<div class="container-fluid section text-<?php the_field('subscribe_text_color'); ?>" id="subscribe" style="background-color:<?php the_field('subscribe_background_color'); ?>">
-		<div class="row">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12">
-						<h3 class="title"><?php the_field('subscribe_form_title'); ?></h3>
-						<div class="subscribe-form">
-					  	<?php the_field('subscribe_form_code','option'); ?>
-						</div>
+<div class="container-fluid section text-<?php the_field('subscribe_text_color'); ?>" id="subscribe" style="background-color:<?php the_field('subscribe_background_color'); ?>">
+	<div class="row">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<h3 class="title"><?php the_field('subscribe_form_title'); ?></h3>
+					<div class="subscribe-form">
+				  	<?php the_field('subscribe_form_code','option'); ?>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-<?php }; ?>
+</div>
 
 <!-- Search -->

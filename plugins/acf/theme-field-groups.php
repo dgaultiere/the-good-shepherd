@@ -1554,7 +1554,7 @@ acf_add_local_field_group(array (
 			'disabled' => 0,
 		),
 
-		// Feature link section
+		// Featured link section
 		array (
 			'key' => 'field_57ba7435ae5e6',
 			'label' => 'Featured Link URL',
@@ -1927,6 +1927,187 @@ acf_add_local_field_group(array (
 			'disabled' => 0,
 		),
 
+		// Featured link
+		array (
+			'key' => 'field_57ba7435ae5e6a',
+			'label' => 'Featured Link URL',
+			'name' => 'featured_link_url',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+			'readonly' => 0,
+			'disabled' => 0,
+		),
+		array (
+			'key' => 'field_57ba7425ae5e4a',
+			'label' => 'Featured Link Title',
+			'name' => 'featured_link_title',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+			'readonly' => 0,
+			'disabled' => 0,
+		),
+		array (
+			'key' => 'field_57ba742aae5e5a',
+			'label' => 'Featured Link Subtitle',
+			'name' => 'featured_link_subtitle',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+			'readonly' => 0,
+			'disabled' => 0,
+		),
+		array (
+			'key' => 'field_57bfbc4a045fe',
+			'label' => 'Featured Link Image',
+			'name' => 'featured_link_image',
+			'type' => 'image',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'id',
+			'preview_size' => 'medium_large',
+			'library' => 'all',
+			'min_width' => 1200,
+			'min_height' => 300,
+			'min_size' => '',
+			'max_width' => '',
+			'max_height' => '',
+			'max_size' => '',
+			'mime_types' => '',
+		),
+
+		// Podcast
+
+
+		// Featured product
+		array (
+			'key' => 'field_57ba779fae5e7a',
+			'label' => 'Featured Product Title',
+			'name' => 'featured_product_title',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+			'readonly' => 0,
+			'disabled' => 0,
+		),
+		array (
+			'key' => 'field_57ba77a3ae5e8a',
+			'label' => 'Featured Product Image',
+			'name' => 'featured_product_image',
+			'type' => 'image',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'id',
+			'preview_size' => 'thumbnail',
+			'library' => 'all',
+			'min_width' => '',
+			'min_height' => '',
+			'min_size' => '',
+			'max_width' => '',
+			'max_height' => '',
+			'max_size' => '',
+			'mime_types' => '',
+		),
+		array (
+			'key' => 'field_57ba77acae5e9a',
+			'label' => 'Featured Product Summary',
+			'name' => 'featured_product_summary',
+			'type' => 'textarea',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'maxlength' => '',
+			'rows' => 4,
+			'new_lines' => 'wpautop',
+			'readonly' => 0,
+			'disabled' => 0,
+		),
+		array (
+			'key' => 'field_57ba77bfae5eaa',
+			'label' => 'Featured Product Link',
+			'name' => 'featured_product_link',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+			'readonly' => 0,
+			'disabled' => 0,
+		),
+
 		// About section
 		array (
 			'key' => 'field_553f1790964b5',
@@ -2059,6 +2240,76 @@ acf_add_local_field_group(array (
 			'readonly' => 0,
 			'disabled' => 0,
 		),
+
+		// Featured video
+
+
+		// Highlighted page
+
+
+		// Subscribe form
+		array (
+			'key' => 'field_57ba721aa4b86g1a',
+			'label' => 'Subscribe Form Title',
+			'name' => 'subscribe_form_title',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => 'Subscribe to our email newsletter',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => 80,
+			'readonly' => 0,
+			'disabled' => 0,
+		),
+		array (
+			'key' => 'field_57ba721aa4b86g2a',
+			'label' => 'Subscribe Background Color',
+			'name' => 'subscribe_background_color',
+			'type' => 'color_picker',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '#3498db',
+		),
+		array (
+			'key' => 'field_57ba721aa4b86g3a',
+			'label' => 'Subscribe Text Color',
+			'name' => 'subscribe_text_color',
+			'type' => 'radio',
+			'instructions' => 'Select whether the quote text should be white or black. <em>If your background color is dark, choose white text. If your background color is light, choose black text.</em>',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array (
+				'white' => 'White',
+				'black' => 'Black',
+			),
+			'other_choice' => 0,
+			'save_other_choice' => 0,
+			'default_value' => 'white',
+			'layout' => 'horizontal',
+		),
+
+		// Search form
+
+
 	),
 	'location' => array (
 		array (
