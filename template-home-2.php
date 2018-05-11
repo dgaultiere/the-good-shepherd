@@ -153,8 +153,12 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-12">
-					<!-- stuff here -->
+					<?php the_field('video_embed_code'); ?>
+					<?php the_field('video_description'); ?>
 				</div>
+			</div>
+			<div class="row">
+				<a href="<?php the_field('video_button_link') ?>" class="btn btn-primary"><?php the_field('video_button_text') ?></a>
 			</div>
 			<div class="row">
 				<a href="#highlight" class="down-arrow"><i class="fa fa-angle-down"></i></a>
