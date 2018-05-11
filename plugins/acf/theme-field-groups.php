@@ -6,6 +6,7 @@
 
 if( function_exists('acf_add_local_field_group') ):
 
+// Search page options
 acf_add_local_field_group(array (
 	'key' => 'group_55f6684a8e2f5',
 	'title' => 'Search Page Options',
@@ -339,6 +340,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Contact page options
 acf_add_local_field_group(array (
 	'key' => 'group_55c6c12cecf19',
 	'title' => 'Contact Page Options',
@@ -466,6 +468,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Team page options
 acf_add_local_field_group(array (
 	'key' => 'group_57a6e91b1b358',
 	'title' => 'Team Page Options',
@@ -594,6 +597,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Default page options
 acf_add_local_field_group(array (
 	'key' => 'group_55c6c12d04fb7',
 	'title' => 'Default Page Options',
@@ -728,6 +732,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Default post options
 acf_add_local_field_group(array (
 	'key' => 'group_57b28f5b9fcff',
 	'title' => 'Default Post Options',
@@ -845,6 +850,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+//Default post options (duplicate??)
 acf_add_local_field_group(array (
 	'key' => 'group_57b2b5af5c37e',
 	'title' => 'Default Post Options',
@@ -961,6 +967,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Footer styles
 acf_add_local_field_group(array (
 	'key' => 'group_55c80c03844e5',
 	'title' => 'Footer Styling',
@@ -1000,10 +1007,13 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Homepage 1 Template
 acf_add_local_field_group(array (
 	'key' => 'group_57ba6e694f499',
 	'title' => 'Homepage',
 	'fields' => array (
+
+		// Cover section
 		array (
 			'key' => 'field_57ba720ba4b83',
 			'label' => 'Cover Title',
@@ -1268,6 +1278,8 @@ acf_add_local_field_group(array (
 			'default_value' => 'white',
 			'layout' => 'horizontal',
 		),
+
+		// About us section
 		array (
 			'key' => 'field_57ba6ef8ebd66',
 			'label' => 'About Us Title',
@@ -1355,6 +1367,8 @@ acf_add_local_field_group(array (
 			'readonly' => 0,
 			'disabled' => 0,
 		),
+
+		// Recent articles section
 		array (
 			'key' => 'field_57ba6e70ebd5f',
 			'label' => 'Recent Article Title',
@@ -1376,6 +1390,8 @@ acf_add_local_field_group(array (
 			'readonly' => 0,
 			'disabled' => 0,
 		),
+
+		// Recent podcasts section
 		array (
 			'key' => 'field_57ba6e9cebd60',
 			'label' => 'Recent Podcast Title',
@@ -1397,6 +1413,8 @@ acf_add_local_field_group(array (
 			'readonly' => 0,
 			'disabled' => 0,
 		),
+
+		// Quote section
 		array (
 			'key' => 'field_57ba6eccebd64',
 			'label' => 'Quote Title',
@@ -1476,6 +1494,8 @@ acf_add_local_field_group(array (
 			'default_value' => 'white',
 			'layout' => 'horizontal',
 		),
+
+		// TLC section
 		array (
 			'key' => 'field_57ba71c2ebd6b',
 			'label' => 'TLC Title',
@@ -1563,6 +1583,8 @@ acf_add_local_field_group(array (
 			'readonly' => 0,
 			'disabled' => 0,
 		),
+
+		// Recent events section
 		array (
 			'key' => 'field_57ba7109ebd6a',
 			'label' => 'Recent Event Title',
@@ -1584,6 +1606,8 @@ acf_add_local_field_group(array (
 			'readonly' => 0,
 			'disabled' => 0,
 		),
+
+		// Recent videos section
 		array (
 			'key' => 'field_57ba6eb3ebd61',
 			'label' => 'Recent Video Title',
@@ -1605,6 +1629,8 @@ acf_add_local_field_group(array (
 			'readonly' => 0,
 			'disabled' => 0,
 		),
+
+		// Feature link section
 		array (
 			'key' => 'field_57ba7435ae5e6',
 			'label' => 'Featured Link URL',
@@ -1692,6 +1718,8 @@ acf_add_local_field_group(array (
 			'max_size' => '',
 			'mime_types' => '',
 		),
+
+		// Featured product section
 		array (
 			'key' => 'field_57ba779fae5e7',
 			'label' => 'Featured Product Title',
@@ -1801,10 +1829,12 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Homepage 2 template
 acf_add_local_field_group(array (
 	'key' => 'group_55c6c12d0d232',
 	'title' => 'Homepage 2',
 	'fields' => array (
+		// Cover section
 		array (
 			'key' => 'field_553f0c213cc48',
 			'label' => 'Cover Title',
@@ -1895,6 +1925,8 @@ acf_add_local_field_group(array (
 			'default_value' => 'white',
 			'layout' => 'horizontal',
 		),
+
+		// About section
 		array (
 			'key' => 'field_553f1790964b5',
 			'label' => 'About Title',
@@ -2049,6 +2081,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Site info options
 acf_add_local_field_group(array (
 	'key' => 'group_55c801c8c31d5',
 	'title' => 'Site Info',
@@ -2171,6 +2204,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Social links options
 acf_add_local_field_group(array (
 	'key' => 'group_55c7f45deadc1',
 	'title' => 'Social Links',
@@ -2321,6 +2355,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Shortcodes information
 acf_add_local_field_group(array (
 	'key' => 'group_57bfc2cbec8ff',
 	'title' => 'Shortcodes For Posts & Pages',
@@ -2338,8 +2373,7 @@ acf_add_local_field_group(array (
 				'class' => '',
 				'id' => '',
 			),
-			'message' => '<p>Draw attention to a line of text. Best used in addition to a heading tag (e.g. H3). The result will be bold, italicized, serif text that is centered on the page.</p>
-<p><b>Example:</b> [callout]This is a great inspiring line of text[/callout]</p>',
+			'message' => '<p>Draw attention to a line of text. Best used in addition to a heading tag (e.g. H3). The result will be bold, italicized, serif text that is centered on the page.</p><p><b>Example:</b> [callout]This is a great inspiring line of text[/callout]</p>',
 			'new_lines' => '',
 			'esc_html' => 0,
 		),
@@ -2356,8 +2390,7 @@ acf_add_local_field_group(array (
 				'class' => '',
 				'id' => '',
 			),
-			'message' => '<p>Turn a link into a regular button. Regular buttons have a grey border and turn colored when the user hovers or clicks.</p>
-<p><b>Example:</b> [button]Regular Button[/button]</p>',
+			'message' => '<p>Turn a link into a regular button. Regular buttons have a grey border and turn colored when the user hovers or clicks.</p><p><b>Example:</b> [button]Regular Button[/button]</p>',
 			'new_lines' => '',
 			'esc_html' => 0,
 		),
@@ -2374,8 +2407,7 @@ acf_add_local_field_group(array (
 				'class' => '',
 				'id' => '',
 			),
-			'message' => '<p>Turn a link into a primary button. Primary buttons use your theme link color defined in Theme Styling above.</p>
-<p><b>Example:</b> [button-primary]Primary Button[/button-primary]</p>',
+			'message' => '<p>Turn a link into a primary button. Primary buttons use your theme link color defined in Theme Styling above.</p><p><b>Example:</b> [button-primary]Primary Button[/button-primary]</p>',
 			'new_lines' => '',
 			'esc_html' => 0,
 		),
@@ -2399,6 +2431,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Subscribe page options
 acf_add_local_field_group(array (
 	'key' => 'group_5608a1fd42047',
 	'title' => 'Subscription Page Options',
@@ -2488,6 +2521,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Site logo options
 acf_add_local_field_group(array (
 	'key' => 'group_55c7f9e407705',
 	'title' => 'Site Logo',
@@ -2560,6 +2594,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Theme global styling options
 acf_add_local_field_group(array (
 	'key' => 'group_55c80aeec726e',
 	'title' => 'Theme Styling',
@@ -2614,6 +2649,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Site nagivation options
 acf_add_local_field_group(array (
 	'key' => 'group_55f5f7ff3f75c',
 	'title' => 'Site Navigation',
@@ -2653,6 +2689,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Page header styling options
 acf_add_local_field_group(array (
 	'key' => 'group_55c80bcc98663',
 	'title' => 'Page Header Styling',
@@ -2754,6 +2791,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Post layout styling options
 acf_add_local_field_group(array (
 	'key' => 'group_57b9350176ee7',
 	'title' => 'Post Layout',
@@ -2794,6 +2832,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Post share buttons options
 acf_add_local_field_group(array (
 	'key' => 'group_560e09fb0bdc7',
 	'title' => 'Post Share Buttons',
@@ -2896,6 +2935,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Subscribe form options
 acf_add_local_field_group(array (
 	'key' => 'group_57ac1503553bf',
 	'title' => 'Subscribe Form',
@@ -3023,6 +3063,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Associate object fields
 acf_add_local_field_group(array (
 	'key' => 'group_576ed056a2427',
 	'title' => 'Associate Information',
@@ -3179,6 +3220,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Associates page options
 acf_add_local_field_group(array (
 	'key' => 'group_576ece83c4dd9',
 	'title' => 'Associates Page',
@@ -3290,6 +3332,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Even object fields
 acf_add_local_field_group(array (
 	'key' => 'group_575369005b876',
 	'title' => 'Event Information',
@@ -3419,8 +3462,7 @@ acf_add_local_field_group(array (
 			'label' => 'Button URL',
 			'name' => 'event_register_url',
 			'type' => 'text',
-			'instructions' => 'Provide a link where guests can register or RSVP. For email use
-mailto:your-email@address.com',
+			'instructions' => 'Provide a link where guests can register or RSVP. For email use mailto:your-email@address.com',
 			'required' => 1,
 			'conditional_logic' => array (
 				array (
@@ -3464,6 +3506,7 @@ mailto:your-email@address.com',
 	'description' => '',
 ));
 
+// Podcast page options
 acf_add_local_field_group(array (
 	'key' => 'group_576ed9eeb1a99',
 	'title' => 'Podcast Page',
@@ -3506,6 +3549,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Product object fields
 acf_add_local_field_group(array (
 	'key' => 'group_5735708f5fb57',
 	'title' => 'Product Information',
@@ -3619,6 +3663,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Videos page options
 acf_add_local_field_group(array (
 	'key' => 'group_576ed9cde19d5',
 	'title' => 'Videos Page',
@@ -3677,6 +3722,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Events page options
 acf_add_local_field_group(array (
 	'key' => 'group_57535f8f8bcf5',
 	'title' => 'Events Page',
@@ -3719,6 +3765,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Store page options
 acf_add_local_field_group(array (
 	'key' => 'group_57534fe2989e8',
 	'title' => 'Store Page',
@@ -3777,6 +3824,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Video object fields
 acf_add_local_field_group(array (
 	'key' => 'group_579e168d2891f',
 	'title' => 'Video Information',
@@ -3929,6 +3977,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+// Podcast object fields
 acf_add_local_field_group(array (
 	'key' => 'group_57a42f7d20dc2',
 	'title' => 'Podcast Information',
