@@ -1103,82 +1103,6 @@ acf_add_local_field_group(array (
 			'layout' => 'horizontal',
 		),
 
-		// Cover button
-		array (
-			'key' => 'field_57ba721aa4b86f91',
-			'label' => 'Include Cover Button',
-			'name' => 'show_cover_button',
-			'type' => 'true_false',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => 'Show primary action button in the cover area',
-			'default_value' => 1,
-		),
-		array (
-			'key' => 'field_57ba721aa4b86f92',
-			'label' => 'Cover Button Text',
-			'name' => 'cover_button_text',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 1,
-			'conditional_logic' => array (
-				array (
-					array (
-						'field' => 'field_57ba721aa4b86f91',
-						'operator' => '==',
-						'value' => '1',
-					),
-				),
-			),
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => 80,
-			'readonly' => 0,
-			'disabled' => 0,
-		),
-		array (
-			'key' => 'field_57ba721aa4b86f93',
-			'label' => 'Cover Button Link',
-			'name' => 'cover_button_link',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 1,
-			'conditional_logic' => array (
-				array (
-					array (
-						'field' => 'field_57ba721aa4b86f91',
-						'operator' => '==',
-						'value' => '1',
-					),
-				),
-			),
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => 80,
-			'readonly' => 0,
-			'disabled' => 0,
-		),
-
 		// Subscribe form
 		array (
 			'key' => 'field_57ba721aa4b86f9',
@@ -1834,6 +1758,7 @@ acf_add_local_field_group(array (
 	'key' => 'group_55c6c12d0d232',
 	'title' => 'Homepage 2',
 	'fields' => array (
+
 		// Cover section
 		array (
 			'key' => 'field_553f0c213cc48',
@@ -1924,6 +1849,82 @@ acf_add_local_field_group(array (
 			'save_other_choice' => 0,
 			'default_value' => 'white',
 			'layout' => 'horizontal',
+		),
+
+		// Cover button
+		array (
+			'key' => 'field_57ba721aa4b86f91',
+			'label' => 'Include Cover Button',
+			'name' => 'show_cover_button',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => 'Show primary action button in the cover area',
+			'default_value' => 1,
+		),
+		array (
+			'key' => 'field_57ba721aa4b86f92',
+			'label' => 'Cover Button Text',
+			'name' => 'cover_button_text',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_57ba721aa4b86f91',
+						'operator' => '==',
+						'value' => '1',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => 80,
+			'readonly' => 0,
+			'disabled' => 0,
+		),
+		array (
+			'key' => 'field_57ba721aa4b86f93',
+			'label' => 'Cover Button Link',
+			'name' => 'cover_button_link',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_57ba721aa4b86f91',
+						'operator' => '==',
+						'value' => '1',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => 80,
+			'readonly' => 0,
+			'disabled' => 0,
 		),
 
 		// About section
