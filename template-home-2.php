@@ -136,28 +136,19 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<h2 class="title"><?php the_field('about_title'); ?></h2>
-					<h3 class="subtitle"><?php the_field('about_subtitle'); ?></h3>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12">
-					<?php echo wp_get_attachment_image( get_field('about_image'), 'medium' ); ?>
-					<a href="<?php the_field('about_link'); ?>" class="heading-link">
-						<h4><?php the_field('about_paragraph_heading'); ?></h4>
-					</a>
-					<div>
-						<p>
-							<?php the_field('about_paragraph_content'); ?>
-						</p>
-						<div class="read-more-link">
-							<a href="<?php the_field('about_link'); ?>">
-					  		<?php if(get_field('site_language', 'option') == "es-mx") { ?>
-					  			Lee Mas
-								<?php } else { ?>
-									Read More
-								<?php } ?>
-							</a>
-						</div>
+					<p><?php the_field('about_description'); ?></p>
+
+					<!-- 3 distinctives & icons go here -->
+
+					<div class="container">
+						<a href="<?php the_field('about_button_url'); ?>" class="btn btn-primary">
+							<?php the_field('about_button_text'); ?>
+						</a>
+					</div>
+					<div class="container">
+						<a href="<?php the_field('about_secondary_url'); ?>" class="secondary-link">
+							<?php the_field('about_secondary_text'); ?><i class="fa fa-angle-right"></i>
+						</a>
 					</div>
 				</div>
 			</div>
