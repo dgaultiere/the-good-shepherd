@@ -14,7 +14,7 @@
 						<h1 class="title"><?php the_field('cover_title'); ?></h1>
 						<h2 class="subtitle"><?php the_field('cover_subtitle'); ?></h2>
 						<?php if ( get_field('show_cover_button') ) { ?>
-							<a href="<?php the_field('cover_button_link') ?>" class="btn btn-primary"><?php the_field('cover_button_text') ?></a>
+							<a href="<?php the_field('cover_button_link'); ?>" class="btn btn-primary"><?php the_field('cover_button_text'); ?></a>
 						<?php }; ?>
 					</div>
 				</div>
@@ -32,8 +32,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
-					<h2><?php the_field('featured_link_title'); ?></h2>
-					<a href="<?php the_field('featured_link_url') ?>">
+					<h2 class="title"><?php the_field('featured_link_title'); ?></h2>
+					<a href="<?php the_field('featured_link_url'); ?>">
 						<?php
 							$featured_link_image = get_field('featured_link_image');
 							if( $featured_link_image ) {
@@ -41,33 +41,52 @@
 							}
 						?>
 					</a>
-					<a href="<?php the_field('featured_link_url'); ?>" class="btn">
-						<?php the_field('featured_link_subtitle'); ?><i class="fa fa-angle-right"></i>
-					</a>
+					<div class="row">
+						<a href="<?php the_field('featured_link_button_url'); ?>" class="btn btn-primary">
+							<?php the_field('featured_link_button_text'); ?>
+						</a>
+					</div>
+					<div class="row">
+						<a href="<?php the_field('featured_link_secondary_url'); ?>" class="secondary-link">
+							<?php the_field('featured_link_secondary_text'); ?><i class="fa fa-angle-right"></i>
+						</a>
+					</div>
 				</div>
 			</div>
+			<div class="row">
+				<a href="#podcast" class="down-arrow"><i class="fa fa-angle-down"></i></a>
+			</div>
 		</div>
-	</div>
-	<div class="row">
-		<a href="#podcast" class="down-arrow"><i class="fa fa-angle-down"></i></a>
 	</div>
 </div>
 
 <!-- Podcast -->
-<div class="container-fluid section text-<?php the_field('podcast_text_color'); ?>" id="podcast" style="background-image:url('<?php $cover_image = get_field('podcast_photo'); echo $cover_image['sizes']['extra-large']; ?>');">
-	<div class="row">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<h2 class="title"><?php the_field('podcast_title'); ?></h2>
-					<h3 class="subtitle"><?php the_field('podcast_subtitle'); ?></h3>
+<div class="bg-image" style="background-image:url('<?php $cover_image = get_field('podcast_photo'); echo $cover_image['sizes']['extra-large']; ?>');">
+	<div class="container-fluid section text-<?php the_field('podcast_text_color'); ?>" id="podcast" style="background-color: rgba(0,0,0,0.<?php the_field('podcast_photo_darkness'); ?>)">
+		<div class="row">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<h2 class="title"><?php the_field('podcast_title'); ?></h2>
+						<h3 class="subtitle"><?php the_field('podcast_subtitle2'); ?></h3>
+						<div class="row">
+							<p><?php the_field('podcast_description'); ?></p>
+						</div>
+						<div class="row">
+							<a href="<?php the_field('podcast_button_url'); ?>" class="btn btn-primary">
+								<?php the_field('podcast_button_text'); ?>
+							</a>
+						</div>
+						<div class="row">
+							<a href="<?php the_field('podcast_secondary_url'); ?>" class="secondary-link">
+								<?php the_field('podcast_secondary_text'); ?><i class="fa fa-angle-right"></i>
+							</a>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="row">
-				<a href="<?php the_field('podcast_button_link') ?>" class="btn btn-primary"><?php the_field('podcast_button_text') ?></a>
-			</div>
-			<div class="row">
-				<a href="#product" class="down-arrow"><i class="fa fa-angle-down"></i></a>
+				<div class="row">
+					<a href="#product" class="down-arrow"><i class="fa fa-angle-down"></i></a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -79,21 +98,28 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
-					<a href="<?php the_field('featured_product_link') ?>">
-						<?php
-							$product_image = get_field('featured_product_image');
-							if( $product_image ) {
-								echo wp_get_attachment_image( $product_image, 'medium');
-							}
-						?>
-					</a>
-					<h3 class="entry-title">
-						<a href="<?php the_field('featured_product_link') ?>"><?php the_field('featured_product_title'); ?></a>
-					</h3>
-					<div class="entry-summary">
-						<?php the_field('featured_product_summary'); ?>
+					<h2 class="title"><?php the_field('featured_product_title'); ?></h2>
+					<h3 class="subtitle"><?php the_field('featured_product_subtitle'); ?></h3>
+					<div class="row">
+						<a href="<?php the_field('featured_product_link'); ?>">
+							<?php
+								$product_image = get_field('featured_product_image');
+								if( $product_image ) {
+									echo wp_get_attachment_image( $product_image, 'medium');
+								}
+							?>
+						</a>
 					</div>
-					<a href="<?php the_field('featured_product_link') ?>" class="btn btn-primary">More Info <i class="fa fa-angle-right"></i></a>
+					<div class="row">
+						<a href="<?php the_field('featured_product_button_url'); ?>" class="btn btn-primary">
+							<?php the_field('featured_product_button_text'); ?>
+						</a>
+					</div>
+					<div class="row">
+						<a href="<?php the_field('featured_product_secondary_url'); ?>" class="secondary-link">
+							<?php the_field('featured_product_secondary_text'); ?><i class="fa fa-angle-right"></i>
+						</a>
+					</div>
 				</div>
 			</div>
 			<div class="row">
@@ -159,7 +185,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<a href="<?php the_field('video_button_link') ?>" class="btn btn-primary"><?php the_field('video_button_text') ?></a>
+				<a href="<?php the_field('video_button_link'); ?>" class="btn btn-primary"><?php the_field('video_button_text'); ?></a>
 			</div>
 			<div class="row">
 				<a href="#highlight" class="down-arrow"><i class="fa fa-angle-down"></i></a>

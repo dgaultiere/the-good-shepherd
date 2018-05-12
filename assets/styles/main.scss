@@ -2589,7 +2589,14 @@ iframe[src*="simplecast.com"] {
 		padding: 0;
 	}
 
+	.secondary-link {
+		display: inline-block;
+		maring: 0 auto;
+	}
+
 	&.text-white {
+		color: $white;
+
 		.title,
 		.subtitle,
 		.down-arrow,
@@ -2665,7 +2672,6 @@ iframe[src*="simplecast.com"] {
 }
 
 #cover {
-	// height: 360px;
 	text-align: center;
 	padding-top: 120px;
 	padding-right: 30px;
@@ -2823,48 +2829,53 @@ iframe[src*="simplecast.com"] {
 
 
 /* Homepage 2 */
-
-#about {
-	img {
-		width: 280px;
-		max-width: 100%;
-		margin: 0 auto 35px;
-
-		@media (min-width: $screen-sm-min) {
-			float: left;
-			margin: 0 20px 15px 0;
-		}
-
-		@media (min-width: $screen-md-min) {
-			margin: 0 30px 25px 0;
-			width: 320px;
-		}
-	}
-
-	h4 {
+.page-template-template-home-2 {
+	#podcast {
 		text-align: center;
-		margin-top: 5px;
-		margin-bottom: 15px;
-
-		@media (min-width: $screen-sm-min) {
-			text-align: left;
-		}
 	}
-}
 
-#featured {
-	.snippet-thumbnail {
-		max-height: 200px;
+	#about {
+		img {
+			width: 280px;
+			max-width: 100%;
+			margin: 0 auto 35px;
 
-		span {
-			display: inline-block;
+			@media (min-width: $screen-sm-min) {
+				float: left;
+				margin: 0 20px 15px 0;
+			}
+
+			@media (min-width: $screen-md-min) {
+				margin: 0 30px 25px 0;
+				width: 320px;
+			}
+		}
+
+		h4 {
 			text-align: center;
-			padding: 17.5%;
+			margin-top: 5px;
+			margin-bottom: 15px;
+
+			@media (min-width: $screen-sm-min) {
+				text-align: left;
+			}
 		}
 	}
 
-	.entry-summary {
-		font-size: 15px;
+	#featured {
+		.snippet-thumbnail {
+			max-height: 200px;
+
+			span {
+				display: inline-block;
+				text-align: center;
+				padding: 17.5%;
+			}
+		}
+
+		.entry-summary {
+			font-size: 15px;
+		}
 	}
 }
 
