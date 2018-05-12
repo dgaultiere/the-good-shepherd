@@ -12,11 +12,10 @@
 				<div class="col-xs-12">
 					<h1 class="title"><?php the_field('cover_title'); ?></h1>
 					<h2 class="subtitle"><?php the_field('cover_subtitle'); ?></h2>
+					<?php if ( get_field('show_cover_button') ) { ?>
+						<a href="<?php the_field('cover_button_link') ?>" class="btn btn-primary"><?php the_field('cover_button_text') ?></a>
+					<?php }; ?>
 				</div>
-			</div>
-				<?php if ( get_field('show_cover_button') ) { ?>
-					<a href="<?php the_field('cover_button_link') ?>" class="btn btn-primary"><?php the_field('cover_button_text') ?></a>
-				<?php }; ?>
 			</div>
 			<div class="row">
 				<a href="#featured-link" class="down-arrow"><i class="fa fa-angle-down"></i></a>

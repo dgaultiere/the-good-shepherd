@@ -69,9 +69,9 @@ var cssTasks = function(filename) {
     .pipe(function() {
       return $.if(enabled.maps, $.sourcemaps.init());
     })
-      .pipe(function() {
-        return $.if('*.less', $.less());
-      })
+      // .pipe(function() {
+      //   return $.if('*.less', $.less());
+      // })
       .pipe(function() {
         return $.if('*.scss', $.sass({
           outputStyle: 'nested', // libsass doesn't support expanded yet
@@ -87,7 +87,7 @@ var cssTasks = function(filename) {
           'opera 12'
         ]
       })
-      .pipe($.minifyCss)
+      .pipe($.cleanCss)
     .pipe(function() {
       return $.if(enabled.rev, $.rev());
     })
