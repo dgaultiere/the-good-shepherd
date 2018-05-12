@@ -5,17 +5,19 @@
 ?>
 
 <!-- Cover Section -->
-<div class="container-fluid section text-<?php the_field('cover_text_color'); ?>" id="cover" style="background-image:url('<?php $cover_image = get_field('cover_photo'); echo $cover_image['sizes']['extra-large']; ?>');">
-	<div class="row">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xs-12">
-					<h1 class="title"><?php the_field('cover_title'); ?></h1>
-					<h2 class="subtitle"><?php the_field('cover_subtitle'); ?></h2>
+<div class="bg-image" style="background-image:url('<?php $cover_image = get_field('cover_photo'); echo $cover_image['sizes']['extra-large']; ?>');">
+	<div class="container-fluid section text-<?php the_field('cover_text_color'); ?>" id="cover">
+		<div class="row">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12">
+						<h1 class="title"><?php the_field('cover_title'); ?></h1>
+						<h2 class="subtitle"><?php the_field('cover_subtitle'); ?></h2>
+					</div>
 				</div>
-			</div>
-			<div class="row">
-				<a href="#content-section-1" class="down-arrow"><i class="fa fa-angle-down"></i></a>
+				<div class="row">
+					<a href="#content-section-1" class="down-arrow"><i class="fa fa-angle-down"></i></a>
+				</div>
 			</div>
 		</div>
 	</div>

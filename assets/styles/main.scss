@@ -2660,14 +2660,20 @@ iframe[src*="simplecast.com"] {
 	}
 }
 
-#cover {
-	background-color: $grey;
+.bg-image {
 	@include background-image;
+}
+
+#cover {
 	// height: 360px;
+	text-align: center;
 	padding-top: 120px;
 	padding-right: 30px;
 	padding-left: 30px;
-	text-align: center;
+	background-color: rgba(0,0,0,0);
+  overflow: hidden;
+  height: 100%;
+  z-index: 2;
 
 	.title {
 		font-weight: 600;
@@ -2683,6 +2689,10 @@ iframe[src*="simplecast.com"] {
 		color: $white;
 		font-size: 22px;
 		border-bottom: none;
+	}
+
+	.btn {
+		margin-top: 50px;
 	}
 
 	@media (min-width: $screen-sm-min) {
