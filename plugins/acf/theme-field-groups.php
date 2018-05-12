@@ -732,7 +732,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
-// Default post options
+// Default post options (post, podcast, event)
 acf_add_local_field_group(array (
 	'key' => 'group_57b28f5b9fcff',
 	'title' => 'Default Post Options',
@@ -850,122 +850,122 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
-// Default post options (duplicate??)
-// acf_add_local_field_group(array (
-// 	'key' => 'group_57b2b5af5c37e',
-// 	'title' => 'Default Post Options',
-// 	'fields' => array (
-// 		array (
-// 			'key' => 'field_57b2b5af63502',
-// 			'label' => 'Post Header Background',
-// 			'name' => 'post_header_background',
-// 			'type' => 'radio',
-// 			'instructions' => 'Use a custom background image or color on the header of this post.',
-// 			'required' => 1,
-// 			'conditional_logic' => 0,
-// 			'wrapper' => array (
-// 				'width' => '',
-// 				'class' => '',
-// 				'id' => '',
-// 			),
-// 			'choices' => array (
-// 				'default' => 'Theme Default',
-// 				'image' => 'Custom Image',
-// 				'color' => 'Custom Color',
-// 			),
-// 			'other_choice' => 0,
-// 			'save_other_choice' => 0,
-// 			'default_value' => 'default',
-// 			'layout' => 'vertical',
-// 		),
-// 		array (
-// 			'key' => 'field_57b2b5af63513',
-// 			'label' => 'Post Header Color',
-// 			'name' => 'post_header_color',
-// 			'type' => 'color_picker',
-// 			'instructions' => 'Choose a color for the header background. If you\'re not sure, try one of these: <a href="https://flatuicolors.com/" target="_blank">www.flatuicolors.com</a>',
-// 			'required' => 1,
-// 			'conditional_logic' => array (
-// 				array (
-// 					array (
-// 						'field' => 'field_57b2b5af63502',
-// 						'operator' => '==',
-// 						'value' => 'color',
-// 					),
-// 				),
-// 			),
-// 			'wrapper' => array (
-// 				'width' => '',
-// 				'class' => '',
-// 				'id' => '',
-// 			),
-// 			'default_value' => '#9c9c9c',
-// 		),
-// 		array (
-// 			'key' => 'field_57b2b5af6351e',
-// 			'label' => 'Post Header Image',
-// 			'name' => 'post_header_image',
-// 			'type' => 'image',
-// 			'instructions' => 'Choose an image for the header background. Wide images are recommended. Images will be cropped to 1920x280 for display.',
-// 			'required' => 1,
-// 			'conditional_logic' => array (
-// 				array (
-// 					array (
-// 						'field' => 'field_57b2b5af63502',
-// 						'operator' => '==',
-// 						'value' => 'image',
-// 					),
-// 				),
-// 			),
-// 			'wrapper' => array (
-// 				'width' => '',
-// 				'class' => '',
-// 				'id' => '',
-// 			),
-// 			'return_format' => 'array',
-// 			'preview_size' => 'medium',
-// 			'library' => 'all',
-// 			'min_width' => 1920,
-// 			'min_height' => 280,
-// 			'min_size' => '',
-// 			'max_width' => '',
-// 			'max_height' => '',
-// 			'max_size' => '',
-// 			'mime_types' => '',
-// 		),
-// 	),
-// 	'location' => array (
-// 		array (
-// 			array (
-// 				'param' => 'post_type',
-// 				'operator' => '==',
-// 				'value' => 'video',
-// 			),
-// 		),
-// 		array (
-// 			array (
-// 				'param' => 'post_type',
-// 				'operator' => '==',
-// 				'value' => 'product',
-// 			),
-// 		),
-// 		array (
-// 			array (
-// 				'param' => 'post_type',
-// 				'operator' => '==',
-// 				'value' => 'associate',
-// 			),
-// 		),
-// 	),
-// 	'menu_order' => 0,
-// 	'position' => 'normal',
-// 	'style' => 'default',
-// 	'label_placement' => 'top',
-// 	'instruction_placement' => 'label',
-// 	'hide_on_screen' => '',
-// 	'active' => 1,
-// 	'description' => '',
-// ));
+// Default post options (video, product, associate)
+acf_add_local_field_group(array (
+	'key' => 'group_57b2b5af5c37e',
+	'title' => 'Default Post Options',
+	'fields' => array (
+		array (
+			'key' => 'field_57b2b5af63502',
+			'label' => 'Post Header Background',
+			'name' => 'post_header_background',
+			'type' => 'radio',
+			'instructions' => 'Use a custom background image or color on the header of this post.',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array (
+				'default' => 'Theme Default',
+				'image' => 'Custom Image',
+				'color' => 'Custom Color',
+			),
+			'other_choice' => 0,
+			'save_other_choice' => 0,
+			'default_value' => 'default',
+			'layout' => 'vertical',
+		),
+		array (
+			'key' => 'field_57b2b5af63513',
+			'label' => 'Post Header Color',
+			'name' => 'post_header_color',
+			'type' => 'color_picker',
+			'instructions' => 'Choose a color for the header background. If you\'re not sure, try one of these: <a href="https://flatuicolors.com/" target="_blank">www.flatuicolors.com</a>',
+			'required' => 1,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_57b2b5af63502',
+						'operator' => '==',
+						'value' => 'color',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '#9c9c9c',
+		),
+		array (
+			'key' => 'field_57b2b5af6351e',
+			'label' => 'Post Header Image',
+			'name' => 'post_header_image',
+			'type' => 'image',
+			'instructions' => 'Choose an image for the header background. Wide images are recommended. Images will be cropped to 1920x280 for display.',
+			'required' => 1,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_57b2b5af63502',
+						'operator' => '==',
+						'value' => 'image',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'array',
+			'preview_size' => 'medium',
+			'library' => 'all',
+			'min_width' => 1920,
+			'min_height' => 280,
+			'min_size' => '',
+			'max_width' => '',
+			'max_height' => '',
+			'max_size' => '',
+			'mime_types' => '',
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'video',
+			),
+		),
+		array (
+			array (
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'product',
+			),
+		),
+		array (
+			array (
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'associate',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
 
 // Footer styles
 acf_add_local_field_group(array (
