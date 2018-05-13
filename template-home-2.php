@@ -37,20 +37,24 @@
 						<?php
 							$featured_link_image = get_field('featured_link_image');
 							if( $featured_link_image ) {
-								echo wp_get_attachment_image( $featured_link_image, 'large');
+								echo wp_get_attachment_image($featured_link_image, 'medium');
 							}
 						?>
 					</a>
-					<div class="row">
-						<a href="<?php the_field('featured_link_button_url'); ?>" class="btn btn-primary">
-							<?php the_field('featured_link_button_text'); ?>
-						</a>
-					</div>
-					<div class="row">
-						<a href="<?php the_field('featured_link_secondary_url'); ?>" class="secondary-link">
-							<?php the_field('featured_link_secondary_text'); ?><i class="fa fa-angle-right"></i>
-						</a>
-					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<a href="<?php the_field('featured_link_button_url'); ?>" class="btn btn-primary">
+						<?php the_field('featured_link_button_text'); ?>
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<a href="<?php the_field('featured_link_secondary_url'); ?>" class="secondary-link">
+						<?php the_field('featured_link_secondary_text'); ?><i class="fa fa-angle-right"></i>
+					</a>
 				</div>
 			</div>
 			<div class="row">
@@ -69,19 +73,21 @@
 					<div class="col-xs-12">
 						<h2 class="title"><?php the_field('podcast_title'); ?></h2>
 						<h3 class="subtitle"><?php the_field('podcast_subtitle2'); ?></h3>
-						<div class="row">
-							<p><?php the_field('podcast_description'); ?></p>
-						</div>
-						<div class="row">
-							<a href="<?php the_field('podcast_button_url'); ?>" class="btn btn-primary">
-								<?php the_field('podcast_button_text'); ?>
-							</a>
-						</div>
-						<div class="row">
-							<a href="<?php the_field('podcast_secondary_url'); ?>" class="secondary-link">
-								<?php the_field('podcast_secondary_text'); ?><i class="fa fa-angle-right"></i>
-							</a>
-						</div>
+						<p><?php the_field('podcast_description'); ?></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<a href="<?php the_field('podcast_button_url'); ?>" class="btn btn-primary">
+							<?php the_field('podcast_button_text'); ?>
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<a href="<?php the_field('podcast_secondary_url'); ?>" class="secondary-link">
+							<?php the_field('podcast_secondary_text'); ?><i class="fa fa-angle-right"></i>
+						</a>
 					</div>
 				</div>
 				<div class="row">
@@ -108,16 +114,20 @@
 							}
 						?>
 					</a>
-					<div class="row">
-						<a href="<?php the_field('featured_product_button_url'); ?>" class="btn btn-primary">
-							<?php the_field('featured_product_button_text'); ?>
-						</a>
-					</div>
-					<div class="row">
-						<a href="<?php the_field('featured_product_secondary_url'); ?>" class="secondary-link">
-							<?php the_field('featured_product_secondary_text'); ?><i class="fa fa-angle-right"></i>
-						</a>
-					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<a href="<?php the_field('featured_product_button_url'); ?>" class="btn btn-primary">
+						<?php the_field('featured_product_button_text'); ?>
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<a href="<?php the_field('featured_product_secondary_url'); ?>" class="secondary-link">
+						<?php the_field('featured_product_secondary_text'); ?><i class="fa fa-angle-right"></i>
+					</a>
 				</div>
 			</div>
 			<div class="row">
@@ -135,19 +145,25 @@
 				<div class="col-xs-12">
 					<h2 class="title"><?php the_field('about_title'); ?></h2>
 					<p><?php the_field('about_description'); ?></p>
-
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
 					<!-- 3 distinctives & icons go here -->
-
-					<div class="row">
-						<a href="<?php the_field('about_button_url'); ?>" class="btn btn-primary">
-							<?php the_field('about_button_text'); ?>
-						</a>
-					</div>
-					<div class="row">
-						<a href="<?php the_field('about_secondary_url'); ?>" class="secondary-link">
-							<?php the_field('about_secondary_text'); ?><i class="fa fa-angle-right"></i>
-						</a>
-					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<a href="<?php the_field('about_button_url'); ?>" class="btn btn-primary">
+						<?php the_field('about_button_text'); ?>
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<a href="<?php the_field('about_secondary_url'); ?>" class="secondary-link">
+						<?php the_field('about_secondary_text'); ?><i class="fa fa-angle-right"></i>
+					</a>
 				</div>
 			</div>
 			<div class="row">
@@ -164,18 +180,22 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<?php the_field('video_embed_code'); ?>
-					<div class="quote"><?php the_field('video_quote'); ?></div>
-					<div class="quote-credit"><?php the_field('video_quote_credit'); ?></div>
-					<div class="row">
-						<a href="<?php the_field('video_button_url'); ?>" class="btn btn-primary">
-							<?php the_field('video_button_text'); ?>
-						</a>
-					</div>
-					<div class="row">
-						<a href="<?php the_field('video_secondary_url'); ?>" class="secondary-link">
-							<?php the_field('video_secondary_text'); ?><i class="fa fa-angle-right"></i>
-						</a>
-					</div>
+					<div class="quote"><h2 class="title"><?php the_field('video_quote'); ?></h2></div>
+					<div class="quote-credit"><h3 class="subtitle"><?php the_field('video_quote_credit'); ?></h3></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<a href="<?php the_field('video_button_url'); ?>" class="btn btn-primary">
+						<?php the_field('video_button_text'); ?>
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<a href="<?php the_field('video_secondary_url'); ?>" class="secondary-link">
+						<?php the_field('video_secondary_text'); ?><i class="fa fa-angle-right"></i>
+					</a>
 				</div>
 			</div>
 			<div class="row">
@@ -195,22 +215,26 @@
 					<?php
 						$highlight_photo = get_field('highlight_photo');
 						if( $highlight_photo ) {
-							echo wp_get_attachment_image( $highlight_photo, 'medium');
+							echo wp_get_attachment_image( $highlight_photo, 'medium-banner');
 						}
 					?>
 					<p>
 						<?php the_field('highlight_description'); ?>
 					</p>
-					<div class="row">
-						<a href="<?php the_field('highlight_button_url'); ?>" class="btn btn-primary">
-							<?php the_field('highlight_button_text'); ?>
-						</a>
-					</div>
-					<div class="row">
-						<a href="<?php the_field('highlight_secondary_url'); ?>" class="secondary-link">
-							<?php the_field('highlight_secondary_text'); ?><i class="fa fa-angle-right"></i>
-						</a>
-					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<a href="<?php the_field('highlight_button_url'); ?>" class="btn btn-primary">
+						<?php the_field('highlight_button_text'); ?>
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<a href="<?php the_field('highlight_secondary_url'); ?>" class="secondary-link">
+						<?php the_field('highlight_secondary_text'); ?><i class="fa fa-angle-right"></i>
+					</a>
 				</div>
 			</div>
 			<div class="row">

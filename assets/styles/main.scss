@@ -2583,7 +2583,7 @@ iframe[src*="simplecast.com"] {
 
 	img {
 		display: block;
-		width: 100%;
+		max-width: 100%;
 		height: auto;
 		padding: 0;
 	}
@@ -2832,6 +2832,10 @@ iframe[src*="simplecast.com"] {
 
 		.btn {
 			margin-top: 40px;
+
+			&.search-submit {
+				margin-top: 0;
+			}
 		}
 
 		.secondary-link {
@@ -2841,12 +2845,16 @@ iframe[src*="simplecast.com"] {
 	}
 
 	#featured-link,
-	#featured-product,
+	#product,
 	#highlight {
 		img {
+			display: block;
 			margin: 15px auto 0;
-			width: 100%;
-			max-width: 800px;
+			max-width: 100%;
+
+			@media (min-width: $screen-sm-min) {
+				max-width: 800px;
+			}
 		}
 	}
 }
