@@ -163,18 +163,20 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
-					<h2 class="title"><?php the_field('video_title'); ?></h2>
-					<h3 class="subtitle"><?php the_field('video_subtitle'); ?></h3>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12">
 					<?php the_field('video_embed_code'); ?>
-					<?php the_field('video_description'); ?>
+					<div class="quote"><?php the_field('video_quote'); ?></div>
+					<div class="quote-credit"><?php the_field('video_quote_credit'); ?></div>
+					<div class="row">
+						<a href="<?php the_field('video_button_url'); ?>" class="btn btn-primary">
+							<?php the_field('video_button_text'); ?>
+						</a>
+					</div>
+					<div class="row">
+						<a href="<?php the_field('video_secondary_url'); ?>" class="secondary-link">
+							<?php the_field('video_secondary_text'); ?><i class="fa fa-angle-right"></i>
+						</a>
+					</div>
 				</div>
-			</div>
-			<div class="row">
-				<a href="<?php the_field('video_button_link'); ?>" class="btn btn-primary"><?php the_field('video_button_text'); ?></a>
 			</div>
 			<div class="row">
 				<a href="#highlight" class="down-arrow"><i class="fa fa-angle-down"></i></a>
