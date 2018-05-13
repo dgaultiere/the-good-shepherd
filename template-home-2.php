@@ -192,28 +192,24 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<h2 class="title"><?php the_field('highlight_title'); ?></h2>
-					<h3 class="subtitle"><?php the_field('highlight_subtitle'); ?></h3>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12">
-					<?php echo wp_get_attachment_image( get_field('highlight_image'), 'medium' ); ?>
-					<a href="<?php the_field('highlight_link'); ?>" class="heading-link">
-						<h4><?php the_field('highlight_paragraph_heading'); ?></h4>
-					</a>
-					<div>
-						<p>
-							<?php the_field('highlight_paragraph_content'); ?>
-						</p>
-						<div class="read-more-link">
-							<a href="<?php the_field('highlight_link'); ?>">
-					  		<?php if(get_field('site_language', 'option') == "es-mx") { ?>
-					  			Lee Mas
-								<?php } else { ?>
-									Read More
-								<?php } ?>
-							</a>
-						</div>
+					<?php
+						$highlight_photo = get_field('highlight_photo');
+						if( $highlight_photo ) {
+							echo wp_get_attachment_image( $highlight_photo, 'medium');
+						}
+					?>
+					<p>
+						<?php the_field('highlight_description'); ?>
+					</p>
+					<div class="row">
+						<a href="<?php the_field('highlight_button_url'); ?>" class="btn btn-primary">
+							<?php the_field('highlight_button_text'); ?>
+						</a>
+					</div>
+					<div class="row">
+						<a href="<?php the_field('highlight_secondary_url'); ?>" class="secondary-link">
+							<?php the_field('highlight_secondary_text'); ?><i class="fa fa-angle-right"></i>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -225,7 +221,7 @@
 </div>
 
 <!-- Subscribe -->
-<div class="container-fluid section text-<?php the_field('subscribe_text_color'); ?>" id="subscribe" style="background-color:<?php the_field('subscribe_background_color'); ?>">
+<div class="container-fluid section" id="subscribe">
 	<div class="row">
 		<div class="container">
 			<div class="row">
@@ -247,7 +243,6 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<h2 class="title"><?php the_field('search_title'); ?></h2>
-					<h3 class="subtitle"><?php the_field('search_subtitle'); ?></h3>
 				</div>
 			</div>
 			<div class="row">
@@ -255,6 +250,13 @@
 					<div class="big-search">
 						<?php get_search_form(); ?>
 					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<a href="<?php the_field('search_secondary_url'); ?>" class="secondary-link">
+						<?php the_field('search_secondary_text'); ?><i class="fa fa-angle-right"></i>
+					</a>
 				</div>
 			</div>
 		</div>
