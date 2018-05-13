@@ -100,16 +100,14 @@
 				<div class="col-xs-12">
 					<h2 class="title"><?php the_field('featured_product_title'); ?></h2>
 					<h3 class="subtitle"><?php the_field('featured_product_subtitle'); ?></h3>
-					<div class="row">
-						<a href="<?php the_field('featured_product_link'); ?>">
-							<?php
-								$product_image = get_field('featured_product_image');
-								if( $product_image ) {
-									echo wp_get_attachment_image( $product_image, 'medium');
-								}
-							?>
-						</a>
-					</div>
+					<a href="<?php the_field('featured_product_button_url'); ?>">
+						<?php
+							$product_image = get_field('featured_product_image');
+							if( $product_image ) {
+								echo wp_get_attachment_image( $product_image, 'medium');
+							}
+						?>
+					</a>
 					<div class="row">
 						<a href="<?php the_field('featured_product_button_url'); ?>" class="btn btn-primary">
 							<?php the_field('featured_product_button_text'); ?>
@@ -140,12 +138,12 @@
 
 					<!-- 3 distinctives & icons go here -->
 
-					<div class="container">
+					<div class="row">
 						<a href="<?php the_field('about_button_url'); ?>" class="btn btn-primary">
 							<?php the_field('about_button_text'); ?>
 						</a>
 					</div>
-					<div class="container">
+					<div class="row">
 						<a href="<?php the_field('about_secondary_url'); ?>" class="secondary-link">
 							<?php the_field('about_secondary_text'); ?><i class="fa fa-angle-right"></i>
 						</a>
