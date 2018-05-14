@@ -66,11 +66,11 @@ function my_theme_register_required_plugins() {
 		),
 
 		// WP Retina 2x
-		array(
-			'name'      => 'WP Retina 2x',
-			'slug'      => 'wp-retina-2x',
-			'required'  => true,
-		),
+		// array(
+		// 	'name'      => 'WP Retina 2x',
+		// 	'slug'      => 'wp-retina-2x',
+		// 	'required'  => true,
+		// ),
 
 		// M Retina Gravatars
 		array(
