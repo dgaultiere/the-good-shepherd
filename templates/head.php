@@ -145,6 +145,12 @@
 				border-color: <?php echo $accent_color?>;
 			}
 
+      .secondary-link:hover,
+      .secondary-link:active,
+      .secondary-link:focus {
+        border-color: <?php echo $accent_color?>;
+      }
+
 			/** Forms & Inputs **/
 			.btn:focus,
 			.form-control:focus,

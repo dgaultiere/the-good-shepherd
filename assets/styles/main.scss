@@ -895,6 +895,24 @@ textarea {
 	}
 }
 
+.btn,
+.secondary-link {
+	.fa {
+		margin-left: 5px;
+	}
+}
+
+.secondary-link {
+	border-bottom: 1px solid transparent;
+
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: none;
+		border-color: $accent-color;
+	}
+}
+
 .btn-primary,
 .subscribe-form .button {
 	color: darken($accent-color, 10%);
@@ -2610,6 +2628,14 @@ iframe[src*="simplecast.com"] {
 			}
 		}
 
+		.secondary-link {
+			&:hover,
+			&:active,
+			&:focus {
+				border-color: $white;
+			}
+		}
+
 		.down-arrow {
 			text-shadow: $text-shadow-1;
 
@@ -2796,10 +2822,6 @@ iframe[src*="simplecast.com"] {
 
 		.btn {
 			margin-top: 30px;
-
-			.fa {
-				margin-left: 5px;
-			}
 		}
 	}
 
