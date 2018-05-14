@@ -32,7 +32,7 @@
 	}
 
 	.title {
-		font-size: 24px;
+		font-size: 28px;
 		color: $grey-darker;
 		font-weight: 400;
 		line-height: 1.3;
@@ -70,6 +70,12 @@
 		max-width: 100%;
 		height: auto;
 		padding: 0;
+	}
+
+	.video {
+		width: 640px;
+		max-width: 100%;
+		margin: 0 auto 25px;
 	}
 
 	&.text-white {
@@ -215,8 +221,6 @@
 .page-template-template-home {
 	.section {
 		.title {
-			font-size: 28px;
-			padding-bottom: 10px;
 			border-bottom: $border-grey-lighter-2px;
 		}
 	}
@@ -314,7 +318,6 @@
 
 /* Homepage 2 */
 .page-template-template-home-2 {
-
 	.section {
 		text-align: center;
 
@@ -337,7 +340,7 @@
 	#highlight {
 		img {
 			display: block;
-			margin: 15px auto 0;
+			margin: 15px auto 25px;
 			max-width: 100%;
 
 			@media (min-width: $screen-sm-min) {

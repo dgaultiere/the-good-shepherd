@@ -617,3 +617,15 @@ $analytics_id = get_field('google_analytics_id','option');
   <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 <?php }
 add_action('wp_footer', __NAMESPACE__ . '\\include_GA', 10);
+
+
+
+/**
+ * FitVids
+ */
+
+function fit_vids() {
+  wp_enqueue_script( 'fit-vids', get_template_directory_uri() . '/plugins/fitvids/jquery.fitvids.js', array('jquery'), 1.0, true );
+  wp_enqueue_script( 'fit-vids-target', get_template_directory_uri() . '/plugins/fitvids/fitvids-targets.js', array('fit-vids','jquery'), 1.0, true );
+}
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\fit_vids' );

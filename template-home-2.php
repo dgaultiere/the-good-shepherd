@@ -144,7 +144,7 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<h2 class="title"><?php the_field('about_title'); ?></h2>
-					<p><?php the_field('about_description'); ?></p>
+					<p class="text-justify"><?php the_field('about_description'); ?></p>
 				</div>
 			</div>
 			<div class="row">
@@ -179,7 +179,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
-					<?php the_field('video_embed_code'); ?>
+					<div class="video"><?php the_field('video_embed_code'); ?></div>
 					<div class="quote"><h2 class="title"><?php the_field('video_quote'); ?></h2></div>
 					<div class="quote-credit"><h3 class="subtitle"><?php the_field('video_quote_credit'); ?></h3></div>
 				</div>
@@ -218,9 +218,7 @@
 							echo wp_get_attachment_image( $highlight_photo, 'medium-banner');
 						}
 					?>
-					<p>
-						<?php the_field('highlight_description'); ?>
-					</p>
+					<p class="text-justify"><?php the_field('highlight_description'); ?></p>
 				</div>
 			</div>
 			<div class="row">
@@ -271,9 +269,7 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-12">
-					<div class="big-search">
 						<?php get_search_form(); ?>
-					</div>
 				</div>
 			</div>
 			<div class="row">
