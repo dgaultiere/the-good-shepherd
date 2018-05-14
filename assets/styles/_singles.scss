@@ -1,0 +1,258 @@
+/* ==========================================================================
+   Post Type Singles
+   ========================================================================== */
+
+.single {
+	.post-type {
+		display: none;
+	}
+
+	.main {
+		header {
+			background: $grey-lighter;
+			padding: 14px 22px;
+			border-radius: $border-radius;
+			margin-bottom: 40px;
+
+			@media print {
+				padding: 0;
+			}
+
+			.entry-subtitle {
+				display: inline-block;
+				margin: 4px 0 0;
+			}
+
+			.entry-meta-container {
+				margin: 4px 0 0;
+				clear: none;
+			}
+		}
+	}
+
+	.subscribe-form-container {
+		background: $grey-lighter;
+		padding: 14px 22px;
+		margin-top: 15px;
+		border-radius: $border-radius;
+
+		.button {
+			background: $white;
+		}
+
+		@media print {
+			display: none;
+		}
+	}
+}
+
+.single-post,
+.single-event,
+.single-podcast {
+	.featured-image {
+		width: 100%;
+
+		@media (min-width: $screen-sm-min) {
+			width: 30%;
+		}
+
+		.wp-post-image {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}
+
+.single-product {
+	.main {
+		header {
+			background: none;
+			padding: 0;
+			border-radius: 0;
+			text-align: center;
+
+			@media (min-width: $screen-sm-min) {
+				text-align: left;
+			}
+
+			.btn {
+				float: none;
+				margin: 8px 0 0;
+			}
+		}
+	}
+
+	.featured-image {
+		width: 100%;
+		border-radius: $border-radius;
+
+		@media (min-width: $screen-sm-min) {
+			max-width: 100%;
+		}
+
+		.wp-post-image {
+			width: auto;
+			min-width: 250px;
+			max-width: 100%;
+			height: auto;
+			max-height: 400px;
+			display: block;
+			margin: 0 auto;
+
+			@media (min-width: $screen-sm-min) {
+				margin: 0;
+			}
+
+			@media (min-width: $screen-sm-min) {
+				min-width: 150px;
+			}
+
+			@media (min-width: $screen-md-min) {
+				min-width: 200px;
+			}
+
+			@media (min-width: $screen-lg-min) {
+				min-width: 250px;
+			}
+		}
+	}
+
+	.entry-subtitle {
+		float: left;
+		font-size: 18px;
+
+		@media (min-width: $screen-sm-min) {
+			float: none;
+		}
+	}
+
+	.entry-meta-container {
+		margin: 15px auto 0;
+		display: block;
+
+		@media (min-width: $screen-sm-min) {
+			margin: 15px 0 0;
+		}
+
+		.meta-datapoint {
+			display: block;
+			font-size: 16px;
+		}
+
+		.post-type {
+			display: none;
+		}
+
+		.price {
+			font-size: 24px;
+			margin-top: -8px;
+			float: right;
+			margin-right: 0;
+
+			@media (min-width: $screen-sm-min) {
+				margin-top: 0;
+				float: none;
+			}
+
+			i {
+				font-size: 16px;
+				margin-right: 2px;
+			}
+		}
+	}
+
+	.btn-product {
+		display: block;
+		margin-top: 15px;
+
+		@media (min-width: $screen-sm-min) {
+			min-width: 150px;
+		}
+	}
+}
+
+.single-associate {
+	// Use this to move associate profile image next to the meta box
+	// .main {
+	// 	header {
+	// 		@media (min-width: $screen-sm-min) {
+	// 			display: inline-block;
+	// 			width: calc(100% - 265px);
+	// 		}
+	// 	}
+	// }
+
+	.featured-image {
+		width: 100%;
+		border-radius: $border-radius;
+
+		@media (min-width: $screen-sm-min) {
+			float: left;
+			width: 240px;
+			max-width: 100%;
+			margin-right: 25px;
+			margin-left: 0;
+		}
+
+		.wp-post-image {
+			border-radius: 50%;
+			width: auto;
+			min-width: 250px;
+			max-width: 100%;
+			height: auto;
+			max-height: 400px;
+			display: block;
+			margin: 0 auto;
+
+			@media (min-width: $screen-sm-min) {
+				margin: 0;
+			}
+
+			@media (min-width: $screen-sm-min) {
+				min-width: 150px;
+			}
+		}
+	}
+
+	.entry-title {
+		margin-bottom: 5px;
+	}
+
+	.entry-subtitle {
+		margin-top: 5px;
+	}
+}
+
+.single-event {
+	.entry-title {
+		margin-bottom: 5px;
+	}
+
+	.entry-subtitle {
+		margin-top: 5px;
+	}
+
+	.main {
+		header {
+			.btn {
+				display: block;
+				margin: 8px 0;
+				padding: 6px 16px;
+
+				@media (min-width: 440px) {
+					display: inline-block;
+					float: right;
+				}
+			}
+		}
+	}
+}
+
+iframe[src*="simplecast.com"] {
+	border: 1px solid #c9c9c9;
+	border-radius: 4px;
+}
+
+.wp-audio-shortcode {
+	margin-bottom: 25px;
+}

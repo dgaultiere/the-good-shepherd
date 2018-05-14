@@ -1,0 +1,382 @@
+/* ==========================================================================
+   Header and Navigation
+   ========================================================================== */
+
+.navbar {
+	margin-bottom: 0;
+	padding: 10px 0;
+	font-weight: 400;
+	background: $white;
+	position: relative;
+	@include transition(all 0.2s);
+
+	@media (min-width: $screen-sm-min) {
+		position: fixed;
+		padding: 25px 0;
+	}
+
+	.social-links {
+		text-align: center;
+		padding-bottom: 20px;
+		line-height: 1;
+		list-style-type: none;
+ 		-webkit-padding-start: 0px;
+		-webkit-margin-before: 0px;
+		 -webkit-margin-after: 0px;
+		 -webkit-margin-start: 0px;
+		   -webkit-margin-end: 0px;
+		@include transition(all 0.2s);
+
+		@media (min-width: $screen-sm-min) {
+			float: right;
+			padding-bottom: 10px;
+		}
+
+		.fa {
+			font-size: 16px;
+			padding: 0;
+			height: auto;
+			width: auto;
+			margin-right: 5px;
+			color: $accent-color;
+			background-color: transparent;
+
+			&:hover,
+			&:active,
+			&:focus {
+				color: darken($accent-color, 10%);
+				background-color: transparent;
+			}
+		}
+
+		li:last-child a {
+			margin-right: 15px;
+
+			@media (min-width: $screen-sm-min) {
+				margin-right: 0;
+			}
+		}
+	}
+
+	.social-links-above {
+		display: none;
+		@include transition(all 0.2s);
+
+		@media (min-width: $screen-sm-min) {
+			display: block;
+		}
+	}
+
+	.social-links-below {
+		display: block;
+		@include transition(all 0.2s);
+
+		@media (min-width: $screen-sm-min) {
+			display: none;
+		}
+
+		.fa {
+			font-size: 18px;
+			margin-right: 6px;
+		}
+	}
+}
+
+.navbar-brand {
+	color: $grey-dark;
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: -0.025em;
+	height: auto;
+	line-height: 1.3333;
+	padding: 18px 15px 15px;
+	margin-left: 0px;
+	@include transition(all 0.2s);
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: $nav-highlight;
+	}
+
+	.thin {
+		font-weight: 400;
+	}
+
+	img {
+		height: auto;
+		max-width: 200px;
+		max-height: 36px;
+		margin: -9px -2px;
+	}
+
+	@media (min-width: $screen-sm-min) {
+		font-size: 24px;
+		letter-spacing: inherit;
+		padding: 15px 15px 0;
+		margin-left: 0px;
+
+		img {
+			max-width: 240px;
+			max-height: 42px;
+			margin-top: -5px;
+		}
+	}
+
+	@media (min-width: $screen-md-min) {
+		font-size: 28px;
+		margin-left: 0px;
+
+		img {
+			max-width: 280px;
+			max-height: 46px;
+			margin-top: -6px;
+		}
+	}
+
+	@media (min-width: $screen-lg-min) {
+		img {
+			max-width: 320px;
+			max-height: 50px;
+		}
+	}
+}
+
+.navbar-nav {
+	li {
+		font-weight: 400;
+		font-size: 16px;
+		padding: 10px 15px;
+		text-align: center;
+
+		@media (min-width: $screen-sm-min) {
+			padding: 0 9px;
+			font-size: 16px;
+
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+
+		@media (min-width: $screen-md-min) {
+			font-size: 17px;
+		}
+
+		a {
+			display: inline-block;
+			padding: 0 0 5px;
+			line-height: normal;
+			background: transparent;
+			color: $grey-dark;
+			border-bottom: 2px solid transparent;
+			margin: 0 auto;
+			@include transition(all 0.2s);
+
+			&:hover,
+			&:active,
+			&:focus {
+				background: transparent;
+				color: $nav-highlight;
+				border-color: rgba(0,0,0,0.2);
+			}
+		}
+	}
+
+	.active {
+		a {
+			color: $nav-highlight;
+		}
+
+		.dropdown-menu {
+			a {
+				color: $grey-dark;
+
+				&:hover,
+				&:active,
+				&:focus {
+					color: $nav-highlight;
+				}
+			}
+
+			.active {
+				a {
+					color: $nav-highlight;
+				}
+			}
+		}
+	}
+
+	.dropdown {
+		@include transition(all 0.2s);
+
+		.dropdown-toggle {
+			@include transition(all 0.2s);
+		}
+
+		.caret {
+			margin: 0;
+		}
+
+		.dropdown-menu {
+			right: 5px;
+			@include transition(all 0.2s);
+
+			a {
+				border-color: transparent;
+			}
+		}
+	}
+
+	.open {
+		.dropdown-toggle,
+		.dropdown-toggle:hover,
+		.dropdown-toggle:focus {
+			background: transparent;
+			border-color: transparent;
+		}
+
+		.dropdown-menu {
+			border: none;
+			border-radius: $border-radius;
+			background-color: #f5f5f5;
+			margin-top: -2px;
+			padding-top: 10px;
+			padding-bottom: 2px;
+			@include transition(all 0.2s);
+
+			@media (min-width: $screen-sm-min) {
+				display: inline-block;
+				background-color: $white;
+				padding-top: 10px;
+				padding-bottom: 5px;
+				box-shadow: $box-shadow-blur-3;
+			}
+
+			li {
+				padding: 4px 10px;
+				text-align: center;
+				font-size: 15px;
+				background-color: transparent;
+
+				@media (min-width: $screen-sm-min) {
+					padding: 3px 15px;
+				}
+
+				@media (min-width: $screen-md-min) {
+					font-size: 16px;
+				}
+
+				a {
+					padding: 0 0 5px;
+					background-color: transparent;
+					border-color: transparent;
+					border-width: 1px;
+				}
+			}
+		}
+	}
+
+	@media print {
+		display: none;
+	}
+}
+
+.navbar-right {
+	clear: right;
+	margin-right: 0;
+}
+
+.navbar-collapse {
+	max-height: none;
+}
+
+.navbar-toggle {
+	padding: 4px 4px 2px;
+	@include transition(all 0.2s);
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: $nav-highlight;
+		@include transition(all 0.2s);
+
+		.icon-bar {
+			background-color: $nav-highlight;
+			@include transition(all 0.2s);
+		}
+
+		.icon-menu {
+			color: $nav-highlight;
+			@include transition(all 0.2s);
+		}
+	}
+
+	.icon-bar {
+		background-color: $grey-dark;
+		width: 30px;
+		height: 3px;
+		@include transition(all 0.2s);
+
+		+.icon-bar {
+			margin-top: 5px;
+		}
+	}
+
+	.icon-menu {
+		display: block;
+		margin-top: 3px;
+		color: $grey-dark;
+		font-size: 10px;
+		font-weight: 700;
+		font-family: sans-serif;
+		text-align: center;
+		text-transform: uppercase;
+		@include transition(all 0.2s);
+	}
+
+	@media (min-width: $screen-sm-min) {
+		margin: 36px 20px;
+	}
+}
+
+
+@media (min-width: $screen-sm-min) {
+	.navbar-shrink {
+		box-shadow: $box-shadow-blur-3;
+		padding: 16px 0 12px;
+		@include transition(all 0.2s);
+
+		.navbar-brand {
+			font-size: 24px;
+			padding-top: 0;
+		}
+
+		.navbar-nav {
+			padding-top: 6px;
+		}
+
+		*[class^='social-links'] {
+			display: none;
+		}
+	}
+}
+
+.navbar-fixed-top {
+	top: 0px;
+}
+
+@media (min-width: $screen-sm-min) {
+	body.admin-bar {
+		.navbar-fixed-top {
+			top: 32px !important;
+		}
+	}
+
+	@media (max-width: 782px) {
+		body.admin-bar {
+			.navbar-fixed-top {
+				top: 46px !important;
+			}
+		}
+	}
+}

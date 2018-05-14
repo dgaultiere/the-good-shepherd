@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Subscription Page Template
+   ========================================================================== */
+
+.page-template-template-subscribe {
+	.col-subscribe-form {
+		&.right {
+			margin-top: 40px;
+
+			@media (min-width: $screen-sm-min) {
+				padding-left: 20px;
+				margin-top: 0;
+
+				h3 {
+					font-size: 24px;
+					text-align: left;
+					margin-top: 0;
+				}
+			}
+
+			.subscribe-form-container {
+				padding-bottom: 15px;
+			}
+		}
+	}
+
+	.subscribe-form-container {
+		&.top {
+			margin-bottom: 40px;
+		}
+
+		&.bottom {
+			margin-top: 40px;
+		}
+
+		h3 {
+			margin-bottom: 15px;
+			text-align: center;
+		}
+
+		.email {
+			@media (min-width: $screen-sm-min) {
+				max-width: 516px;
+			}
+		}
+
+		.alert {
+			max-width: 630px;
+		}
+
+		#mc_embed_signup {
+			width: 630px;
+		}
+	}
+}

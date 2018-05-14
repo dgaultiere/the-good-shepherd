@@ -1,0 +1,422 @@
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+
+/** Basic Colors **/
+$black:							#000;
+$grey-darker:				#333;
+$grey-dark:					#555;
+$grey-medium:				#777;
+$grey: 							#9c9c9c;
+$grey-light: 				lighten($grey, 30%);
+$grey-lighter:			#f0f0f0;
+$white:							rgb(255,255,255);
+$white-66:					rgba(255,255,255,0.66);
+$white-33:					rgba(255,255,255,0.33);
+
+/** Specific-Use Colors **/
+$nav-highlight:					#3498db;
+$link-color:						#3498db;
+$link-color-hover:			#3498db;
+$accent-color:					#3498db;
+$footer-bg-color:				#34495e;
+$page-header-color:			#555;
+
+/** Border/Box Variables **/
+$border-radius:  						3px;
+$border-grey-1px:						1px solid #c9c9c9;
+$border-grey-2px:						2px solid #c9c9c9;
+$border-grey-light-2px:			2px solid #d7d7d7;
+$border-grey-lighter-2px:		2px solid #e9e9e9;
+$box-shadow-1: 							0 1px 0 rgba(0,0,0,0.2);
+$box-shadow-2: 							0 2px 0 rgba(0,0,0,0.2);
+$box-shadow-3:							0 3px 0 rgba(0,0,0,0.2);
+$box-shadow-blur-3:					0 1px 3px rgba(0,0,0,0.5);
+
+/** Fonts & Text **/
+$font-bernino:			'jaf-bernino-sans', 'Lucida Grande', 'Helvetica', 'Arial', sans-serif;
+$font-freight:			'freight-text-pro', 'Georgia', 'Cambria', 'Times New Roman', 'Times', serif;
+$text-shadow-1:			0 0 3px rgba(0,0,0,.5);
+
+
+/** Mixins **/
+
+@mixin background-image {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+@mixin prose-heading {
+	font-family: $font-bernino;
+	font-weight: 600;
+	letter-spacing: -0.72px;
+	line-height: 1.2;
+	margin-bottom: 4px;
+}
+
+@mixin prose-body {
+	font-family: $font-freight;
+	font-size: 19px;
+	font-weight: 300;
+	letter-spacing:0.159px;
+	line-height: 1.5;
+	margin-bottom: 24px;
+	word-wrap: break-word;
+}
+
+@mixin prose-body-sans {
+	font-family: $font-bernino;
+	font-size: 17px;
+	font-weight: 400;
+	letter-spacing:0.159px;
+	line-height: 1.5;
+	margin-bottom: 24px;
+	word-wrap: break-word;
+}
+
+@mixin hyphenate {
+  overflow-wrap: break-word;
+      word-wrap: break-word;
+  -ms-word-wrap: break-all;
+      word-wrap: break-all;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+
+
+/** Flatten das boostrap **/
+
+.well,
+.navbar-inner,
+.popover,
+.btn,
+.tooltip,
+input,
+select,
+textarea,
+pre,
+.progress,
+.modal,
+.add-on,
+.alert,
+.table-bordered,
+.tooltip-inner,
+.badge,
+.label,
+.img-polaroid {
+	-webkit-box-shadow: none !important;
+ 		 -moz-box-shadow: none !important;
+ 		 			box-shadow: none !important;
+ 	border-radius: $border-radius;
+	border-collapse: collapse !important;
+	background-image: none !important;
+}
+
+
+/** Basic Print Styles (element-specific styles inline) **/
+
+@media print {
+	body {
+		color: #000;
+		background: #fff;
+		margin: .5cm;
+	}
+
+	.container,
+	.container-fluid,
+	.row,
+	[class*="col-"] {
+			margin: auto;
+			width: 100%;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		page-break-after: avoid;
+	}
+
+	iframe {
+		display: none;
+	}
+}
+
+
+/** Basic Elements **/
+
+html {
+	margin:0;
+	padding:0;
+	height: 100%;
+}
+
+body {
+	font-family: $font-bernino;
+	font-size: 17px;
+	font-weight: 400;
+	color: $grey-darker;
+	min-height:100%;
+	-webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+	padding-top: 0;
+	padding-bottom: 75px;
+
+	@media (min-width: $screen-sm-min) {
+		padding-top: 100px;
+
+		@media print {
+			padding-top: 0;
+		}
+	}
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	font-weight: 600;
+	margin-top: 20px;
+}
+
+h1,
+.h1 {
+	font-size: 36px;
+}
+
+h2,
+.h2 {
+	font-size: 30px;
+}
+
+h3,
+.h3 {
+	font-size: 27px;
+}
+
+h4,
+.h4 {
+	font-size: 23px;
+}
+
+h5,
+.h5 {
+	font-size: 19px;
+}
+
+h6,
+.h6 {
+	font-size: 17px;
+}
+
+hr {
+	border-top: $border-grey-lighter-2px;
+}
+
+a {
+	color: $link-color;
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: $link-color-hover;
+	}
+}
+
+/* BEGIN code to prevent FOUC on page load */
+.navbar-brand,
+.navbar-nav,
+*[class^='social-links'],
+.page-header,
+.archive-top-content,
+.sidebar,
+.main,
+.floating-share-buttons {
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transition: transform .4s ease-in-out, opacity .4s ease-in-out;
+  -webkit-transition: -webkit-transform .4s ease-in-out, opacity .4s ease-in-out;
+}
+
+.wf-loading {
+	.navbar-brand,
+	.navbar-nav,
+	*[class^='social-links'],
+	.page-header,
+	.archive-top-content,
+	.sidebar,
+	.main,
+	.floating-share-buttons {
+	  opacity: 0;
+	  transform: translateY(-20px);
+	  -webkit-transform: translateY(-20px);
+	  -ms-transform: translateY(-20px);
+	}
+}
+/* END code to prevent FOUC on page load */
+
+p {
+	text-rendering: optimizeLegibility;
+	-webkit-font-feature-settings: "kern";
+		 -moz-font-feature-settings: "kern";
+		 -moz-font-feature-settings: "kern=1";
+		 			font-feature-settings: "kern";
+	font-kerning: normal;
+}
+
+.main,
+.archive-top-content {
+	z-index: 1;
+
+	h1, h2, h3, h4, h5, h6 {
+		@include prose-heading;
+	}
+
+	p,
+	ul,
+	ol {
+		@include prose-body-sans;
+	}
+
+	ul,
+	ol {
+		overflow: hidden;
+	}
+}
+
+.serif {
+	.main,
+	.archive-top-content {
+		p,
+		ul,
+		ol {
+			@include prose-body;
+		}
+
+		/* Class to use sans-serif font for body text even on serif-specified page */
+		p.sans-serif {
+			@include prose-body-sans;
+		}
+	}
+}
+
+.entry-summary {
+
+	p,
+	ul,
+	ol {
+		@include prose-body;
+		text-align: justify;
+	}
+}
+
+/* Ensure blog posts use serif font unless otherwise indicated */
+.entry-content.serif {
+
+	p,
+	ul,
+	ol {
+		@include prose-body;
+		text-align: justify;
+	}
+}
+
+/* Handy little class to make a quote or line of text stand out */
+.callout,
+.main .callout,
+.archive-top-content .callout {
+	text-align: center;
+	font-family: $font-freight;
+	font-weight: 600;
+	font-style: italic;
+	letter-spacing:0.159px;
+	line-height: 1.4;
+	margin-bottom: 20px;
+}
+
+img {
+	border-radius: 2px;
+}
+
+.alignleft {
+  display: block;
+  margin: 15px auto;
+
+	@media (min-width: $screen-sm-min) {
+    float: left;
+    margin: 5px 20px 15px 0;
+	}
+}
+
+.alignright {
+  display: block;
+  margin: 15px auto;
+
+	@media (min-width: $screen-sm-min) {
+    float: right;
+    margin: 5px 0 15px 20px;
+	}
+}
+
+.aligncenter {
+  display: block;
+  margin: 15px auto;
+	max-width: 100%;
+	height: auto;
+}
+
+.topimage {
+	margin-top: 0 !important;
+}
+
+.circle {
+	border-radius: 50%;
+}
+
+.wp-editor {
+	ul {
+		display: table;
+	}
+
+	.alignleft {
+		float: none;
+	  display: block;
+	  margin: 15px auto;
+
+		@media (min-width: 480px) {
+	    float: left;
+	    margin: 5px 20px 15px 0;
+		}
+	}
+
+	.alignright {
+		float: none;
+	  display: block;
+	  margin: 15px auto;
+
+		@media (min-width: 480px) {
+	    float: right;
+	    margin: 5px 0 15px 20px;
+		}
+	}
+}
+
+iframe {
+	max-width: 100% !important;
+}
+
+.wp-caption-text {
+	font-size: 15px;
+	color: $grey;
+	padding-top: 7px;
+}
+
+textarea {
+	resize:vertical;
+}

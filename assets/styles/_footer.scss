@@ -1,0 +1,133 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+footer.content-info {
+	bottom: 0;
+	display: table;
+	width: 100%;
+	background: $footer-bg-color;
+	margin: 0;
+	padding: 25px 0;
+	text-align: center;
+	color: $white;
+	font-size: 15px;
+
+	a {
+		color: $white-66;
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: $white;
+		}
+	}
+
+	h3 {
+		text-align: center;
+	  font-size: 15px;
+	  text-transform: uppercase;
+	  margin-top: 25px;
+		color: $white;
+
+	  @media (min-width: $screen-sm-min) {
+	  	text-align: left;
+	  }
+	}
+
+	.widget {
+		width: 100%;
+	  padding-top: 0;
+	  margin-top: 0;
+	  text-align: center;
+
+	  ul {
+			list-style: none;
+			padding-left: 0;
+
+			li {
+				line-height: 1.2;
+				margin-bottom: 8px;
+			}
+	  }
+
+		.sub-menu,
+		.children {
+		  padding-left: 10px;
+		  margin-top: 8px;
+
+		  li {
+			  margin-bottom: 0;
+			  margin-top: 4px;
+			  font-size: 15px;
+		  }
+		}
+
+	  @media (min-width: $screen-sm-min) {
+		  float: left;
+		  width: 33.33%;
+		  padding-left: 10%;
+		  text-align: left;
+
+		  &:first-child,
+		  &:nth-child(4) {
+			  padding-left: 0;
+		  }
+	  }
+
+  	.post-date {
+			display: inline-block;
+		  font-size: 12px;
+		  font-weight: 400;
+		  margin-left: 3px;
+
+		  &:before {
+			  content: '–';
+			  margin-right: 6px;
+		  }
+
+		  @media (min-width: $screen-sm-min) {
+			  float: none;
+			  margin-top: 2px;
+		  }
+	  }
+	}
+
+	.widget_text {
+		ul {
+
+			@media (min-width: $screen-sm-min) {
+		    list-style: inherit;
+		    padding-left: 24px;
+			}
+
+			li {
+				line-height: inherit;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.social-links {
+		.fa {
+			color: $footer-bg-color;
+			background-color: $white;
+
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: $white-66;
+			}
+		}
+	}
+
+	.copyright {
+		letter-spacing: 0.025em;
+		font-size: 13px;
+		margin-top: 40px;
+	}
+
+	@media print {
+		display: none;
+	}
+}
