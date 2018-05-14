@@ -1756,7 +1756,7 @@ acf_add_local_field_group(array (
 // Homepage 2 template
 acf_add_local_field_group(array (
 	'key' => 'group_55c6c12d0d232',
-	'title' => 'Homepage 2',
+	'title' => 'Homepage',
 	'fields' => array (
 
 		// Cover section
