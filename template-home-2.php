@@ -148,10 +148,36 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-xs-12">
-					<!-- 3 distinctives & icons go here -->
+				<!-- 3 distinctives & icons go here -->
+				<div class="col-xs-4 distinctive">
+					<?php
+						$distinctive_image_1 = get_field('about_distinctive_1_icon');
+						if( $distinctive_image_1 ) {
+							echo wp_get_attachment_image( $distinctive_image_1, 'medium');
+						}
+					?>
+					<p><?php the_field('about_distinctive_1'); ?></p>
+				</div>
+				<div class="col-xs-4 distinctive">
+					<?php
+						$distinctive_image_2 = get_field('about_distinctive_2_icon');
+						if( $distinctive_image_2 ) {
+							echo wp_get_attachment_image( $distinctive_image_2, 'medium');
+						}
+					?>
+					<p><?php the_field('about_distinctive_2'); ?></p>
 				</div>
 			</div>
+			<div class="col-xs-4 distinctive">
+				<?php
+					$distinctive_image_3 = get_field('about_distinctive_3_icon');
+					if( $distinctive_image_3 ) {
+						echo wp_get_attachment_image( $distinctive_image_3, 'medium');
+					}
+				?>
+				<p><?php the_field('about_distinctive_3'); ?></p>
+			</div>
+		</div>
 			<div class="row">
 				<div class="col-xs-12">
 					<a href="<?php the_field('about_button_url'); ?>" class="btn btn-primary">
