@@ -248,10 +248,21 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
-					<h3 class="title"><?php the_field('subscribe_form_title'); ?></h3>
-					<div class="subscribe-form">
-				  	<?php the_field('subscribe_form_code','option'); ?>
-					</div>
+					<h3 class="title"><?php the_field('subscribe_title'); ?></h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<a href="<?php the_field('subscribe_button_url'); ?>" class="btn btn-primary">
+						<?php the_field('subscribe_button_text'); ?>
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<a href="<?php the_field('subscribe_secondary_button_url'); ?>" class="secondary-link">
+						<?php the_field('subscribe_secondary_button_text'); ?><i class="fa fa-angle-right"></i>
+					</a>
 				</div>
 			</div>
 		</div>
