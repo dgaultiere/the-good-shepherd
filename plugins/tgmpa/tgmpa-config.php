@@ -73,11 +73,11 @@ function my_theme_register_required_plugins() {
 		// ),
 
 		// M Retina Gravatars
-		array(
-			'name'      => 'M Retina Gravatars',
-			'slug'      => 'm-retina-gravatars',
-			'required'  => true,
-		),
+		// array(
+		// 	'name'      => 'M Retina Gravatars',
+		// 	'slug'      => 'm-retina-gravatars',
+		// 	'required'  => true,
+		// ),
 
 		// WordPress SEO by Yoast
 		array(
