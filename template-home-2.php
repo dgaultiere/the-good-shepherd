@@ -71,8 +71,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
-						<h2 class="title"><?php the_field('podcast_title'); ?></h2>
-						<h3 class="subtitle"><?php the_field('podcast_subtitle2'); ?></h3>
+						<h2 class="title small"><?php the_field('podcast_title'); ?></h2>
+						<h3 class="subtitle big"><?php the_field('podcast_subtitle2'); ?></h3>
 						<p><?php the_field('podcast_description'); ?></p>
 					</div>
 				</div>
@@ -104,8 +104,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
-					<h2 class="title"><?php the_field('featured_product_title'); ?></h2>
-					<h3 class="subtitle"><?php the_field('featured_product_subtitle'); ?></h3>
+					<h2 class="title small long"><?php the_field('featured_product_title'); ?></h2>
+					<h3 class="subtitle long"><?php the_field('featured_product_subtitle'); ?></h3>
 					<a href="<?php the_field('featured_product_button_url'); ?>">
 						<?php
 							$product_image = get_field('featured_product_image');
@@ -205,8 +205,8 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<div class="video"><?php the_field('video_embed_code'); ?></div>
-					<div class="quote"><h2 class="title"><?php the_field('video_quote'); ?></h2></div>
-					<div class="quote-credit"><h3 class="subtitle"><?php the_field('video_quote_credit'); ?></h3></div>
+					<div class="quote"><h2 class="title long"><?php the_field('video_quote'); ?></h2></div>
+					<div class="quote-credit"><h3 class="subtitle long"><?php the_field('video_quote_credit'); ?></h3></div>
 				</div>
 			</div>
 			<div class="row">

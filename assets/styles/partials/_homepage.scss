@@ -42,10 +42,18 @@
 		margin-bottom: 15px;
 		position: relative;
 
+		&.small {
+			font-size: 20px;
+		}
+
 		@media (min-width: $screen-sm-min) {
 			font-size: 32px;
 			padding-bottom: 15px;
 			margin-bottom: 25px;
+
+			&.small {
+				font-size: 24px;
+			}
 		}
 	}
 
@@ -54,8 +62,29 @@
 		font-size: 18px;
 		border-bottom: none;
 
+		&.big {
+			font-size: 36px;
+		}
+
 		@media (min-width: $screen-sm-min) {
 			font-size: 22px;
+
+			&.big {
+				font-size: 40px;
+			}
+		}
+	}
+
+	.title,
+	.subtitle {
+		&.long {
+			max-width: 85%;
+			margin-left: auto;
+			margin-right: auto;
+
+			@media (min-width: $screen-sm-min) {
+				max-width: 60%;
+			}
 		}
 	}
 
@@ -101,6 +130,8 @@
 		}
 
 		.secondary-link {
+			text-shadow: $text-shadow-1;
+
 			&:hover,
 			&:active,
 			&:focus {
@@ -163,6 +194,16 @@
 
 .bg-image {
 	@include background-image;
+
+	.title {
+		text-shadow: $text-shadow-1;
+		color: $white;
+	}
+
+	.subtitle {
+		@extend .title;
+		color: $white;
+	}
 }
 
 #cover {
@@ -177,15 +218,12 @@
 	.title {
 		font-weight: 600;
 		font-size: 32px;
-		color: $white;
-		text-shadow: $text-shadow-1;
 		text-align: center;
 		border-bottom: none;
 	}
 
 	.subtitle {
 		@extend .title;
-		color: $white;
 		font-size: 22px;
 		border-bottom: none;
 	}
@@ -382,6 +420,12 @@
 					width: 100%;
 				}
 			}
+		}
+	}
+
+	#subscribe {
+		.btn {
+			margin-top: 0;
 		}
 	}
 }
