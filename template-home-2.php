@@ -148,7 +148,6 @@
 				</div>
 			</div>
 			<div class="row">
-				<!-- 3 distinctives & icons go here -->
 				<div class="col-sm-4 distinctive">
 					<?php
 						$distinctive_image_1 = get_field('about_distinctive_1_icon');
@@ -246,6 +245,35 @@
 						}
 					?>
 					<p class="text-justify"><?php the_field('highlight_description'); ?></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4 distinctive">
+					<?php
+						$distinctive_image_1 = get_field('highlight_distinctive_1_icon');
+						if( $distinctive_image_1 ) {
+							echo wp_get_attachment_image( $distinctive_image_1, 'medium');
+						}
+					?>
+					<h4><?php the_field('highlight_distinctive_1'); ?></h4>
+				</div>
+				<div class="col-sm-4 distinctive">
+					<?php
+						$distinctive_image_2 = get_field('highlight_distinctive_2_icon');
+						if( $distinctive_image_2 ) {
+							echo wp_get_attachment_image( $distinctive_image_2, 'medium');
+						}
+					?>
+					<h4><?php the_field('highlight_distinctive_2'); ?></h4>
+				</div>
+				<div class="col-sm-4 distinctive">
+					<?php
+						$distinctive_image_3 = get_field('highlight_distinctive_3_icon');
+						if( $distinctive_image_3 ) {
+							echo wp_get_attachment_image( $distinctive_image_3, 'medium');
+						}
+					?>
+					<h4><?php the_field('highlight_distinctive_3'); ?></h4>
 				</div>
 			</div>
 			<div class="row">
