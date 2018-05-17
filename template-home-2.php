@@ -156,7 +156,7 @@
 							echo wp_get_attachment_image( $distinctive_image_1, 'medium');
 						}
 					?>
-					<p><?php the_field('about_distinctive_1'); ?></p>
+					<h4><?php the_field('about_distinctive_1'); ?></h4>
 				</div>
 				<div class="col-sm-4 distinctive">
 					<?php
@@ -165,7 +165,7 @@
 							echo wp_get_attachment_image( $distinctive_image_2, 'medium');
 						}
 					?>
-					<p><?php the_field('about_distinctive_2'); ?></p>
+					<h4><?php the_field('about_distinctive_2'); ?></h4>
 				</div>
 				<div class="col-sm-4 distinctive">
 					<?php
@@ -174,7 +174,7 @@
 							echo wp_get_attachment_image( $distinctive_image_3, 'medium');
 						}
 					?>
-					<p><?php the_field('about_distinctive_3'); ?></p>
+					<h4><?php the_field('about_distinctive_3'); ?></h4>
 				</div>
 			</div>
 			<div class="row">
@@ -305,7 +305,9 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-12">
+					<div class="big-search">
 						<?php get_search_form(); ?>
+					</div>
 				</div>
 			</div>
 			<div class="row">

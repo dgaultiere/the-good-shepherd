@@ -185,6 +185,12 @@
 		img {
 			margin: 10px auto 20px;
 		}
+
+		h4 {
+			font-weight: 400;
+			font-size: 22px;
+			color: $grey-dark;
+		}
 	}
 }
 
@@ -402,6 +408,13 @@
 				&:focus {
 					background-color: darken($white, 8%);
 				}
+			}
+		}
+
+		.big-search {
+			.search-form {
+				margin: 0px auto;
+				max-width: 500px;
 			}
 		}
 	}
