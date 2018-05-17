@@ -205,8 +205,10 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<div class="video"><?php the_field('video_embed_code'); ?></div>
-					<div class="quote"><h2 class="title long"><?php the_field('video_quote'); ?></h2></div>
-					<div class="quote-credit"><h3 class="subtitle long"><?php the_field('video_quote_credit'); ?></h3></div>
+					<div class="quote">
+						<h2 class="title long callout"><?php the_field('video_quote'); ?></h2>
+						<h3 class="subtitle long"><?php the_field('video_quote_credit'); ?></h3>
+					</div>
 				</div>
 			</div>
 			<div class="row">

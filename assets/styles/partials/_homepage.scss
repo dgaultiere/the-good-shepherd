@@ -190,6 +190,7 @@
 			font-weight: 400;
 			font-size: 22px;
 			color: $grey-dark;
+			margin-bottom: 40px;
 		}
 	}
 }
@@ -415,6 +416,12 @@
 			.search-form {
 				margin: 0px auto;
 				max-width: 500px;
+			}
+		}
+
+		.quote {
+			.subtitle {
+				color: $grey-dark;
 			}
 		}
 	}
