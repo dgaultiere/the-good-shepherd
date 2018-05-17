@@ -149,7 +149,7 @@
 			</div>
 			<div class="row">
 				<!-- 3 distinctives & icons go here -->
-				<div class="col-xs-4 distinctive">
+				<div class="col-sm-4 distinctive">
 					<?php
 						$distinctive_image_1 = get_field('about_distinctive_1_icon');
 						if( $distinctive_image_1 ) {
@@ -158,7 +158,7 @@
 					?>
 					<p><?php the_field('about_distinctive_1'); ?></p>
 				</div>
-				<div class="col-xs-4 distinctive">
+				<div class="col-sm-4 distinctive">
 					<?php
 						$distinctive_image_2 = get_field('about_distinctive_2_icon');
 						if( $distinctive_image_2 ) {
@@ -167,7 +167,7 @@
 					?>
 					<p><?php the_field('about_distinctive_2'); ?></p>
 				</div>
-				<div class="col-xs-4 distinctive">
+				<div class="col-sm-4 distinctive">
 					<?php
 						$distinctive_image_3 = get_field('about_distinctive_3_icon');
 						if( $distinctive_image_3 ) {
