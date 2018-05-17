@@ -443,6 +443,37 @@
 		}
 	}
 
+	#product {
+		@media (min-width: $screen-sm-min) {
+			text-align: left;
+
+			.title,
+			.subtitle {
+				text-align: left;
+				margin-left: 0;
+				margin-right: 0;
+
+				&.long {
+					max-width: 100%;
+				}
+			}
+
+			.btn,
+			.secondary-link {
+				margin-left: 0;
+				margin-right: 0;
+			}
+
+			.btn {
+				margin-top: 0;
+			}
+
+			img {
+				margin-top: 0;
+			}
+		}
+	}
+
 	#subscribe {
 		.btn {
 			margin-top: 0;

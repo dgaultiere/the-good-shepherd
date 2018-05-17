@@ -371,6 +371,15 @@ img {
 	height: auto;
 }
 
+*[class^='col-sm'] {
+	@media (max-width: $screen-sm-min) {
+		&.pull-right,
+		&.pull-left {
+			float: none !important;
+		}
+	}
+}
+
 .topimage {
 	margin-top: 0 !important;
 }

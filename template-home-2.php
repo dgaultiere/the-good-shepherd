@@ -103,9 +103,11 @@
 	<div class="row">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12">
+				<div class="col-sm-5 col-sm-pull-2 pull-right">
 					<h2 class="title small long"><?php the_field('featured_product_title'); ?></h2>
 					<h3 class="subtitle long"><?php the_field('featured_product_subtitle'); ?></h3>
+				</div>
+				<div class="col-sm-3 col-sm-offset-2">
 					<a href="<?php the_field('featured_product_button_url'); ?>">
 						<?php
 							$product_image = get_field('featured_product_image');
@@ -115,16 +117,11 @@
 						?>
 					</a>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12">
+				<div class="col-sm-5 col-sm-pull-2 pull-right">
 					<a href="<?php the_field('featured_product_button_url'); ?>" class="btn btn-primary">
 						<?php the_field('featured_product_button_text'); ?>
 					</a>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12">
+					<div class="clearfix"></div>
 					<a href="<?php the_field('featured_product_secondary_url'); ?>" class="secondary-link">
 						<?php the_field('featured_product_secondary_text'); ?><i class="fa fa-angle-right"></i>
 					</a>
