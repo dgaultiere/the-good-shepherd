@@ -151,6 +151,17 @@
         border-color: <?php echo $accent_color?>;
       }
 
+      /** Button Styles for Homepage 2 **/
+      .page-template-template-home-2 .section .btn-primary {
+        background-color: <?php echo $accent_color?>;
+      }
+
+      .page-template-template-home-2 .section .btn-primary:hover,
+      .page-template-template-home-2 .section .btn-primary:active,
+      .page-template-template-home-2 .section .btn-primary:focus {
+        background-color: <?php echo Roots\Sage\Extras\color_luminance($accent_color,-.15) ?>;
+      }
+
 			/** Forms & Inputs **/
 			.btn:focus,
 			.form-control:focus,

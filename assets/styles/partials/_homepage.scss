@@ -335,9 +335,36 @@
 			}
 		}
 
+		.btn-primary {
+			border-color: transparent;
+			background-color: $accent-color;
+			color: $white;
+
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: darken($accent-color, 10%);
+				color: $white;
+			}
+		}
+
 		.secondary-link {
 			display: inline-block;
 			margin-top: 20px;
+		}
+
+		&.text-white {
+			.btn {
+				border-color: transparent;
+				background-color: $white;
+				color: initial;
+
+				&:active,
+				&:hover,
+				&:focus {
+					background-color: darken($white, 8%);
+				}
+			}
 		}
 	}
 
@@ -350,7 +377,10 @@
 			max-width: 100%;
 
 			@media (min-width: $screen-sm-min) {
-				max-width: 800px;
+				&.size-medium-banner {
+					max-width: 800px;
+					width: 100%;
+				}
 			}
 		}
 	}
