@@ -149,7 +149,7 @@
 					<?php
 						$distinctive_image_1 = get_field('about_distinctive_1_icon');
 						if( $distinctive_image_1 ) {
-							echo wp_get_attachment_image( $distinctive_image_1, 'medium');
+							echo wp_get_attachment_image( $distinctive_image_1, 'thumbnail');
 						}
 					?>
 					<h4><?php the_field('about_distinctive_1'); ?></h4>
@@ -158,7 +158,7 @@
 					<?php
 						$distinctive_image_2 = get_field('about_distinctive_2_icon');
 						if( $distinctive_image_2 ) {
-							echo wp_get_attachment_image( $distinctive_image_2, 'medium');
+							echo wp_get_attachment_image( $distinctive_image_2, 'thumbnail');
 						}
 					?>
 					<h4><?php the_field('about_distinctive_2'); ?></h4>
@@ -167,7 +167,7 @@
 					<?php
 						$distinctive_image_3 = get_field('about_distinctive_3_icon');
 						if( $distinctive_image_3 ) {
-							echo wp_get_attachment_image( $distinctive_image_3, 'medium');
+							echo wp_get_attachment_image( $distinctive_image_3, 'thumbnail');
 						}
 					?>
 					<h4><?php the_field('about_distinctive_3'); ?></h4>
@@ -249,7 +249,7 @@
 					<?php
 						$distinctive_image_1 = get_field('highlight_distinctive_1_icon');
 						if( $distinctive_image_1 ) {
-							echo wp_get_attachment_image( $distinctive_image_1, 'medium');
+							echo wp_get_attachment_image( $distinctive_image_1, 'thumbnail');
 						}
 					?>
 					<h4><?php the_field('highlight_distinctive_1'); ?></h4>
@@ -258,7 +258,7 @@
 					<?php
 						$distinctive_image_2 = get_field('highlight_distinctive_2_icon');
 						if( $distinctive_image_2 ) {
-							echo wp_get_attachment_image( $distinctive_image_2, 'medium');
+							echo wp_get_attachment_image( $distinctive_image_2, 'thumbnail');
 						}
 					?>
 					<h4><?php the_field('highlight_distinctive_2'); ?></h4>
@@ -267,7 +267,7 @@
 					<?php
 						$distinctive_image_3 = get_field('highlight_distinctive_3_icon');
 						if( $distinctive_image_3 ) {
-							echo wp_get_attachment_image( $distinctive_image_3, 'medium');
+							echo wp_get_attachment_image( $distinctive_image_3, 'thumbnail');
 						}
 					?>
 					<h4><?php the_field('highlight_distinctive_3'); ?></h4>
