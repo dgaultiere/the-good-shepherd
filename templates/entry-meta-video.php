@@ -10,9 +10,6 @@
 			<i class="fa fa-map-marker"></i><?php the_field('video_location'); ?>
 		</div>
 	<?php }; ?>
-	<div class="meta-datapoint date">
-		<i class="fa fa-calendar"></i><?php the_field('video_date'); ?>
-	</div>
 	<?php if ( get_field('show_video_length') ) { ?>
 		<div class="meta-datapoint length">
 			<i class="fa fa-clock-o"></i><?php the_field('video_length'); ?>
