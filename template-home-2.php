@@ -33,6 +33,13 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<h2 class="title"><?php the_field('featured_link_title'); ?></h2>
+					<p>
+						Are you worn out by people’s needs?<br><br>
+						Do you feel alone with the weight of leadership?<br><br>
+						Is your spouse frustrated with your ministry?<br><br>
+						Do you know how to care for your soul?
+					</p>
+					<h3 class="subtitle"><?php the_field('featured_link_subtitle'); ?></h3>
 					<a href="<?php the_field('featured_link_url'); ?>">
 						<?php
 							$featured_link_image = get_field('featured_link_image');
@@ -47,13 +54,6 @@
 				<div class="col-xs-12">
 					<a href="<?php the_field('featured_link_button_url'); ?>" class="btn btn-primary">
 						<?php the_field('featured_link_button_text'); ?>
-					</a>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12">
-					<a href="<?php the_field('featured_link_secondary_url'); ?>" class="secondary-link">
-						<?php the_field('featured_link_secondary_text'); ?><i class="fa fa-angle-right"></i>
 					</a>
 				</div>
 			</div>
