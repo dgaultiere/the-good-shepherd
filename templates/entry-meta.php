@@ -24,6 +24,11 @@
 	<div class="meta-datapoint author">
 		<i class="fa fa-user"></i><?php the_author_posts_link(); ?>
 	</div>
+	<?php if( is_page_template('template-home-2.php') ) { ?>
+		<div class="meta-datapoint date">
+ 			<i class="fa fa-calendar"></i><?php the_time( get_option( 'date_format' ) ); ?>
+ 		</div>
+	<?php }; ?>
 	<?php if(get_the_category_list()) { ?>
 		<div class="meta-datapoint category">
 			<i class="fa fa-folder-o"></i><?php the_category(', '); ?>

@@ -102,37 +102,50 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
-					<h2 class="title"><?php the_field('what_we_offer_title'); ?></h2>
-					<p class="text-justify"><?php the_field('what_we_offer_description'); ?></p>
+					<h2 class="title"><?php the_field('wwo_title'); ?></h2>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-4 distinctive">
+				<?php if( have_rows('wwo_distinctives') ): while ( have_rows('wwo_distinctives') ) : the_row(); ?>
+					<div class="col-sm-4 distinctive">
+						<?php
+							$icon = get_sub_field('icon');
+							if( $icon ) {
+								echo wp_get_attachment_image( $icon, 'thumbnail');
+							}
+						?>
+						<h4><?php the_sub_field('label'); ?></h4>
+						<p>
+							<?php
+								if( have_rows('links') ):
+								while ( have_rows('links') ) : the_row();
+								$link = get_sub_field('link');
+								if( $link ):
+							?>
+								<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>">
+									<?php echo $link['title']; ?>
+								</a>
+							<?php
+								endif;
+								endwhile;
+								endif;
+							?>
+						</p>
+					</div>
+				<?php endwhile; endif; ?>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
 					<?php
-						$distinctive_image_1 = get_field('what_we_offer_distinctive_1_icon');
-						if( $distinctive_image_1 ) {
-							echo wp_get_attachment_image( $distinctive_image_1, 'thumbnail');
-						}
+						$button = get_field('wwo_button');
+						if( $button ):
 					?>
-					<h4><?php the_field('what_we_offer_distinctive_1'); ?></h4>
-				</div>
-				<div class="col-sm-4 distinctive">
+						<a href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>" class="btn btn-primary">
+							<?php echo $button['title']; ?>
+						</a>
 					<?php
-						$distinctive_image_2 = get_field('what_we_offer_distinctive_2_icon');
-						if( $distinctive_image_2 ) {
-							echo wp_get_attachment_image( $distinctive_image_2, 'thumbnail');
-						}
+						endif;
 					?>
-					<h4><?php the_field('what_we_offer_distinctive_2'); ?></h4>
-				</div>
-				<div class="col-sm-4 distinctive">
-					<?php
-						$distinctive_image_3 = get_field('what_we_offer_distinctive_3_icon');
-						if( $distinctive_image_3 ) {
-							echo wp_get_attachment_image( $distinctive_image_3, 'thumbnail');
-						}
-					?>
-					<h4><?php the_field('what_we_offer_distinctive_3'); ?></h4>
 				</div>
 			</div>
 			<div class="row">
@@ -160,9 +173,16 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-12">
-					<a href="<?php the_field('about_link_url'); ?>" class="secondary-link">
-						<?php the_field('about_link_text'); ?><i class="fa fa-angle-right"></i>
-					</a>
+					<?php
+						$link = get_field('about_link');
+						if( $link ):
+					?>
+						<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="secondary-link">
+							<?php echo $link['title']; ?><i class="fa fa-angle-right"></i>
+						</a>
+					<?php
+						endif;
+					?>
 				</div>
 			</div>
 			<div class="row">
@@ -278,46 +298,38 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
-					<h2 class="title"><?php the_field('featured_quote_title'); ?></h2>
+					<h2 class="title"><?php the_field('fq_title'); ?></h2>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-4">
-					<p><?php the_field('featured_quote_1'); ?></p>
-					<?php
-						$featured_quote_1_image = get_field('featured_quote_1_image');
-						if( $featured_quote_1_image ) {
-							echo wp_get_attachment_image($featured_quote_1_image, 'medium');
-						}
-					?>
-					<p><?php the_field('featured_quote_1_credit'); ?></p>
-				</div>
-				<div class="col-sm-4">
-					<p><?php the_field('featured_quote_2'); ?></p>
-					<?php
-						$featured_quote_2_image = get_field('featured_quote_2_image');
-						if( $featured_quote_2_image ) {
-							echo wp_get_attachment_image($featured_quote_2_image, 'medium');
-						}
-					?>
-					<p><?php the_field('featured_quote_2_credit'); ?></p>
-				</div>
-				<div class="col-sm-4">
-					<p><?php the_field('featured_quote_3'); ?></p>
-					<?php
-						$featured_quote_3_image = get_field('featured_quote_3_image');
-						if( $featured_quote_3_image ) {
-							echo wp_get_attachment_image($featured_quote_3_image, 'medium');
-						}
-					?>
-					<p><?php the_field('featured_quote_3_credit'); ?></p>
-				</div>
+				<?php if( have_rows('fq_quotes') ): while ( have_rows('fq_quotes') ) : the_row(); ?>
+					<div class="col-sm-4 featured-quote">
+						<p><?php the_sub_field('quote'); ?></p>
+						<?php
+							$photo = get_sub_field('photo');
+							if( $photo ) {
+								echo wp_get_attachment_image($photo, 'medium');
+							}
+						?>
+						<div class="quote-author">
+							<?php the_sub_field('name'); ?><br>
+							<span class="smaller"><?php the_sub_field('personal_title'); ?></span>
+						</div>
+					</div>
+				<?php endwhile; endif; ?>
 			</div>
 			<div class="row">
 				<div class="col-xs-12">
-					<a href="<?php the_field('featured_quote_link_url'); ?>" class="secondary-link">
-						<?php the_field('featured_quote_link_text'); ?><i class="fa fa-angle-right"></i>
-					</a>
+					<?php
+						$link = get_field('fq_link');
+						if( $link ):
+					?>
+						<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="secondary-link">
+							<?php echo $link['title']; ?><i class="fa fa-angle-right"></i>
+						</a>
+					<?php
+						endif;
+					?>
 				</div>
 			</div>
 			<div class="row">
@@ -372,21 +384,43 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-12">
-					<!-- Latest post here -->
+					<?php
+						$args = array('posts_per_page' => '1');
+						$the_query = new WP_Query( $args );
+						if ( $the_query->have_posts() ) :
+						while ( $the_query->have_posts() ) : $the_query->the_post();
+					?>
+					<?php	get_template_part('templates/content-snippet-post-side'); ?>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-xs-12">
-					<a href="<?php the_field('blog_button_url'); ?>" class="btn btn-primary">
-						<?php the_field('blog_button_text'); ?>
+					<a href="<?php the_permalink(); ?>" class="btn btn-primary">
+						Read Now
 					</a>
+					<?php
+						endwhile;
+						wp_reset_postdata();
+						else :
+					?>
+						<a href="<?php echo get_post_type_archive_link('post') ?>" class="btn btn-primary">
+							View the Blog
+						</a>
+					<?php endif; ?>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-xs-12">
-					<a href="<?php the_field('blog_secondary_url'); ?>" class="secondary-link">
-						<?php the_field('blog_secondary_text'); ?><i class="fa fa-angle-right"></i>
-					</a>
+					<?php
+						$link = get_field('blog_link');
+						if( $link ):
+					?>
+						<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="secondary-link">
+							<?php echo $link['title']; ?><i class="fa fa-angle-right"></i>
+						</a>
+					<?php
+						endif;
+					?>
 				</div>
 			</div>
 			<div class="row">
