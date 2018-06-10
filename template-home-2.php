@@ -42,14 +42,9 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<h2 class="title"><?php the_field('featured_link_title'); ?></h2>
-					<p>
-						Are you worn out by people’s needs?<br><br>
-						Do you feel alone with the weight of leadership?<br><br>
-						Is your spouse frustrated with your ministry?<br><br>
-						Do you know how to care for your soul?
-					</p>
+					<p class="description"><?php the_field('featured_link_description'); ?></p>
 					<h3 class="subtitle"><?php the_field('featured_link_subtitle'); ?></h3>
-					<a href="<?php the_field('featured_link_url'); ?>">
+					<a class="link-photo" href="<?php the_field('featured_link_url'); ?>">
 						<?php
 							$featured_link_image = get_field('featured_link_image');
 							if( $featured_link_image ) {
@@ -135,22 +130,22 @@
 								}
 							?>
 							<h4><?php the_sub_field('label'); ?></h4>
-							<p>
-								<?php
-									if( have_rows('links') ):
-									while ( have_rows('links') ) : the_row();
-									$link = get_sub_field('link');
-									if( $link ):
-								?>
+							<?php
+								if( have_rows('links') ):
+								while ( have_rows('links') ) : the_row();
+								$link = get_sub_field('link');
+								if( $link ):
+							?>
+								<div class="distinctive-link">
 									<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>">
 										<?php echo $link['title']; ?>
 									</a>
-								<?php
-									endif;
-									endwhile;
-									endif;
-								?>
-							</p>
+								</div>
+							<?php
+								endif;
+								endwhile;
+								endif;
+							?>
 						</div>
 					<?php endwhile; ?>
 				</div>
@@ -331,7 +326,7 @@
 						<?php
 							$photo = get_sub_field('photo');
 							if( $photo ) {
-								echo wp_get_attachment_image($photo, 'medium');
+								echo wp_get_attachment_image($photo, 'thumbnail');
 							}
 						?>
 						<div class="quote-author">
@@ -429,7 +424,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-xs-12">
+				<div class="col-sm-8 col-sm-offset-2">
 					<?php
 						$args = array('posts_per_page' => '1');
 						$the_query = new WP_Query( $args );

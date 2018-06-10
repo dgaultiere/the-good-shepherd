@@ -18,7 +18,7 @@
   <?php get_template_part('templates/entry-meta', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
   <div class="entry-summary">
     <p>
-      <?php echo Roots\Sage\Extras\string_limit_words($excerpt,25); ?>
+      <?php echo Roots\Sage\Extras\string_limit_words($excerpt,40); ?>
     </p>
   </div>
 </article>
