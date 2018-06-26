@@ -506,9 +506,32 @@
 	}
 
 	.featured-quote {
+		p {
+			@media (min-width: $screen-sm-min) {
+				min-height: 9em;
+			}
+
+			@media (min-width: $screen-md-min) {
+				min-height: 6em;
+			}
+		}
+
 		img {
 			margin: 10px auto 20px;
 			border-radius: 50%;
+			max-width: 100px;
+
+			@media (min-width: $screen-sm-min) {
+				max-width: none;
+			}
+		}
+
+		.quote-author {
+			margin-bottom: 50px;
+
+			@media (min-width: $screen-sm-min) {
+				margin-bottom: 0;
+			}
 		}
 	}
 
