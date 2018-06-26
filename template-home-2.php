@@ -74,37 +74,39 @@
 </div>
 
 <!-- Testimonial -->
-<div class="container-fluid section grey-bg" id="testimonial">
-	<div class="row">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<?php
-						$testimonial_image = get_field('testimonial_photo');
-						if( $testimonial_image ) {
-							echo wp_get_attachment_image($testimonial_image, 'medium-banner');
-						}
-					?>
-					<div class="quote">
-						<h2 class="title long callout"><?php the_field('testimonial_quote'); ?></h2>
-						<h3 class="subtitle long"><?php the_field('testimonial_credit'); ?></h3>
-					</div>
-				</div>
-			</div>
-			<?php
-				$link = get_field('testimonial_action_link');
-				if( $link ):
-			?>
+<div class="bg-image" style="background-image:url('<?php $image = get_field('testimonial_photo'); echo $image['sizes']['extra-large']; ?>');">
+	<div class="container-fluid section text-<?php the_field('testimonial_text_color'); ?>" id="testimonial" style="background-color: rgba(0,0,0,0.<?php the_field('testimonial_photo_darkness'); ?>)">
+		<div class="row">
+			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
-						<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="secondary-link">
-							<?php echo $link['title']; ?><i class="fa fa-angle-right"></i>
-						</a>
+						<?php
+							// $testimonial_image = get_field('testimonial_photo');
+							// if( $testimonial_image ) {
+							// 	echo wp_get_attachment_image($testimonial_image, 'medium-banner');
+							// }
+						?>
+						<div class="quote">
+							<h2 class="title long callout"><?php the_field('testimonial_quote'); ?></h2>
+							<h3 class="subtitle long"><?php the_field('testimonial_credit'); ?></h3>
+						</div>
 					</div>
 				</div>
-			<?php endif; ?>
-			<div class="row">
-				<a href="#what-we-offer" class="down-arrow"><i class="fa fa-angle-down"></i></a>
+				<?php
+					$link = get_field('testimonial_action_link');
+					if( $link ):
+				?>
+					<div class="row">
+						<div class="col-xs-12">
+							<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="secondary-link">
+								<?php echo $link['title']; ?><i class="fa fa-angle-right"></i>
+							</a>
+						</div>
+					</div>
+				<?php endif; ?>
+				<div class="row">
+					<a href="#what-we-offer" class="down-arrow"><i class="fa fa-angle-down"></i></a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -358,7 +360,7 @@
 </div>
 
 <!-- Podcast -->
-<div class="bg-image" style="background-image:url('<?php $cover_image = get_field('podcast_photo'); echo $cover_image['sizes']['extra-large']; ?>');">
+<div class="bg-image" style="background-image:url('<?php $image = get_field('podcast_photo'); echo $image['sizes']['extra-large']; ?>');">
 	<div class="container-fluid section text-<?php the_field('podcast_text_color'); ?>" id="podcast" style="background-color: rgba(0,0,0,0.<?php the_field('podcast_photo_darkness'); ?>)">
 		<div class="row">
 			<div class="container">
