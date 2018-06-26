@@ -152,7 +152,8 @@
       }
 
       /** Button Styles for Homepage 2 **/
-      .page-template-template-home-2 .section .btn-primary {
+      .page-template-template-home-2 .section .btn-primary,
+      .page-template-template-home-2 .distinctive .circle {
         background-color: <?php echo $accent_color?>;
       }
 

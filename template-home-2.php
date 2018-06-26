@@ -41,12 +41,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
-					<h2 class="title"><?php the_field('featured_link_title'); ?></h2>
+					<h2 class="title"><?php the_field('featured_link_title2'); ?></h2>
 					<p class="description"><?php the_field('featured_link_description'); ?></p>
-					<h3 class="subtitle"><?php the_field('featured_link_subtitle'); ?></h3>
+					<h3 class="subtitle"><?php the_field('featured_link_subtitle2'); ?></h3>
 					<a class="link-photo" href="<?php the_field('featured_link_url'); ?>">
 						<?php
-							$featured_link_image = get_field('featured_link_image');
+							$featured_link_image = get_field('featured_link_image2');
 							if( $featured_link_image ) {
 								echo wp_get_attachment_image($featured_link_image, 'medium');
 							}
@@ -119,12 +119,14 @@
 				<div class="row">
 					<?php while ( have_rows('wwo_distinctives') ) : the_row(); ?>
 						<div class="col-sm-4 distinctive">
-							<?php
-								$icon = get_sub_field('icon');
-								if( $icon ) {
-									echo wp_get_attachment_image( $icon, 'thumbnail');
-								}
-							?>
+							<div class="circle">
+								<?php
+									$icon = get_sub_field('icon');
+									if( $icon ) {
+										echo wp_get_attachment_image( $icon, 'thumbnail');
+									}
+								?>
+							</div>
 							<h4><?php the_sub_field('label'); ?></h4>
 							<?php
 								if( have_rows('links') ):
@@ -264,12 +266,14 @@
 				<div class="row">
 					<?php while ( have_rows('hp_distinctives') ) : the_row(); ?>
 						<div class="col-sm-4 distinctive">
-							<?php
-								$icon = get_sub_field('icon');
-								if( $icon ) {
-									echo wp_get_attachment_image( $icon, 'thumbnail');
-								}
-							?>
+							<div class="circle">
+								<?php
+									$icon = get_sub_field('icon');
+									if( $icon ) {
+										echo wp_get_attachment_image( $icon, 'thumbnail');
+									}
+								?>
+							</div>
 							<h5><?php the_sub_field('label'); ?></h5>
 						</div>
 					<?php endwhile; ?>
