@@ -80,12 +80,6 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
-						<?php
-							// $testimonial_image = get_field('testimonial_photo');
-							// if( $testimonial_image ) {
-							// 	echo wp_get_attachment_image($testimonial_image, 'medium-banner');
-							// }
-						?>
 						<div class="quote">
 							<h2 class="title long callout"><?php the_field('testimonial_quote'); ?></h2>
 							<h3 class="subtitle long"><?php the_field('testimonial_credit'); ?></h3>

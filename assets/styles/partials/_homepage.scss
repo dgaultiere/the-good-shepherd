@@ -255,7 +255,6 @@
 }
 
 /* Homepage 1 */
-
 .page-template-template-home {
 	.section {
 		.title {
@@ -353,7 +352,6 @@
 	}
 }
 
-
 /* Homepage 2 */
 .page-template-template-home-2 {
 	.section {
@@ -413,6 +411,14 @@
 			}
 		}
 
+		&.text-white {
+			.quote {
+				.subtitle {
+					color: $white;
+				}
+			}
+		}
+
 		img.size-medium-banner {
 			display: block;
 			margin: 15px auto 25px;
@@ -447,6 +453,48 @@
 		display: inline-block;
 		margin: 15px auto 25px;
 		max-width: 100%;
+	}
+
+	#testimonial {
+		padding-top: 100px;
+		padding-bottom: 120px;
+
+		.quote {
+			.title {
+				font-size: 36px;
+			}
+
+			.subtitle {
+				font-size: 24px;
+			}
+		}
+
+		@media (min-width: $screen-sm-min) {
+			padding-top: 160px;
+			padding-bottom: 160px;
+
+			.quote {
+				.title {
+					font-size: 42px;
+				}
+
+				.subtitle {
+					font-size: 26px;
+				}
+			}
+		}
+
+		@media (min-width: $screen-lg-min) {
+			.quote {
+				.title {
+					font-size: 48px;
+				}
+
+				.subtitle {
+					font-size: 30px;
+				}
+			}
+		}
 	}
 
 	#product {
