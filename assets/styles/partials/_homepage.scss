@@ -609,9 +609,14 @@
 
 		.quote-author {
 			margin-bottom: 70px;
+			font-size: 19px;
 
 			@media (min-width: $screen-sm-min) {
 				margin-bottom: 0;
+			}
+
+			.smaller {
+				font-size: 15px;
 			}
 		}
 	}
@@ -624,6 +629,12 @@
 		@media (min-width: $screen-sm-min) {
 			padding-top: 100px;
 			padding-bottom: 120px;
+		}
+	}
+
+	#podcast {
+		p {
+			font-size: 24px;
 		}
 	}
 
