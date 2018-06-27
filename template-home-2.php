@@ -189,8 +189,8 @@
 			?>
 				<div class="row">
 					<div class="col-xs-12">
-						<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="secondary-link">
-							<?php echo $link['title']; ?><i class="fa fa-angle-right"></i>
+						<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="btn btn-primary">
+							<?php echo $link['title']; ?>
 						</a>
 					</div>
 				</div>
