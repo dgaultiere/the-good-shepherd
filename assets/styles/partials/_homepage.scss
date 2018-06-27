@@ -675,6 +675,9 @@
 
 			img {
 				margin-top: 0;
+				max-height: 300;
+				width: auto;
+				box-shadow: $box-shadow-blur-3;
 			}
 		}
 	}
