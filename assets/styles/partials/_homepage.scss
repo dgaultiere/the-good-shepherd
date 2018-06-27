@@ -198,6 +198,14 @@
 		@extend .title;
 		color: $white;
 	}
+
+	p {
+		text-shadow: $text-shadow-1;
+	}
+
+	.btn {
+		box-shadow: $box-shadow-blur-3 !important;
+	}
 }
 
 #cover {
@@ -568,18 +576,30 @@
 
 	.featured-quote {
 		p {
+			font-size: 24px;
+			font-style: italic;
+			margin-top: 30px;
+
 			@media (min-width: $screen-sm-min) {
 				min-height: 9em;
+				font-size: 20px;
 			}
 
 			@media (min-width: $screen-md-min) {
+				min-height: 8em;
+				font-size: 22px;
+			}
+
+			@media (min-width: $screen-lg-min) {
 				min-height: 6em;
+				font-size: 24px;
 			}
 		}
 
 		img {
 			margin: 10px auto 20px;
 			border-radius: 50%;
+			width: 100px;
 			max-width: 100px;
 
 			@media (min-width: $screen-sm-min) {
@@ -588,7 +608,7 @@
 		}
 
 		.quote-author {
-			margin-bottom: 60px;
+			margin-bottom: 70px;
 
 			@media (min-width: $screen-sm-min) {
 				margin-bottom: 0;
