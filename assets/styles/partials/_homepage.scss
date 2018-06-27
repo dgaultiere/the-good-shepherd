@@ -523,13 +523,14 @@
 	}
 
 	.distinctive {
+		margin-top: 30px;
+
 		.circle {
 			margin: 5px auto;
-			padding: 40px;
+			padding: 35px;
 			border-radius: 50%;
 			width: 140px;
 			background-color: $accent-color;
-			// background-color: transparent !important;
 		}
 
 		img {
@@ -564,6 +565,17 @@
 	.quote {
 		.subtitle {
 			margin-bottom: 0;
+		}
+	}
+
+	#highlight {
+		.distinctive {
+			.circle {
+				// padding: 15px;
+				padding: 0;
+				border-radius: 0;
+				background-color: transparent !important;
+			}
 		}
 	}
 
