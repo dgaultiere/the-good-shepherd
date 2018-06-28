@@ -50,19 +50,12 @@
 						if( $button && $featured_link_image ):
 					?>
 						<a href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>" class="link-photo">
-							<?php
-								// if( $featured_link_image ) {
-									echo wp_get_attachment_image($featured_link_image, 'medium');
-								// }
-							?>
+							<?php echo wp_get_attachment_image($featured_link_image, 'medium'); ?>
 						</a>
 					<?php endif;?>
 				</div>
 			</div>
-			<?php
-				// $button = get_field('featured_link_button');
-				if( $button ):
-			?>
+			<?php if( $button ): ?>
 				<div class="row">
 					<div class="col-xs-12">
 						<a href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>" class="btn btn-primary">
