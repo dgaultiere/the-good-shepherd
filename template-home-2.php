@@ -44,18 +44,23 @@
 					<h2 class="title"><?php the_field('featured_link_title2'); ?></h2>
 					<p class="description"><?php the_field('featured_link_description'); ?></p>
 					<h3 class="subtitle"><?php the_field('featured_link_subtitle2'); ?></h3>
-					<a class="link-photo" href="<?php the_field('featured_link_url'); ?>">
-						<?php
-							$featured_link_image = get_field('featured_link_image2');
-							if( $featured_link_image ) {
-								echo wp_get_attachment_image($featured_link_image, 'medium');
-							}
-						?>
-					</a>
+					<?php
+						$button = get_field('featured_link_button');
+						$featured_link_image = get_field('featured_link_image2');
+						if( $button && $featured_link_image ):
+					?>
+						<a href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>" class="link-photo">
+							<?php
+								// if( $featured_link_image ) {
+									echo wp_get_attachment_image($featured_link_image, 'medium');
+								// }
+							?>
+						</a>
+					<?php endif;?>
 				</div>
 			</div>
 			<?php
-				$button = get_field('featured_link_button');
+				// $button = get_field('featured_link_button');
 				if( $button ):
 			?>
 				<div class="row">
