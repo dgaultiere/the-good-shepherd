@@ -26,6 +26,12 @@
     </script>
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
+    <!-- OneTrust Cookies Consent Notice -->
+    <script src="https://cdn.cookielaw.org/consent/4faf9852-4dfc-4d31-a189-e793092203ce.js" type="text/javascript" charset="UTF-8"></script>
+    <script type="text/javascript">
+      function OptanonWrapper() { }
+    </script>
+
 		<!-- Theme Styles -->
 		<style type="text/css">
 			<?php
