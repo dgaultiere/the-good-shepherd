@@ -530,7 +530,13 @@
 			padding: 35px;
 			border-radius: 50%;
 			width: 140px;
-			background-color: $accent-color;
+			background-color: $grey-light;
+		}
+
+		.circle {
+			padding: 0;
+			border-radius: 0;
+			background-color: transparent !important;
 		}
 
 		img {
@@ -571,7 +577,6 @@
 	#highlight {
 		.distinctive {
 			.circle {
-				// padding: 15px;
 				padding: 0;
 				border-radius: 0;
 				background-color: transparent !important;
