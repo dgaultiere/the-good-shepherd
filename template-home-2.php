@@ -45,25 +45,30 @@
 					<p class="description"><?php the_field('featured_link_description'); ?></p>
 					<h3 class="subtitle"><?php the_field('featured_link_subtitle2'); ?></h3>
 					<?php
-						$button = get_field('featured_link_button');
-						$featured_link_image = get_field('featured_link_image2');
-						if( $button && $featured_link_image ):
+					$featured_link_image = get_field('featured_link_image2');
+					if( $featured_link_image ):
 					?>
-						<a href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>" class="link-photo">
+						<div class="link-photo">
 							<?php echo wp_get_attachment_image($featured_link_image, 'medium'); ?>
-						</a>
-					<?php endif;?>
+						</div>
+					<?php endif; ?>
 				</div>
 			</div>
-			<?php if( $button ): ?>
-				<div class="row">
-					<div class="col-xs-12">
-						<a href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>" class="btn btn-primary">
-							<?php echo $button['title']; ?>
-						</a>
-					</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<a class="btn btn-primary" id="featured-link-show-hide">
+						<?php the_field('featured_link_button_title'); ?>
+					</a>
 				</div>
-			<?php endif; ?>
+			</div>
+			<div class="row featured-download-form" id="featured-link-email-form">
+				<div class="col-xs-12">
+					<?php get_template_part('templates/subscribe-form-download-a'); ?>
+						<!-- Nine Ways eBook -->
+						<input type="checkbox" value="2097152" name="group[41][2097152]" id="mce-group[41]-41-0" checked>
+					<?php get_template_part('templates/subscribe-form-download-b'); ?>
+				</div>
+			</div>
 			<div class="row">
 				<a href="#testimonial" class="down-arrow"><i class="fa fa-angle-down"></i></a>
 			</div>
@@ -489,14 +494,9 @@
 					</a>
 				</div>
 				<div class="col-sm-5 col-sm-pull-2 pull-right">
-					<?php
-						$button = get_field('fp_button');
-						if( $button ):
-					?>
-						<a href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>" class="btn btn-primary">
-							<?php echo $button['title']; ?>
-						</a>
-					<?php endif; ?>
+					<a class="btn btn-primary" id="featured-product-show-hide">
+						<?php the_field('fp_button_title'); ?>
+					</a>
 					<?php
 						$link = get_field('fp_link');
 						if( $link ):
@@ -506,6 +506,14 @@
 							<?php echo $link['title']; ?><i class="fa fa-angle-right"></i>
 						</a>
 					<?php endif; ?>
+				</div>
+			</div>
+			<div class="row featured-download-form" id="featured-product-email-form">
+				<div class="col-xs-12">
+					<?php get_template_part('templates/subscribe-form-download-a'); ?>
+						<!-- Easy Yoke Sample Chapter -->
+						<input type="checkbox" value="4194304" name="group[41][4194304]" id="mce-group[41]-41-1" checked>
+					<?php get_template_part('templates/subscribe-form-download-b'); ?>
 				</div>
 			</div>
 			<div class="row">

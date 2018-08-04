@@ -457,6 +457,29 @@
 		}
 	}
 
+	#featured-link-email-form,
+	#featured-product-email-form {
+		display: none;
+	}
+
+	.featured-download-form {
+		.subscribe-form-container {
+			width: 500px;
+			max-width: 100%;
+			margin: 30px auto 0;
+
+			h3 {
+				margin: 20px 0 0;
+				padding: 0 0 5px;
+				text-align: center !important;
+			}
+		}
+
+		#mc_embed_signup {
+			width: 367px;
+		}
+	}
+
 	.link-photo {
 		display: inline-block;
 		margin: 15px auto 25px;
