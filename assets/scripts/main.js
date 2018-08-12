@@ -69,16 +69,18 @@
         // Show/hide element for email-before-download form
         $(document).ready(function () {
           $("#featured-link-show-hide").click(function () {
-            $("#featured-link-email-form").toggle();
+            // $("#featured-link-email-form").toggle();
+            $("#featured-link-email-form").toggleClass("open");
           });
           $("#featured-product-show-hide").click(function () {
-            $("#featured-product-email-form").toggle();
+            // $("#featured-product-email-form").toggle();
+            $("#featured-product-email-form").toggleClass("open");
           });
         });
 
         // Replace MailChimp success message with something appropriate for the download Form
         $('#featured-link-email-form #mce-success-response').bind('DOMSubtreeModified', function(e) {
-          document.getElementById("mce-success-response").textContent="Thank you! Please check your email for a link to download the eBook.";
+          document.getElementById("mce-success-response").textContent="Thank you! Please check your email for a link to your download.";
         });
 
       },

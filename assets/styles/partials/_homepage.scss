@@ -25,10 +25,17 @@
 	padding-top: 60px;
 	padding-bottom: 80px;
 	font-size: 16px;
+	@include transition(all, 0.2s);
 
 	@media (min-width: $screen-sm-min) {
 		padding-top: 100px;
 		padding-bottom: 120px;
+	}
+
+	.row {
+		.container {
+			@include transition(all, 0.2s);
+		}
 	}
 
 	.title {
@@ -459,10 +466,20 @@
 
 	#featured-link-email-form,
 	#featured-product-email-form {
-		display: none;
+		// display: none;
+		opacity: 0;
+		height: 0;
+    overflow: hidden;
+
+		&.open {
+			opacity: 1;
+			height: auto;
+		}
 	}
 
 	.featured-download-form {
+		@include transition(all 0.2s);
+
 		.subscribe-form-container {
 			width: 500px;
 			max-width: 100%;
