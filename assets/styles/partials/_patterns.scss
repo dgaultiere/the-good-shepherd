@@ -14,7 +14,15 @@ form,
 }
 
 .akismet_comment_form_privacy_notice {
-	@extend .form-group>label;
+	font-family: $font-bernino;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+.comments {
+	.akismet_comment_form_privacy_notice {
+		font-size: 14px;
+	}
 }
 
 input,
