@@ -250,64 +250,61 @@
 </div>
 
 <!-- Highlighted Page -->
-<div class="container-fluid section grey-bg" id="highlight">
-	<div class="row">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<h2 class="title"><?php the_field('highlight_title'); ?></h2>
-					<?php
-						$highlight_photo = get_field('highlight_photo');
-						if( $highlight_photo ) {
-							echo wp_get_attachment_image( $highlight_photo, 'medium-banner');
-						}
-					?>
-					<p class="text-justify"><?php the_field('highlight_description'); ?></p>
-				</div>
-			</div>
-			<?php if( have_rows('hp_distinctives') ): ?>
+<div class="bg-image" style="background-image:url('<?php $image = get_field('highlight_photo'); echo $image['sizes']['extra-large']; ?>');">
+	<div class="container-fluid section text-<?php the_field('highlight_text_color'); ?>" id="highlight" style="background-color: rgba(0,0,0,0.<?php the_field('highlight_photo_darkness'); ?>)">
+		<div class="row">
+			<div class="container">
 				<div class="row">
-					<?php while ( have_rows('hp_distinctives') ) : the_row(); ?>
-						<div class="col-sm-4 distinctive">
-							<div class="circle">
-								<?php
-									$icon = get_sub_field('icon');
-									if( $icon ) {
-										echo wp_get_attachment_image( $icon, 'thumbnail');
-									}
-								?>
+					<div class="col-xs-12">
+						<h2 class="title small"><?php the_field('highlight_title'); ?></h2>
+						<h3 class="subtitle big"><?php the_field('highlight_subtitle'); ?></h3>
+						<p class="text-justify"><?php the_field('highlight_description'); ?></p>
+					</div>
+				</div>
+				<?php if( have_rows('hp_distinctives') ): ?>
+					<div class="row">
+						<?php while ( have_rows('hp_distinctives') ) : the_row(); ?>
+							<div class="col-sm-4 distinctive">
+								<div class="circle">
+									<?php
+										$icon = get_sub_field('icon');
+										if( $icon ) {
+											echo wp_get_attachment_image( $icon, 'thumbnail');
+										}
+									?>
+								</div>
+								<h4><?php the_sub_field('label'); ?></h4>
 							</div>
-							<h5><?php the_sub_field('label'); ?></h5>
+						<?php endwhile; ?>
+					</div>
+				<?php endif; ?>
+				<?php
+					$button = get_field('highlight_button');
+					if( $button ):
+				?>
+					<div class="row">
+						<div class="col-xs-12">
+							<a href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>" class="btn btn-primary">
+								<?php echo $button['title']; ?>
+							</a>
 						</div>
-					<?php endwhile; ?>
-				</div>
-			<?php endif; ?>
-			<?php
-				$button = get_field('highlight_button');
-				if( $button ):
-			?>
-				<div class="row">
-					<div class="col-xs-12">
-						<a href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>" class="btn btn-primary">
-							<?php echo $button['title']; ?>
-						</a>
 					</div>
-				</div>
-			<?php endif; ?>
-			<?php
-				$link = get_field('highlight_link');
-				if( $link ):
-			?>
-				<div class="row">
-					<div class="col-xs-12">
-						<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="secondary-link">
-							<?php echo $link['title']; ?><i class="fa fa-angle-right"></i>
-						</a>
+				<?php endif; ?>
+				<?php
+					$link = get_field('highlight_link');
+					if( $link ):
+				?>
+					<div class="row">
+						<div class="col-xs-12">
+							<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="secondary-link">
+								<?php echo $link['title']; ?><i class="fa fa-angle-right"></i>
+							</a>
+						</div>
 					</div>
+				<?php endif; ?>
+				<div class="row">
+					<a href="#featured-quotes" class="down-arrow"><i class="fa fa-angle-down"></i></a>
 				</div>
-			<?php endif; ?>
-			<div class="row">
-				<a href="#featured-quotes" class="down-arrow"><i class="fa fa-angle-down"></i></a>
 			</div>
 		</div>
 	</div>

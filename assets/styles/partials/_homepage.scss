@@ -206,7 +206,7 @@
 		color: $white;
 	}
 
-	p {
+	h1,h2,h3,h4,h5,h6,p {
 		text-shadow: $text-shadow-1;
 	}
 
@@ -564,6 +564,7 @@
 
 	.distinctive {
 		margin-top: 30px;
+		margin-bottom: 50px;
 
 		.circle {
 			margin: 5px auto;
@@ -576,7 +577,7 @@
 		.circle {
 			padding: 0;
 			border-radius: 0;
-			background-color: transparent !important;
+			background-color: transparent;
 		}
 
 		img {
@@ -587,14 +588,6 @@
 			font-weight: 400;
 			line-height: 1.4;
 			font-size: 22px;
-			color: $grey-dark;
-			margin-bottom: 40px;
-		}
-
-		h5 {
-			font-weight: 400;
-			line-height: 1.4;
-			margin-bottom: 50px;
 		}
 	}
 
@@ -602,10 +595,6 @@
 		display: block;
 		text-align: center;
 		margin: 0 auto 5px;
-
-		&:last-child {
-			margin-bottom: 50px;
-		}
 	}
 
 	.quote {
@@ -616,10 +605,17 @@
 
 	#highlight {
 		.distinctive {
+			margin-top: 50px;
+			margin-bottom: 10px;
+
 			.circle {
-				padding: 0;
-				border-radius: 0;
-				background-color: transparent !important;
+				// padding: 0;
+				// border-radius: 0;
+				// background-color: transparent !important;
+				padding: 25px;
+				border-radius: 50%;
+				background-color: rgba(255,255,255,0.75);
+				width: 160px;
 			}
 		}
 	}
