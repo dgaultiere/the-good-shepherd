@@ -423,14 +423,14 @@
 					<h2 class="title"><?php the_field('blog_title'); ?></h2>
 				</div>
 			</div>
+			<?php
+				$args = array('posts_per_page' => 1, 'ignore_sticky_posts' => 1);
+				$the_query = new WP_Query( $args );
+				if ( $the_query->have_posts() ) :
+					while ( $the_query->have_posts() ) : $the_query->the_post();
+			?>
 			<div class="row">
 				<div class="col-sm-8 col-sm-offset-2">
-					<?php
-						$args = array('posts_per_page' => 1, 'ignore_sticky_posts' => 1);
-						$the_query = new WP_Query( $args );
-						if ( $the_query->have_posts() ) :
-							while ( $the_query->have_posts() ) : $the_query->the_post();
-					?>
 					<?php	get_template_part('templates/content-snippet-post-side'); ?>
 				</div>
 			</div>
@@ -441,11 +441,11 @@
 					</a>
 				</div>
 			</div>
-				<?php
-						endwhile;
-						wp_reset_postdata();
-					else :
-				?>
+			<?php
+					endwhile;
+					wp_reset_postdata();
+				else :
+			?>
 			<div class="row">
 				<div class="col-xs-12">
 						<a href="<?php echo get_post_type_archive_link('post') ?>" class="btn btn-primary">
