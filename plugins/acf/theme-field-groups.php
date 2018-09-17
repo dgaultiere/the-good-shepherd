@@ -924,7 +924,7 @@ acf_add_local_field_group(array (
 		),
 		array (
 		  'key' => 'highlight_subtitle',
-		  'label' => 'Subitle',
+		  'label' => 'Subtitle',
 		  'name' => 'highlight_subtitle',
 		  'type' => 'text',
 		  'instructions' => '',
