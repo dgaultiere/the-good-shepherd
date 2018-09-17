@@ -106,20 +106,19 @@ textarea {
 
 .btn-primary,
 .subscribe-form .button {
-	color: darken($accent-color, 10%);
-	background-color: transparent;
-	border-color: $accent-color;
+	color: $white;
+	background-color: $accent-color;
+	border: none;
 
 	&:hover,
 	&:active,
 	&:focus {
-		color: $white;
-		background-color: $accent-color;
-		border-color: $accent-color;
+		background-color: darken($accent-color, 10%);
+		border: none;
 	}
 
 	a {
-		color: darken($accent-color, 10%);
+		color: $white;
 	}
 }
 
@@ -129,9 +128,9 @@ textarea {
 	line-height: 1;
 }
 
-// input[type=submit] {
-// 	@extend .btn-primary;
-// }
+input[type=submit] {
+	@extend .btn-primary;
+}
 
 .input-group-btn:last-child>.btn,
 .input-group-btn:last-child>.btn-group,

@@ -127,7 +127,18 @@
 			.view-all a:hover,
 			.btn:active,
 			.btn:focus,
-			.btn:hover,
+			.btn:hover {
+				background-color:  <?php echo $accent_color?>;
+				border-color: <?php echo $accent_color?>;
+			}
+
+			.btn-primary,
+      .subscribe-form .button,
+      input[type=submit] {
+				background-color: <?php echo $accent_color?>;
+        color: white;
+			}
+
 			.btn-primary:active,
 			.btn-primary:focus,
 			.btn-primary:hover,
@@ -137,33 +148,13 @@
       input[type=submit]:active,
       input[type=submit]:focus,
       input[type=submit]:hover {
-				background-color:  <?php echo $accent_color?>;
-				border-color: <?php echo $accent_color?>;
-			}
-
-			.btn-primary,
-      .btn-primary a,
-      .subscribe-form .button,
-      input[type=submit] {
-				color: <?php echo $accent_color?>;
-				border-color: <?php echo $accent_color?>;
-			}
+        background-color: <?php echo Roots\Sage\Extras\color_luminance($accent_color,-.15) ?>;
+      }
 
       .secondary-link:hover,
       .secondary-link:active,
       .secondary-link:focus {
         border-color: <?php echo $accent_color?>;
-      }
-
-      /** Button Styles for Homepage 2 **/
-      .page-template-template-home-2 .section .btn-primary {
-        background-color: <?php echo $accent_color?>;
-      }
-
-      .page-template-template-home-2 .section .btn-primary:hover,
-      .page-template-template-home-2 .section .btn-primary:active,
-      .page-template-template-home-2 .section .btn-primary:focus {
-        background-color: <?php echo Roots\Sage\Extras\color_luminance($accent_color,-.15) ?>;
       }
 
 			/** Forms & Inputs **/
