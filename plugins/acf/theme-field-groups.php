@@ -840,7 +840,7 @@ acf_add_local_field_group(array (
 			'name' => 'highlight_text_color',
 			'type' => 'radio',
 			'instructions' => 'Select whether the text over the background photo should be white or black. <em>If your background is dark, choose white text. If your background is light, choose black text.</em>',
-			'required' => 1,
+			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array (
 				'width' => '',
@@ -880,7 +880,7 @@ acf_add_local_field_group(array (
 		),
 		array (
 		  'key' => 'highlight_subtitle',
-		  'label' => 'Title',
+		  'label' => 'Subitle',
 		  'name' => 'highlight_subtitle',
 		  'type' => 'text',
 		  'instructions' => '',
