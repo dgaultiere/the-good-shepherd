@@ -171,11 +171,12 @@
 </div>
 
 <!-- About -->
-<div class="container-fluid section grey-bg" id="about">
+<div class="bg-image" style="background-image:url('<?php $image = get_field('about_photo'); echo $image['sizes']['extra-large']; ?>');">
+	<div class="container-fluid section text-<?php the_field('about_text_color'); ?>" id="about" style="background-color: rgba(0,0,0,0.<?php the_field('about_photo_darkness'); ?>)">
 	<div class="row">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12">
+				<div class="col-xs-8 col-xs-offset-2">
 					<h2 class="title"><?php the_field('about_title'); ?></h2>
 					<?php
 						$about_photo = get_field('about_photo');
@@ -203,6 +204,7 @@
 			</div>
 		</div>
 	</div>
+</div>
 </div>
 
 <!-- Video -->
