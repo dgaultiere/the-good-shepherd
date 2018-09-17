@@ -20,9 +20,7 @@ use Roots\Sage\Wrapper;
 	    <?php if ( is_page_template(array('template-home.php','template-home-2.php','template-home-3.php')) ) : ?>
 	    	<div class="container-fluid">
 	    <?php else : ?>
-		    <div class="container-fluid">
-					<?php get_template_part('templates/page', 'header'); ?>
-		    </div>
+				<?php get_template_part('templates/page', 'header'); ?>
 				<div class="container">
 	   	<?php endif; ?>
 		      <div class="content row">

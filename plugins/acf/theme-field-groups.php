@@ -3628,35 +3628,11 @@ acf_add_local_field_group(array (
 			'choices' => array (
 				'default' => 'Theme Default',
 				'image' => 'Custom Image',
-				'color' => 'Custom Color',
 			),
 			'other_choice' => 0,
 			'save_other_choice' => 0,
 			'default_value' => 'default',
 			'layout' => 'vertical',
-		),
-		array (
-			'key' => 'field_57b2b5af63513',
-			'label' => 'Post Header Color',
-			'name' => 'post_header_color',
-			'type' => 'color_picker',
-			'instructions' => 'Choose a color for the header background. If you\'re not sure, try one of these: <a href="https://flatuicolors.com/" target="_blank">www.flatuicolors.com</a>',
-			'required' => 1,
-			'conditional_logic' => array (
-				array (
-					array (
-						'field' => 'field_57b2b5af63502',
-						'operator' => '==',
-						'value' => 'color',
-					),
-				),
-			),
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '#9c9c9c',
 		),
 		array (
 			'key' => 'field_57b2b5af6351e',
@@ -4302,35 +4278,12 @@ acf_add_local_field_group(array (
 			),
 			'choices' => array (
 				'image' => 'Image',
-				'color' => 'Color',
+				'standard' => 'Standard',
 			),
 			'other_choice' => 0,
 			'save_other_choice' => 0,
-			'default_value' => 'color',
+			'default_value' => 'standard',
 			'layout' => 'vertical',
-		),
-		array (
-			'key' => 'field_55c80bd2226f0',
-			'label' => 'Page Header Color',
-			'name' => 'default_header_color',
-			'type' => 'color_picker',
-			'instructions' => 'Choose the default color for page headers that do not have an image background.',
-			'required' => 1,
-			'conditional_logic' => array (
-				array (
-					array (
-						'field' => 'field_55f645418b6ae',
-						'operator' => '==',
-						'value' => 'color',
-					),
-				),
-			),
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '#3498db',
 		),
 		array (
 			'key' => 'field_55f6451eb7a47',
