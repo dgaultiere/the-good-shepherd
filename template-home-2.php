@@ -426,7 +426,7 @@
 			<div class="row">
 				<div class="col-sm-8 col-sm-offset-2">
 					<?php
-						$args = array('posts_per_page' => '1');
+						$args = array('posts_per_page' => 1, 'ignore_sticky_posts' => 1);
 						$the_query = new WP_Query( $args );
 						if ( $the_query->have_posts() ) :
 							while ( $the_query->have_posts() ) : $the_query->the_post();
@@ -439,11 +439,15 @@
 					<a href="<?php the_permalink(); ?>" class="btn btn-primary">
 						Read Now
 					</a>
-					<?php
-							endwhile;
-							wp_reset_postdata();
-						else :
-					?>
+				</div>
+			</div>
+				<?php
+						endwhile;
+						wp_reset_postdata();
+					else :
+				?>
+			<div class="row">
+				<div class="col-xs-12">
 						<a href="<?php echo get_post_type_archive_link('post') ?>" class="btn btn-primary">
 							View the Blog
 						</a>
