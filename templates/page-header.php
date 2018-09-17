@@ -72,7 +72,7 @@
 				">
 					<?php	if(is_singular() && !is_page()) { ?>
 						<div class="post-view-all">
-							<span>&lsaquo;</span><a href="<?php echo get_post_type_archive_link($post_type) ?>"><?php echo $post_type_all_items ?></a>
+							<a href="<?php echo get_post_type_archive_link($post_type) ?>"><span>&lsaquo;</span><?php echo $post_type_all_items ?></a>
 						</div>
 					<?php }; ?>
 					<h1>

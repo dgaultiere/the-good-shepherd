@@ -177,7 +177,7 @@
 			&:focus {
 				background: transparent;
 				color: $nav-highlight;
-				border-color: rgba(0,0,0,0.2);
+				border-color: $light-shadow;
 			}
 		}
 	}
