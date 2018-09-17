@@ -42,8 +42,14 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<h2 class="title"><?php the_field('featured_link_title2'); ?></h2>
-					<p class="description"><?php the_field('featured_link_description'); ?></p>
 					<h3 class="subtitle"><?php the_field('featured_link_subtitle2'); ?></h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-5 col-sm-pull-2 pull-right">
+					<p class="description"><?php the_field('featured_link_description'); ?></p>
+				</div>
+				<div class="col-sm-3 col-sm-offset-2">
 					<?php
 					$featured_link_image = get_field('featured_link_image2');
 					if( $featured_link_image ):

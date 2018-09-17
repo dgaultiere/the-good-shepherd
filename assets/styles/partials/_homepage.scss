@@ -461,6 +461,20 @@
 	#featured-link {
 		.description {
 			font-size: 22px;
+
+			@media (min-width: $screen-sm-min) {
+				text-align: left;
+				font-size: 18px;
+			}
+
+			@media (min-width: $screen-md-min) {
+				font-size: 22px;
+			}
+
+			@media (min-width: $screen-lg-min) {
+				margin-top: 35px;
+				font-size: 24px;
+			}
 		}
 	}
 
