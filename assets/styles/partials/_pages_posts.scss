@@ -323,17 +323,16 @@ aside {
 	@media (min-width: $screen-sm-min) {
 		display: block;
 		position: absolute;
+		margin: 110px auto 0;
 		left: 0;
 		right: 0;
-		margin: 0 auto;
-		margin-top: 110px;
 		width: 100%;
 		max-width: 730px;
 
 		&.share-float {
 			position: fixed;
-			top: 100px;
 			margin-top: 0;
+			top: 100px;
 		}
 
 		.social-share-container {
@@ -373,22 +372,10 @@ aside {
 	}
 }
 
-@media (min-width: $screen-sm-min) {
-	body.admin-bar {
-		.floating-share-buttons {
-			&.share-float {
-				top: calc(100px + 32px) !important;
-			}
-		}
-	}
-
-	@media (max-width: 782px) {
-		body.admin-bar {
-			.floating-share-buttons {
-				&.share-float {
-					top: calc(100px + 46px) !important;
-				}
-			}
+body.admin-bar {
+	.floating-share-buttons {
+		@media (min-width: $screen-sm-min) {
+			padding-top: 25px;
 		}
 	}
 }

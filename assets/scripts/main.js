@@ -97,18 +97,16 @@
 				$(window).scroll(function() {
           var buttonsScrollTop = $(window).scrollTop(),
               buttonsDistDocTop = $('.floating-share-buttons').offset().top,
-              // buttonsHeight = $('.floating-share-buttons').height(),
               headerDistDocTop = $('.page-header').offset().top,
               headerHeight = $('.page-header').height(),
-              // footerDistDocTop = $('footer.content-info').offset().top,
 
               buttonsDistWinTop = ( buttonsDistDocTop - buttonsScrollTop ),
               buttonsDistHeader = ( buttonsDistDocTop - ( headerDistDocTop + headerHeight ) );
-              // buttonsDistFooter = ( footerDistDocTop - ( buttonsDistDocTop + buttonsHeight ) );
 
-					if ( ( buttonsDistWinTop <= 100 ) && ( buttonsDistHeader >= 110 ) && ( $(document).scrollTop() < $(document).height() - 1000 ) ) {
-						$('.floating-share-buttons').addClass('share-float');
-					} else {
+          if ( ( buttonsDistWinTop <= 100 ) && ( buttonsDistHeader >= 110 ) && ( $(document).scrollTop() < $(document).height() - 1000 ) ) {
+            $('.floating-share-buttons').addClass('share-float');
+          }
+          else {
 						$('.floating-share-buttons').removeClass('share-float');
 					}
 				});
