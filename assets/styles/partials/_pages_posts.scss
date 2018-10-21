@@ -36,8 +36,8 @@
 			clear: both;
 			font-size: 36px;
 			font-weight: 700;
-			color: $grey-dark;
 	    letter-spacing: -0.025em;
+			color: $grey-dark;
 
 		  @media (min-width: $screen-sm-min) {
 				display: inline-block;
@@ -86,24 +86,33 @@
 /* Page Headers with Background Image */
 .header-background.bg-image {
 	@include background-image;
-	background-color: $grey;
 	z-index: 1;
 
-	&:before {
-		background-color: rgba(0, 0, 0, 0.1);
-		z-index: 2;
-		content: ' ';
-		display: block;
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 280px;
+	.mask {
+		background-color: rgba(0,0,0,0.2);
 	}
 
 	.page-header {
-		height: 250px;
 		z-index: 3;
+
+		h1 {
+			color: $white;
+			margin-bottom: 60px;
+		}
+
+		.post-view-all {
+			margin-top: 25px;
+
+			a {
+				color: $white;
+
+				&:hover,
+				&:active,
+				&:focus {
+					border-color: $white-66;
+				}
+			}
+		}
 	}
 }
 
@@ -314,16 +323,17 @@ aside {
 	@media (min-width: $screen-sm-min) {
 		display: block;
 		position: absolute;
-		top: 330px;
 		left: 0;
 		right: 0;
 		margin: 0 auto;
+		margin-top: 110px;
 		width: 100%;
 		max-width: 730px;
 
 		&.share-float {
 			position: fixed;
 			top: 100px;
+			margin-top: 0;
 		}
 
 		.social-share-container {
@@ -354,24 +364,12 @@ aside {
 			width: 43px;
 			height: 14px;
 			overflow: hidden;
+			text-shadow: none;
 		}
 	}
 
 	@media print {
 		display: none;
-	}
-}
-
-.bg-image {
-	.floating-share-buttons {
-
-		@media (min-width: $screen-sm-min) {
-			top: 430px;
-
-			&.share-float {
-				top: 100px;
-			}
-		}
 	}
 }
 

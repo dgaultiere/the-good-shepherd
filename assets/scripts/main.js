@@ -95,15 +95,21 @@
 
         // Floating share buttons
 				$(window).scroll(function() {
-					if ( ( $(document).scrollTop() > 330 ) && ( $(document).scrollTop() < $(document).height() - 1000 ) ) {
-						$('.no-bg-image .floating-share-buttons').addClass('share-float');
+          var buttonsScrollTop = $(window).scrollTop(),
+              buttonsDistDocTop = $('.floating-share-buttons').offset().top,
+              // buttonsHeight = $('.floating-share-buttons').height(),
+              headerDistDocTop = $('.page-header').offset().top,
+              headerHeight = $('.page-header').height(),
+              // footerDistDocTop = $('footer.content-info').offset().top,
+
+              buttonsDistWinTop = ( buttonsDistDocTop - buttonsScrollTop ),
+              buttonsDistHeader = ( buttonsDistDocTop - ( headerDistDocTop + headerHeight ) );
+              // buttonsDistFooter = ( footerDistDocTop - ( buttonsDistDocTop + buttonsHeight ) );
+
+					if ( ( buttonsDistWinTop <= 100 ) && ( buttonsDistHeader >= 110 ) && ( $(document).scrollTop() < $(document).height() - 1000 ) ) {
+						$('.floating-share-buttons').addClass('share-float');
 					} else {
-						$('.no-bg-image .floating-share-buttons').removeClass('share-float');
-					}
-					if ( ( $(document).scrollTop() > 430 ) && ( $(document).scrollTop() < $(document).height() - 1000 ) ) {
-						$('.bg-image .floating-share-buttons').addClass('share-float');
-					} else {
-						$('.bg-image .floating-share-buttons').removeClass('share-float');
+						$('.floating-share-buttons').removeClass('share-float');
 					}
 				});
       }
