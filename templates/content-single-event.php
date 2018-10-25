@@ -18,9 +18,9 @@
         </div>
       </div>
     </header>
-	  <?php if ( has_post_thumbnail() && get_field('post_header_background') != 'featured-image' && !is_singular('video') ) { ?>
+	  <?php if ( has_post_thumbnail() && get_field('featured_image_layout') == 'inline' ) { ?>
 			<div class="featured-image">
-				<?php the_post_thumbnail( 'medium' ); ?>
+				<?php the_post_thumbnail( 'medium_large' ); ?>
 			</div>
 		<?php } ?>
     <div class="entry-content <?php if(the_field('text_style') !== 'sans-serif'){ ?>serif<?php }; ?>">

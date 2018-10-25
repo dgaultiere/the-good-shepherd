@@ -6,9 +6,9 @@
       <?php }; ?>
       <?php get_template_part('templates/entry-meta', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
     </header>
-	  <?php if ( has_post_thumbnail() && get_field('post_header_background') != 'featured-image' && !is_singular('video') ) { ?>
+	  <?php if ( has_post_thumbnail() && get_field('featured_image_layout') == 'inline' && !is_singular('video') ) { ?>
 			<div class="featured-image">
-				<?php the_post_thumbnail( 'medium' ); ?>
+				<?php the_post_thumbnail( 'medium_large' ); ?>
 			</div>
 		<?php }; ?>
     <div class="entry-content <?php if(the_field('text_style') !== 'sans-serif'){ ?>serif<?php }; ?>">

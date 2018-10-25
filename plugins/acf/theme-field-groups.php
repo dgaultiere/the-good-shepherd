@@ -3349,17 +3349,17 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
-// Default page options
+// Page & post featured image layout options (page, post, event, podcast)
 acf_add_local_field_group(array (
-	'key' => 'group_55c6c12d04fb7',
-	'title' => 'Default Page Options',
+	'key' => 'featured_image_layout_options',
+	'title' => 'Image Layout Options',
 	'fields' => array (
 		array (
-			'key' => 'field_556b8a22eca9b',
-			'label' => 'Page Header Background',
-			'name' => 'page_header_background',
+			'key' => 'featured_image_layout',
+			'label' => 'Featured Image Layout',
+			'name' => 'featured_image_layout',
 			'type' => 'radio',
-			'instructions' => 'Use a custom background image or color on the header of this page.',
+			'instructions' => 'Choose how the featured image for this page or post should display.',
 			'required' => 1,
 			'conditional_logic' => 0,
 			'wrapper' => array (
@@ -3368,94 +3368,39 @@ acf_add_local_field_group(array (
 				'id' => '',
 			),
 			'choices' => array (
-				'default' => 'Theme Default',
-				'image' => 'Custom Image',
-				'color' => 'Custom Color',
+				'inline' => 'Inline: image inline with text (default)',
+				'banner' => 'Banner: narrow background image behind title',
+				'cover' => 'Cover: large background image behind title',
+				'hide' => 'Hide: do not show featured image',
 			),
 			'other_choice' => 0,
 			'save_other_choice' => 0,
-			'default_value' => 'default',
-			'layout' => 'vertical',
-		),
-		array (
-			'key' => 'field_556bc0e81ab9b',
-			'label' => 'Page Header Color',
-			'name' => 'page_header_color',
-			'type' => 'color_picker',
-			'instructions' => 'Choose a color for the header background. If you\'re not sure, try one of these: <a href="https://flatuicolors.com/" target="_blank">www.flatuicolors.com</a>',
-			'required' => 1,
-			'conditional_logic' => array (
-				array (
-					array (
-						'field' => 'field_556b8a22eca9b',
-						'operator' => '==',
-						'value' => 'color',
-					),
-				),
-			),
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '#9c9c9c',
-		),
-		array (
-			'key' => 'field_55f63ea1608e8',
-			'label' => 'Page Header Image',
-			'name' => 'page_header_image',
-			'type' => 'image',
-			'instructions' => 'Choose an image for the header background. Wide images are recommended. Images will be cropped to 1920x280 for display.',
-			'required' => 1,
-			'conditional_logic' => array (
-				array (
-					array (
-						'field' => 'field_556b8a22eca9b',
-						'operator' => '==',
-						'value' => 'image',
-					),
-				),
-			),
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'object',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '1920',
-			'min_height' => '280',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array (
-			'key' => 'field_5574bc037d69a',
-			'label' => 'Text Style',
-			'name' => 'text_style',
-			'type' => 'radio',
-			'instructions' => 'Select whether you would like to show serif (e.g., Times New Roman) or sans-serif (e.g., Arial) fonts for body text.',
-			'required' => 1,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'choices' => array (
-				'serif' => 'Serif',
-				'sans-serif' => 'Sans-serif',
-			),
-			'other_choice' => 0,
-			'save_other_choice' => 0,
-			'default_value' => 'serif',
+			'default_value' => 'inline',
 			'layout' => 'vertical',
 		),
 	),
 	'location' => array (
+		array (
+			array (
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'post',
+			),
+		),
+		array (
+			array (
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'event',
+			),
+		),
+		array (
+			array (
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'podcast',
+			),
+		),
 		array (
 			array (
 				'param' => 'post_type',
@@ -3489,17 +3434,17 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
-// Default post options (post, podcast, event)
+// Page text style option
 acf_add_local_field_group(array (
-	'key' => 'group_57b28f5b9fcff',
-	'title' => 'Default Post Options',
+	'key' => 'page_text_style',
+	'title' => 'Text Style Options',
 	'fields' => array (
 		array (
-			'key' => 'field_57b28f6f708db',
-			'label' => 'Post Header Background',
-			'name' => 'post_header_background',
+			'key' => 'text_style',
+			'label' => 'Text Style',
+			'name' => 'text_style',
 			'type' => 'radio',
-			'instructions' => 'Use a custom background image or color on the header of this post.',
+			'instructions' => 'Select whether you would like to show serif (e.g., Times New Roman) or sans-serif (e.g., Arial) fonts for body text.',
 			'required' => 1,
 			'conditional_logic' => 0,
 			'wrapper' => array (
@@ -3508,87 +3453,16 @@ acf_add_local_field_group(array (
 				'id' => '',
 			),
 			'choices' => array (
-				'default' => 'Theme Default',
-				'featured-image' => 'Featured Image',
-				'image' => 'Custom Image',
-				'color' => 'Custom Color',
+				'serif' => 'Serif',
+				'sans-serif' => 'Sans-serif',
 			),
 			'other_choice' => 0,
 			'save_other_choice' => 0,
-			'default_value' => 'default',
+			'default_value' => 'serif',
 			'layout' => 'vertical',
-		),
-		array (
-			'key' => 'field_57b29044708dc',
-			'label' => 'Post Header Color',
-			'name' => 'post_header_color',
-			'type' => 'color_picker',
-			'instructions' => 'Choose a color for the header background. If you\'re not sure, try one of these: <a href="https://flatuicolors.com/" target="_blank">www.flatuicolors.com</a>',
-			'required' => 1,
-			'conditional_logic' => array (
-				array (
-					array (
-						'field' => 'field_57b28f6f708db',
-						'operator' => '==',
-						'value' => 'color',
-					),
-				),
-			),
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '#9c9c9c',
-		),
-		array (
-			'key' => 'field_57b2935691524',
-			'label' => 'Post Header Image',
-			'name' => 'post_header_image',
-			'type' => 'image',
-			'instructions' => 'Choose an image for the header background. Wide images are recommended. Images will be cropped to 1920x280 for display.',
-			'required' => 1,
-			'conditional_logic' => array (
-				array (
-					array (
-						'field' => 'field_57b28f6f708db',
-						'operator' => '==',
-						'value' => 'image',
-					),
-				),
-			),
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'array',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => 1920,
-			'min_height' => 280,
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
 		),
 	),
 	'location' => array (
-		array (
-			array (
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'post',
-			),
-		),
-		array (
-			array (
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'podcast',
-			),
-		),
 		array (
 			array (
 				'param' => 'post_type',
@@ -3596,97 +3470,26 @@ acf_add_local_field_group(array (
 				'value' => 'event',
 			),
 		),
-	),
-	'menu_order' => 0,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => 1,
-	'description' => '',
-));
-
-// Default post options (video, product, associate)
-acf_add_local_field_group(array (
-	'key' => 'group_57b2b5af5c37e',
-	'title' => 'Default Post Options',
-	'fields' => array (
-		array (
-			'key' => 'field_57b2b5af63502',
-			'label' => 'Post Header Background',
-			'name' => 'post_header_background',
-			'type' => 'radio',
-			'instructions' => 'Use a custom background image or color on the header of this post.',
-			'required' => 1,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'choices' => array (
-				'default' => 'Theme Default',
-				'image' => 'Custom Image',
-			),
-			'other_choice' => 0,
-			'save_other_choice' => 0,
-			'default_value' => 'default',
-			'layout' => 'vertical',
-		),
-		array (
-			'key' => 'field_57b2b5af6351e',
-			'label' => 'Post Header Image',
-			'name' => 'post_header_image',
-			'type' => 'image',
-			'instructions' => 'Choose an image for the header background. Wide images are recommended. Images will be cropped to 1920x280 for display.',
-			'required' => 1,
-			'conditional_logic' => array (
-				array (
-					array (
-						'field' => 'field_57b2b5af63502',
-						'operator' => '==',
-						'value' => 'image',
-					),
-				),
-			),
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'array',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => 1920,
-			'min_height' => 280,
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-	),
-	'location' => array (
 		array (
 			array (
 				'param' => 'post_type',
 				'operator' => '==',
-				'value' => 'video',
+				'value' => 'page',
 			),
-		),
-		array (
 			array (
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'product',
+				'param' => 'page_template',
+				'operator' => '!=',
+				'value' => 'template-home.php',
 			),
-		),
-		array (
 			array (
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'associate',
+				'param' => 'page_template',
+				'operator' => '!=',
+				'value' => 'template-home-2.php',
+			),
+			array (
+				'param' => 'page_type',
+				'operator' => '!=',
+				'value' => 'posts_page',
 			),
 		),
 	),
@@ -4249,85 +4052,6 @@ acf_add_local_field_group(array (
 		),
 	),
 	'menu_order' => 2,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => 1,
-	'description' => '',
-));
-
-// Page header styling options
-acf_add_local_field_group(array (
-	'key' => 'group_55c80bcc98663',
-	'title' => 'Page Header Styling',
-	'fields' => array (
-		array (
-			'key' => 'field_55f645418b6ae',
-			'label' => 'Default Header Background',
-			'name' => 'default_header_background',
-			'type' => 'radio',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'choices' => array (
-				'image' => 'Image',
-				'standard' => 'Standard',
-			),
-			'other_choice' => 0,
-			'save_other_choice' => 0,
-			'default_value' => 'standard',
-			'layout' => 'vertical',
-		),
-		array (
-			'key' => 'field_55f6451eb7a47',
-			'label' => 'Page Header Image',
-			'name' => 'default_header_image',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 1,
-			'conditional_logic' => array (
-				array (
-					array (
-						'field' => 'field_55f645418b6ae',
-						'operator' => '==',
-						'value' => 'image',
-					),
-				),
-			),
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'object',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-	),
-	'location' => array (
-		array (
-			array (
-				'param' => 'options_page',
-				'operator' => '==',
-				'value' => 'acf-options-header',
-			),
-		),
-	),
-	'menu_order' => 3,
 	'position' => 'normal',
 	'style' => 'default',
 	'label_placement' => 'top',

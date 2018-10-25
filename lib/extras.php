@@ -565,7 +565,7 @@ add_action( 'after_setup_theme', __NAMESPACE__ . '\\create_custom_image_sizes' )
 function create_custom_image_sizes() {
 	add_image_size( 'medium-banner', 768, 360, array( 'center', 'center' ) );
 	add_image_size( 'extra-large', 1920, 1080, false );
-	add_image_size( 'page-header', 1920, 480, false );
+	add_image_size( 'page-header', 1920, 480, array( 'center', 'center' ) );
 }
 
 

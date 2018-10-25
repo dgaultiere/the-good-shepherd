@@ -40,6 +40,10 @@ $font-bernino:			'jaf-bernino-sans', 'Lucida Grande', 'Helvetica', 'Arial', sans
 $font-freight:			'freight-text-pro', 'Georgia', 'Cambria', 'Times New Roman', 'Times', serif;
 $text-shadow-1:			0 0 3px rgba(0,0,0,.5);
 
+/** Custom responsive break points **/
+$screen-xl-min:                  1600px;
+$screen-mobile-landscape-max:    480px;
+
 
 /** Mixins **/
 
@@ -167,7 +171,7 @@ body {
 	padding-bottom: 75px;
 
 	@media (min-width: $screen-sm-min) {
-		padding-top: 100px;
+		padding-top: 107px;
 
 		@media print {
 			padding-top: 0;
