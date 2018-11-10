@@ -2,6 +2,7 @@
 
 use Roots\Sage\Config;
 use Roots\Sage\Wrapper;
+use Roots\Sage\Extras;
 
 ?>
 
@@ -19,6 +20,9 @@ use Roots\Sage\Wrapper;
     <div class="wrap <?php the_field('text_style'); ?>" role="document">
 	    <?php if ( is_page_template('template-home.php') ) : ?>
 	    	<div class="container-fluid">
+	    <?php elseif ( is_page_template('template-showcase.php') ) : ?>
+				<?php get_template_part('templates/page', 'header'); ?>
+				<div class="container-fluid">
 	    <?php else : ?>
 				<?php get_template_part('templates/page', 'header'); ?>
 				<div class="container">
