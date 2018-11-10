@@ -7,7 +7,7 @@
       name="s"
       class="search-field form-control"
       placeholder="<?php
-          if( is_page_template('template-home-2.php') ) :
+          if( is_page_template('template-home.php') ) :
             echo 'Search keywords, topics, and more...';
           elseif( get_field('site_language', 'option') == "es-mx" ) :
             echo 'Busque';

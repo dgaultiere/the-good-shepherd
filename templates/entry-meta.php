@@ -24,7 +24,7 @@
 	<div class="meta-datapoint author">
 		<i class="fa fa-user"></i><?php the_author_posts_link(); ?>
 	</div>
-	<?php if( is_page_template('template-home-2.php') ) { ?>
+	<?php if( is_page_template('template-home.php') ) { ?>
 		<div class="meta-datapoint date">
  			<i class="fa fa-calendar"></i><?php the_time( get_option( 'date_format' ) ); ?>
  		</div>
