@@ -53,7 +53,7 @@ function hide_sidebar() {
        */
        [
         ['is_page_template', 'template-sidebar.php'],
-        ['is_post_type_archive', ['post','article']]
+        ['is_post_type_archive', 'article']
        ]
     );
 
