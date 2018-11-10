@@ -197,13 +197,15 @@ if( function_exists('acf_add_options_page') ) {
  * Google Maps API
  */
 
-function google_maps_add_scripts() {
-  if (is_page_template('template-contact.php')) {
-    wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false', array(), '3', true );
-    wp_enqueue_script( 'google-map-init', get_template_directory_uri() . '/plugins/acf/google-maps.js', array('google-map', 'jquery'), '0.1', true );
-  }
-}
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\google_maps_add_scripts' );
+// Google seems to have changed their terms or something so I'm disabling this for now...
+
+// function google_maps_add_scripts() {
+//   if (is_page_template('template-contact.php')) {
+//     wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false', array(), '3', true );
+//     wp_enqueue_script( 'google-map-init', get_template_directory_uri() . '/plugins/acf/google-maps.js', array('google-map', 'jquery'), '0.1', true );
+//   }
+// }
+// add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\google_maps_add_scripts' );
 
 
 
@@ -378,19 +380,19 @@ function tomjn_mce_external_plugins($plugin_array){
 function change_post_object() {
     global $wp_post_types;
     $labels = &$wp_post_types['post']->labels;
-    $labels->name = 'Articles';
-    $labels->singular_name = 'Article';
-    $labels->add_new = 'New Article';
-    $labels->add_new_item = 'Add New Article';
-    $labels->edit_item = 'Edit Article';
-    $labels->new_item = 'Article';
-    $labels->view_item = 'View Article';
-    $labels->search_items = 'Search Articles';
-    $labels->not_found = 'No Articles found';
-    $labels->not_found_in_trash = 'No Articles found in Trash';
-    $labels->all_items = 'All Articles';
-    $labels->menu_name = 'Articles';
-    $labels->name_admin_bar = 'Article';
+    $labels->name = 'Blog Posts';
+    $labels->singular_name = 'Blog Post';
+    $labels->add_new = 'New Blog Post';
+    $labels->add_new_item = 'Add Blog Post';
+    $labels->edit_item = 'Edit Blog Post';
+    $labels->new_item = 'Blog Post';
+    $labels->view_item = 'View Blog Post';
+    $labels->search_items = 'Search Blog Posts';
+    $labels->not_found = 'No blog posts found';
+    $labels->not_found_in_trash = 'No blog posts found in trash';
+    $labels->all_items = 'All Blog Posts';
+    $labels->menu_name = 'Blog Posts';
+    $labels->name_admin_bar = 'Blog Post';
 }
 add_action( 'init', __NAMESPACE__ . '\\change_post_object' );
 
@@ -403,6 +405,26 @@ add_action( 'init', __NAMESPACE__ . '\\change_post_object' );
 
  add_action( 'init', __NAMESPACE__ . '\\create_post_type' );
  function create_post_type() {
+   register_post_type( 'article',
+     array(
+       'labels' => array(
+         'name' => __( 'Articles' ),
+         'singular_name' => __( 'Article' ),
+         'add_new' => __( 'New Article' ),
+         'add_new_item' => __( 'Add New Article' ),
+         'edit_item' => __( 'Edit Article' ),
+         'new_item' => __( 'New Article' ),
+         'view_item' => __( 'View Article' ),
+         'search_items' => __( 'Search Articles' ),
+         'all_items' => __( 'All Articles' )
+      ),
+       'public' => true,
+       'has_archive' => true,
+       'rewrite' => array('slug' => 'articles'),
+       'menu_icon' => 'dashicons-welcome-edit-page',
+       'supports' => array('title','editor','thumbnail','excerpt','revisions','page-attributes', 'comments'),
+     )
+   );
    register_post_type( 'podcast',
      array(
        'labels' => array(
@@ -526,6 +548,32 @@ add_action( 'init', __NAMESPACE__ . '\\change_post_object' );
 
 add_action( 'init', __NAMESPACE__ . '\\create_custom_taxonomies', 0 );
 function create_custom_taxonomies() {
+  register_taxonomy(
+    'articles_categories',
+    'article',
+    array(
+      'labels' => array(
+        'name' => 'Article Categories',
+        'singular_name' => 'Article Category'
+      ),
+      'show_ui' => true,
+      'show_tagcloud' => false,
+      'hierarchical' => true
+    )
+  );
+  register_taxonomy(
+    'article_tags',
+    'article',
+    array(
+      'labels' => array(
+        'name' => 'Article Tags',
+        'singular_name' => 'Article Tag'
+      ),
+      'show_ui' => true,
+      'show_tagcloud' => true,
+      'hierarchical' => false
+    )
+  );
   register_taxonomy(
     'podcast_tags',
     'podcast',
