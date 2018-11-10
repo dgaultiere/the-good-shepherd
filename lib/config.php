@@ -30,13 +30,13 @@ if (!defined('DIST_DIR')) {
 /**
  * Define which pages shouldn't have the sidebar
  */
-function display_sidebar() {
-  static $display;
+function hide_sidebar() {
+  static $hide;
 
-  if (!isset($display)) {
+  if (!isset($hide)) {
     $conditionalCheck = new ConditionalTagCheck(
       /**
-       * Any of these conditional tags that return true won't show the sidebar.
+       * Any of these conditional tags that return true will show the sidebar.
        * You can also specify your own custom function as long as it returns a boolean.
        *
        * To use a function that accepts arguments, use an array instead of just the function name as a string.
@@ -51,22 +51,14 @@ function display_sidebar() {
        * ['is_post_type_archive', ['foo', 'bar', 'baz']]
        *
        */
-      [
-        'is_404',
-        'is_front_page',
-        ['is_page_template', 'template-full-width.php'],
-        ['is_page_template', 'template-home.php'],
-        ['is_page_template', 'template-contact.php'],
-        ['is_page_template', 'template-search-browse.php'],
-        ['is_page_template', 'template-subscribe.php'],
-        ['is_page_template', 'template-team.php'],
-        ['is_singular', ['post','article','video','product','event','associate','salt']],
-        ['is_post_type_archive', ['podcast','video','product','event','associate','salt']]
-      ]
+       [
+        ['is_page_template', 'template-sidebar.php'],
+        ['is_post_type_archive', ['post','article']]
+       ]
     );
 
-    $display = apply_filters('sage/display_sidebar', $conditionalCheck->result);
+    $hide = apply_filters('sage/hide_sidebar', $conditionalCheck->result);
   }
 
-  return $display;
+  return $hide;
 }

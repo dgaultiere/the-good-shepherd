@@ -36,17 +36,17 @@ use Roots\Sage\Wrapper;
 			        <main class="main col-sm-10 col-sm-offset-1" role="main">
 			          <?php include Wrapper\template_path(); ?>
 			        </main><!-- /.main -->
-		        <?php elseif (Config\display_sidebar()) : ?>
+		        <?php elseif (Config\hide_sidebar()) : ?>
+			        <main class="main col-sm-12" role="main">
+			          <?php include Wrapper\template_path(); ?>
+			        </main><!-- /.main -->
+		        <?php else : ?>
 			        <main class="main col-sm-9" role="main">
 			          <?php include Wrapper\template_path(); ?>
 			        </main><!-- /.main -->
 		          <aside class="sidebar col-sm-3" role="complementary">
 		            <?php include Wrapper\sidebar_path(); ?>
 		          </aside><!-- /.sidebar -->
-		        <?php else: ?>
-			        <main class="main col-sm-12" role="main">
-			          <?php include Wrapper\template_path(); ?>
-			        </main><!-- /.main -->
 		        <?php endif; ?>
 		      </div><!-- /.content -->
 				</div><!-- /.container -->

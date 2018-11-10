@@ -19,8 +19,8 @@ function body_class($classes) {
   }
 
   // Add class if sidebar is active
-  if (Config\display_sidebar()) {
-    $classes[] = 'sidebar-primary';
+  if (!Config\hide_sidebar()) {
+    $classes[] = 'has-sidebar';
   }
 
   return $classes;
@@ -38,6 +38,7 @@ function search_all($query) {
    if($query->is_search) {
      $query->set('post_type', array(
      'post',
+     'article',
      'podcast',
      'video',
      'product'
