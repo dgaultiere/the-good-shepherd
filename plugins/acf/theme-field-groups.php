@@ -1926,7 +1926,7 @@ acf_add_local_field_group(array (
 			array (
 				'param' => 'page_template',
 				'operator' => '==',
-				'value' => 'template-articles.php',
+				'value' => 'template-search-browse.php',
 			),
 		),
 	),

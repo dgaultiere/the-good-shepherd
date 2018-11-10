@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Search Articles
+ * Template Name: Search & Browse
  */
 ?>
 
