@@ -3305,47 +3305,6 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
-// Post layout styling options
-acf_add_local_field_group(array (
-	'key' => 'group_57b9350176ee7',
-	'title' => 'Post Layout',
-	'fields' => array (
-		array (
-			'key' => 'field_57b93505cb1a3',
-			'label' => 'Hide Post Sidebar',
-			'name' => 'hide_post_sidebar',
-			'type' => 'true_false',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => 'Hide the sidebar on individual posts',
-			'default_value' => 1,
-		),
-	),
-	'location' => array (
-		array (
-			array (
-				'param' => 'options_page',
-				'operator' => '==',
-				'value' => 'acf-options-blog-posts',
-			),
-		),
-	),
-	'menu_order' => 1,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => 1,
-	'description' => '',
-));
-
 // Post share buttons options
 acf_add_local_field_group(array (
 	'key' => 'group_560e09fb0bdc7',

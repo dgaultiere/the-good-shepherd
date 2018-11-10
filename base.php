@@ -32,7 +32,7 @@ use Roots\Sage\Wrapper;
                 ?>
               </div>
             <?php endif; ?>
-		        <?php if ( (get_field('hide_post_sidebar','option') && is_singular(array('post','event','video','podcast','associate'))) || is_post_type_archive('podcast') ) : ?>
+		        <?php if ( is_singular(array('post','article','event','video','podcast','associate')) || is_post_type_archive('podcast') ) : ?>
 			        <main class="main col-sm-10 col-sm-offset-1" role="main">
 			          <?php include Wrapper\template_path(); ?>
 			        </main><!-- /.main -->

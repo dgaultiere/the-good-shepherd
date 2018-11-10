@@ -374,7 +374,7 @@ function tomjn_mce_external_plugins($plugin_array){
 
 
 /**
- * Rename post to articles
+ * Rename post to "blog post"
  */
 
 function change_post_object() {

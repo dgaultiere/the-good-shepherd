@@ -60,7 +60,7 @@ function display_sidebar() {
         ['is_page_template', 'template-articles.php'],
         ['is_page_template', 'template-subscribe.php'],
         ['is_page_template', 'template-team.php'],
-        ['is_singular', ['video','product','event','associate','salt']],
+        ['is_singular', ['post','article','video','product','event','associate','salt']],
         ['is_post_type_archive', ['podcast','video','product','event','associate','salt']]
       ]
     );

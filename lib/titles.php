@@ -12,6 +12,8 @@ function title() {
     } else {
       return __('Latest Posts', 'sage');
     }
+  } elseif ( is_post_type_archive('article') ) {
+    return __('Articles', 'sage');
   } elseif ( is_post_type_archive('podcast') ) {
     return __('Podcast', 'sage');
   } elseif ( is_post_type_archive('video') ) {
