@@ -544,65 +544,84 @@ add_action( 'init', __NAMESPACE__ . '\\change_post_object' );
 
 
  /**
-  * Add custom taxonomies
+  * Customize taxonomies
   */
 
-add_action( 'init', __NAMESPACE__ . '\\create_custom_taxonomies', 0 );
-function create_custom_taxonomies() {
-  register_taxonomy(
-    'articles_categories',
-    'article',
-    array(
-      'labels' => array(
-        'name' => 'Article Categories',
-        'singular_name' => 'Article Category'
-      ),
-      'show_ui' => true,
-      'show_tagcloud' => false,
-      'hierarchical' => true
-    )
-  );
-  register_taxonomy(
-    'article_tags',
-    'article',
-    array(
-      'labels' => array(
-        'name' => 'Article Tags',
-        'singular_name' => 'Article Tag'
-      ),
-      'show_ui' => true,
-      'show_tagcloud' => true,
-      'hierarchical' => false
-    )
-  );
-  register_taxonomy(
-    'podcast_tags',
-    'podcast',
-    array(
-      'labels' => array(
-        'name' => 'Podcast Tags',
-        'singular_name' => 'Podcast Tag'
-      ),
-      'show_ui' => true,
-      'show_tagcloud' => true,
-      'hierarchical' => false
-    )
-  );
-  register_taxonomy(
-    'video_tags',
-    'video',
-    array(
-      'labels' => array(
-        'name' => 'Video Tags',
-        'singular_name' => 'Video Tag'
-      ),
-      'show_ui' => true,
-      'show_tagcloud' => true,
-      'hierarchical' => false
-    )
-  );
-}
+// add_action( 'init', __NAMESPACE__ . '\\create_custom_taxonomies', 0 );
+// function create_custom_taxonomies() {
+//   register_taxonomy(
+//     'articles_categories',
+//     'article',
+//     array(
+//       'labels' => array(
+//         'name' => 'Article Categories',
+//         'singular_name' => 'Article Category'
+//       ),
+//       'show_ui' => true,
+//       'show_tagcloud' => false,
+//       'hierarchical' => true
+//     )
+//   );
+//   register_taxonomy(
+//     'article_tags',
+//     'article',
+//     array(
+//       'labels' => array(
+//         'name' => 'Article Tags',
+//         'singular_name' => 'Article Tag'
+//       ),
+//       'show_ui' => true,
+//       'show_tagcloud' => true,
+//       'hierarchical' => false
+//     )
+//   );
+//   register_taxonomy(
+//     'podcast_tags',
+//     'podcast',
+//     array(
+//       'labels' => array(
+//         'name' => 'Podcast Tags',
+//         'singular_name' => 'Podcast Tag'
+//       ),
+//       'show_ui' => true,
+//       'show_tagcloud' => true,
+//       'hierarchical' => false
+//     )
+//   );
+//   register_taxonomy(
+//     'video_tags',
+//     'video',
+//     array(
+//       'labels' => array(
+//         'name' => 'Video Tags',
+//         'singular_name' => 'Video Tag'
+//       ),
+//       'show_ui' => true,
+//       'show_tagcloud' => true,
+//       'hierarchical' => false
+//     )
+//   );
+// }
 
+add_action( 'init', __NAMESPACE__ . '\\extend_post_taxonomies', 0 );
+function extend_post_taxonomies() {
+  register_taxonomy_for_object_type('post_tag','article');
+
+  // register_taxonomy_for_object_type(
+  //   array(
+  //     'post_tag' => array(
+  //       'article',
+  //       'podcast',
+  //       'video'
+  //     ),
+  //     'post_category' => array(
+  //       'article',
+  //       'podcast',
+  //       'video'
+  //     )
+  //   )
+  // );
+}
 
 
 
