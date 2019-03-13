@@ -30,7 +30,7 @@ textarea,
 .form-control,
 .btn {
 	color: $grey-dark;
-	border: $border-grey-2px;
+	border: $border-input-normal;
 
 	&:focus {
 		border-color: $accent-color;
