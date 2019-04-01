@@ -436,3 +436,37 @@ iframe {
 textarea {
 	resize:vertical;
 }
+
+/* Gutenberg Styles */
+
+.entry-content .alignwide {
+  margin-left  : -80px;
+  margin-right : -80px;
+}
+
+.entry-content .alignfull {
+  margin-left  : calc( -100vw / 2 + 100% / 2 );
+  margin-right : calc( -100vw / 2 + 100% / 2 );
+  max-width    : 100vw;
+}
+
+.alignfull img {
+  width: 100vw;
+}
+
+.wp-block-cover,
+.serif .wp-block-cover {
+	.wp-block-cover-text {
+		font-size: 36px;
+		@include prose-heading;
+	}
+}
+
+.wp-block-cover-image.has-background-dim,
+.wp-block-cover.has-background-dim {
+	&:before {
+		opacity: .25 !important;
+	}
+	
+	text-shadow: $text-shadow-1;
+}

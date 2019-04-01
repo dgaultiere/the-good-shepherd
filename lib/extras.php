@@ -697,3 +697,15 @@ function fit_vids() {
   wp_enqueue_script( 'fit-vids-target', get_template_directory_uri() . '/plugins/fitvids/fitvids-targets.js', array('fit-vids','jquery'), 1.0, true );
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\fit_vids' );
+
+
+
+/**
+ * Register support for Gutenberg wide images in your theme
+ */
+
+function gutenberg_theme_setup() {
+  add_theme_support( 'align-wide' );
+  add_theme_support('editor-styles');
+}
+add_action( 'after_setup_theme', __NAMESPACE__ . '\\gutenberg_theme_setup' );
