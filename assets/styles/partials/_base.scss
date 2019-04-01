@@ -467,6 +467,58 @@ textarea {
 	&:before {
 		opacity: .25 !important;
 	}
-	
+
 	text-shadow: $text-shadow-1;
+}
+
+.page-template-template-gutenberg {
+
+	@media (min-width: 768px) {
+		.main {
+			.row {
+				*:not(.wp-block-cover) {
+					width: 750px;
+				}
+			}
+		}
+	}
+
+	@media (min-width: 992px) {
+		.main {
+			.row {
+				*:not(.wp-block-cover) {
+					width: 970px;
+				}
+			}
+		}
+	}
+
+	@media (min-width: 1200px) {
+		.main {
+			.row {
+				*:not(.wp-block-cover) {
+					width: 1170px;
+				}
+			}
+		}
+	}
+
+	.main {
+		.row {
+			*:not(.wp-block-cover) {
+				margin-right: auto;
+				margin-left: auto;
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+
+			ul, ol {
+				padding-left: 45px !important;
+
+				li {
+					padding-left: 5px !important;
+				}
+			}
+		}
+	}
 }

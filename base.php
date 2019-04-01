@@ -18,7 +18,7 @@ use Roots\Sage\Extras;
       get_template_part('templates/header');
     ?>
     <div class="wrap <?php the_field('text_style'); ?>" role="document">
-	    <?php if ( is_page_template('template-home.php') ) : ?>
+	    <?php if ( is_page_template(array('template-home.php','template-gutenberg.php')) ) : ?>
 	    	<div class="container-fluid">
 	    <?php elseif ( is_page_template('template-showcase.php') ) : ?>
 				<?php get_template_part('templates/page', 'header'); ?>
