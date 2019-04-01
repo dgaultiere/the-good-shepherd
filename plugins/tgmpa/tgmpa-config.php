@@ -31,8 +31,8 @@ function my_theme_register_required_plugins() {
 		// Roots Soil
 		array(
 			'name'      => 'Soil',
-			'slug'      => 'soil-master',
-			'source'    => get_stylesheet_directory() . '/plugins/soil-master.zip',
+			'slug'      => 'soil-3.7.3',
+			'source'    => get_stylesheet_directory() . '/plugins/soil-3.7.3.zip',
 			'required'  => true,
 		),
 
